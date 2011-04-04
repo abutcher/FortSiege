@@ -8,7 +8,7 @@
 //  Not using @synthesize to reinforce the syntax of the new language.
 //
 
-
+#import "cocos2d.h"
 #import <Foundation/Foundation.h>
 
 @interface Position : NSObject {
@@ -46,6 +46,7 @@
 
 @property (retain) Position* position;
 @property (retain) Velocity* velocity;
+
 
 @end
 

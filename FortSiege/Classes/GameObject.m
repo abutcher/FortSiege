@@ -16,7 +16,7 @@
 
 -(GameObject*) init {
     
-    if (self == [super init]) {
+    if ( (self = [super init]) ) {
         position = [[Position alloc] init];
         velocity = [[Velocity alloc] init];
     }
@@ -36,7 +36,7 @@
 @synthesize y;
 
 -(Position*) init {
-    if (self == [super init]) {
+    if ((self = [super init])) {
         self.x = 0;
         self.y = 0;
     }
@@ -45,7 +45,7 @@
 
 -(Position*) initWithCoordinatesX:(int)X andY:(int)Y{
     
-    if (self == [super init]) {
+    if ((self = [super init])) {
         self.x = X;
         self.y = Y;
     }
@@ -63,7 +63,7 @@
 @synthesize deltaY;
 
 -(Velocity*) init {
-    if (self == [super init]) {
+    if ((self = [super init])) {
         self.deltaX = 0;
         self.deltaY = 0;
     }

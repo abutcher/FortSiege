@@ -8,6 +8,7 @@
 
 // Import the interfaces
 #import "FortSiege.h"
+#import "GameObject.h"
 
 // HelloWorld implementation
 @implementation FortSiege
@@ -20,9 +21,15 @@
 	// 'layer' is an autorelease object.
 	FortSiege *layer = [FortSiege node];
 	
+    GameObject* GO = [[GameObject alloc] init];
+    GO.position.x = 40;
+    GO.velocity.deltaX = 30;
+    
 	// add layer as a child to scene
 	[scene addChild: layer];
-	
+    
+    [GO dealloc];
+    
 	// return the scene
 	return scene;
 }

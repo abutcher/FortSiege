@@ -87,6 +87,8 @@
 		5E724D2E12F889A100319E12 /* icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 5E724D2D12F889A100319E12 /* icon.icns */; };
 		5E724D3A12F88AAD00319E12 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E724D3912F88AAD00319E12 /* icon.png */; };
 		B977EB7E134A2C4B001298FC /* GameObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B977EB7D134A2C4B001298FC /* GameObject.m */; };
+		B977EB82134A582D001298FC /* DynamicGameObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B977EB81134A582D001298FC /* DynamicGameObject.m */; };
+		B977EB85134A59C7001298FC /* StaticGameObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B977EB84134A59C7001298FC /* StaticGameObject.m */; };
 		DC6640030F83B3EA000B3E49 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC6640020F83B3EA000B3E49 /* AudioToolbox.framework */; };
 		DC6640050F83B3EA000B3E49 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC6640040F83B3EA000B3E49 /* OpenAL.framework */; };
 		DCCBF1B70F6022AE0040855A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCCBF1B60F6022AE0040855A /* CoreGraphics.framework */; };
@@ -356,6 +358,10 @@
 		5E724D3912F88AAD00319E12 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		B977EB7C134A2C4B001298FC /* GameObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameObject.h; sourceTree = "<group>"; };
 		B977EB7D134A2C4B001298FC /* GameObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameObject.m; sourceTree = "<group>"; };
+		B977EB80134A582D001298FC /* DynamicGameObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynamicGameObject.h; sourceTree = "<group>"; };
+		B977EB81134A582D001298FC /* DynamicGameObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DynamicGameObject.m; sourceTree = "<group>"; };
+		B977EB83134A59C7001298FC /* StaticGameObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StaticGameObject.h; sourceTree = "<group>"; };
+		B977EB84134A59C7001298FC /* StaticGameObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StaticGameObject.m; sourceTree = "<group>"; };
 		DC6640020F83B3EA000B3E49 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		DC6640040F83B3EA000B3E49 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
 		DCCBF1B60F6022AE0040855A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -631,6 +637,10 @@
 				1F3B9A2B0EF2145700286867 /* FortSiegeAppDelegate.m */,
 				B977EB7C134A2C4B001298FC /* GameObject.h */,
 				B977EB7D134A2C4B001298FC /* GameObject.m */,
+				B977EB80134A582D001298FC /* DynamicGameObject.h */,
+				B977EB81134A582D001298FC /* DynamicGameObject.m */,
+				B977EB83134A59C7001298FC /* StaticGameObject.h */,
+				B977EB84134A59C7001298FC /* StaticGameObject.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -1237,6 +1247,8 @@
 				506EDC31102F528A00A389B3 /* FortSiege.m in Sources */,
 				E0F80F60120A0182005866B8 /* RootViewController.m in Sources */,
 				B977EB7E134A2C4B001298FC /* GameObject.m in Sources */,
+				B977EB82134A582D001298FC /* DynamicGameObject.m in Sources */,
+				B977EB85134A59C7001298FC /* StaticGameObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
