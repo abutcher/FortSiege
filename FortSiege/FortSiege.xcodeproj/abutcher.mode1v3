@@ -229,6 +229,8 @@
 			<key>Layout</key>
 			<array>
 				<dict>
+					<key>BecomeActive</key>
+					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -295,7 +297,7 @@
 							<real>186</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>107 135 1095 741 0 0 1440 878 </string>
+						<string>2 137 1095 741 0 0 1440 878 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -311,7 +313,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>kingar_attack.png</string>
+								<string>knight_stand.plist</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -319,11 +321,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>kingar_attack.png</string>
+										<string>knight_stand.plist</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>5EE0E019134975DD008C0A93</string>
+										<string>5EE0E0341349895F008C0A93</string>
 										<key>history</key>
 										<array>
 											<string>5E724D1C12F8845F00319E12</string>
@@ -339,7 +341,8 @@
 											<string>5EE0DFF51349754D008C0A93</string>
 											<string>5EE0E016134975DD008C0A93</string>
 											<string>5EE0E017134975DD008C0A93</string>
-											<string>5EE0E018134975DD008C0A93</string>
+											<string>5EE0E0321349895F008C0A93</string>
+											<string>5EE0E0331349895F008C0A93</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -351,18 +354,16 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {887, 410}}</string>
+								<string>{{0, 0}, {887, 401}}</string>
 								<key>RubberWindowFrame</key>
-								<string>107 135 1095 741 0 0 1440 878 </string>
+								<string>2 137 1095 741 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>410pt</string>
+							<string>401pt</string>
 						</dict>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -373,14 +374,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 415}, {887, 285}}</string>
+								<string>{{0, 406}, {887, 294}}</string>
 								<key>RubberWindowFrame</key>
-								<string>107 135 1095 741 0 0 1440 878 </string>
+								<string>2 137 1095 741 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
 							<key>Proportion</key>
-							<string>285pt</string>
+							<string>294pt</string>
 						</dict>
 					</array>
 					<key>Proportion</key>
@@ -399,9 +400,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>5EE0DFF71349754D008C0A93</string>
+				<string>5EE0E02313498916008C0A93</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>5EE0DFF81349754D008C0A93</string>
+				<string>5EE0E02413498916008C0A93</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -543,7 +544,7 @@
 		<string>/Users/abutcher/FortSiege/FortSiege/FortSiege.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>107 135 1095 741 0 0 1440 878 </string>
+	<string>2 137 1095 741 0 0 1440 878 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>
@@ -620,7 +621,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>5E724D2412F8845F00319E12</string>
-				<string>5EE0DFF91349754D008C0A93</string>
+				<string>5EE0E02513498916008C0A93</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>

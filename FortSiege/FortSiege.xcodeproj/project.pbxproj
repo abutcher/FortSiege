@@ -80,6 +80,12 @@
 		5EE0E011134975B4008C0A93 /* kingar_stand.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EE0E00F134975B4008C0A93 /* kingar_stand.png */; };
 		5EE0E014134975BD008C0A93 /* kingar_walk.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5EE0E012134975BD008C0A93 /* kingar_walk.plist */; };
 		5EE0E015134975BD008C0A93 /* kingar_walk.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EE0E013134975BD008C0A93 /* kingar_walk.png */; };
+		5EE0E02813498922008C0A93 /* knight_attack.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5EE0E02613498922008C0A93 /* knight_attack.plist */; };
+		5EE0E02913498922008C0A93 /* knight_attack.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EE0E02713498922008C0A93 /* knight_attack.png */; };
+		5EE0E02C13498931008C0A93 /* knight_walk.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5EE0E02A13498931008C0A93 /* knight_walk.plist */; };
+		5EE0E02D13498931008C0A93 /* knight_walk.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EE0E02B13498931008C0A93 /* knight_walk.png */; };
+		5EE0E03013498955008C0A93 /* knight_stand.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5EE0E02E13498955008C0A93 /* knight_stand.plist */; };
+		5EE0E03113498955008C0A93 /* knight_stand.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EE0E02F13498955008C0A93 /* knight_stand.png */; };
 		DC6640030F83B3EA000B3E49 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC6640020F83B3EA000B3E49 /* AudioToolbox.framework */; };
 		DC6640050F83B3EA000B3E49 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC6640040F83B3EA000B3E49 /* OpenAL.framework */; };
 		DCCBF1B70F6022AE0040855A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCCBF1B60F6022AE0040855A /* CoreGraphics.framework */; };
@@ -341,6 +347,12 @@
 		5EE0E00F134975B4008C0A93 /* kingar_stand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kingar_stand.png; sourceTree = "<group>"; };
 		5EE0E012134975BD008C0A93 /* kingar_walk.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = kingar_walk.plist; sourceTree = "<group>"; };
 		5EE0E013134975BD008C0A93 /* kingar_walk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kingar_walk.png; sourceTree = "<group>"; };
+		5EE0E02613498922008C0A93 /* knight_attack.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = knight_attack.plist; sourceTree = "<group>"; };
+		5EE0E02713498922008C0A93 /* knight_attack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = knight_attack.png; sourceTree = "<group>"; };
+		5EE0E02A13498931008C0A93 /* knight_walk.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = knight_walk.plist; sourceTree = "<group>"; };
+		5EE0E02B13498931008C0A93 /* knight_walk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = knight_walk.png; sourceTree = "<group>"; };
+		5EE0E02E13498955008C0A93 /* knight_stand.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = knight_stand.plist; sourceTree = "<group>"; };
+		5EE0E02F13498955008C0A93 /* knight_stand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = knight_stand.png; sourceTree = "<group>"; };
 		DC6640020F83B3EA000B3E49 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		DC6640040F83B3EA000B3E49 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
 		DCCBF1B60F6022AE0040855A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -737,6 +749,7 @@
 		5EE0DFF213497522008C0A93 /* sprites */ = {
 			isa = PBXGroup;
 			children = (
+				5EE0E0211349890C008C0A93 /* knight */,
 				5EE0DFF413497545008C0A93 /* kingar */,
 				5EE0DFF313497530008C0A93 /* soldier */,
 			);
@@ -769,6 +782,19 @@
 				5EE0E0071349759E008C0A93 /* kingar_attack.png */,
 			);
 			name = kingar;
+			sourceTree = "<group>";
+		};
+		5EE0E0211349890C008C0A93 /* knight */ = {
+			isa = PBXGroup;
+			children = (
+				5EE0E02E13498955008C0A93 /* knight_stand.plist */,
+				5EE0E02F13498955008C0A93 /* knight_stand.png */,
+				5EE0E02A13498931008C0A93 /* knight_walk.plist */,
+				5EE0E02B13498931008C0A93 /* knight_walk.png */,
+				5EE0E02613498922008C0A93 /* knight_attack.plist */,
+				5EE0E02713498922008C0A93 /* knight_attack.png */,
+			);
+			name = knight;
 			sourceTree = "<group>";
 		};
 		E02BB764126CC223006E46A2 /* cocos2d */ = {
@@ -1185,6 +1211,12 @@
 				5EE0E011134975B4008C0A93 /* kingar_stand.png in Resources */,
 				5EE0E014134975BD008C0A93 /* kingar_walk.plist in Resources */,
 				5EE0E015134975BD008C0A93 /* kingar_walk.png in Resources */,
+				5EE0E02813498922008C0A93 /* knight_attack.plist in Resources */,
+				5EE0E02913498922008C0A93 /* knight_attack.png in Resources */,
+				5EE0E02C13498931008C0A93 /* knight_walk.plist in Resources */,
+				5EE0E02D13498931008C0A93 /* knight_walk.png in Resources */,
+				5EE0E03013498955008C0A93 /* knight_stand.plist in Resources */,
+				5EE0E03113498955008C0A93 /* knight_stand.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
