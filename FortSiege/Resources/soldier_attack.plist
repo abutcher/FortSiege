@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>frames</key>
+	<dict>
+		
+		<key>soldier_attack01.png</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{1, 2}, {16, 16}}</string>
+			<key>spriteOffset</key>
+			<string>{0, -1}</string>
+			<key>spriteSize</key>
+			<string>{16, 16}</string>
+			<key>spriteSourceSize</key>
+			<string>{18, 18}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{2, 2}, {16, 16}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		
+		<key>soldier_attack02.png</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{0, 0}, {17, 17}}</string>
+			<key>spriteOffset</key>
+			<string>{0, -0}</string>
+			<key>spriteSize</key>
+			<string>{17, 17}</string>
+			<key>spriteSourceSize</key>
+			<string>{17, 17}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{20, 2}, {17, 17}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		
+		<key>soldier_attack03.png</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{1, 1}, {15, 15}}</string>
+			<key>spriteOffset</key>
+			<string>{0, -0}</string>
+			<key>spriteSize</key>
+			<string>{15, 15}</string>
+			<key>spriteSourceSize</key>
+			<string>{17, 17}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{39, 2}, {15, 15}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		
+	</dict>
+	<key>metadata</key>
+	<dict>
+		<key>size</key>
+		<string>{512, 512}</string>
+	</dict>
+</dict>
+</plist>

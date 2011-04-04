@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>frames</key>
+	<dict>
+		
+		<key>kingar_walk01.png</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{1, 2}, {14, 16}}</string>
+			<key>spriteOffset</key>
+			<string>{0, -1}</string>
+			<key>spriteSize</key>
+			<string>{14, 16}</string>
+			<key>spriteSourceSize</key>
+			<string>{16, 18}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{74, 2}, {14, 16}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		
+		<key>kingar_walk02.png</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{1, 1}, {12, 16}}</string>
+			<key>spriteOffset</key>
+			<string>{0, -0}</string>
+			<key>spriteSize</key>
+			<string>{12, 16}</string>
+			<key>spriteSourceSize</key>
+			<string>{14, 18}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{60, 2}, {12, 16}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		
+		<key>kingar_walk03.png</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{1, 1}, {12, 16}}</string>
+			<key>spriteOffset</key>
+			<string>{0, -0}</string>
+			<key>spriteSize</key>
+			<string>{12, 16}</string>
+			<key>spriteSourceSize</key>
+			<string>{14, 18}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{46, 2}, {12, 16}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		
+		<key>kingar_walk04.png</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{1, 2}, {14, 16}}</string>
+			<key>spriteOffset</key>
+			<string>{0, -1}</string>
+			<key>spriteSize</key>
+			<string>{14, 16}</string>
+			<key>spriteSourceSize</key>
+			<string>{16, 18}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{30, 2}, {14, 16}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		
+		<key>kingar_walk05.png</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{1, 1}, {12, 16}}</string>
+			<key>spriteOffset</key>
+			<string>{0, -0}</string>
+			<key>spriteSize</key>
+			<string>{12, 16}</string>
+			<key>spriteSourceSize</key>
+			<string>{14, 18}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{16, 2}, {12, 16}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		
+		<key>kingar_walk06.png</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{1, 1}, {12, 16}}</string>
+			<key>spriteOffset</key>
+			<string>{0, -0}</string>
+			<key>spriteSize</key>
+			<string>{12, 16}</string>
+			<key>spriteSourceSize</key>
+			<string>{14, 18}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{2, 2}, {12, 16}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		
+	</dict>
+	<key>metadata</key>
+	<dict>
+		<key>size</key>
+		<string>{512, 512}</string>
+	</dict>
+</dict>
+</plist>
