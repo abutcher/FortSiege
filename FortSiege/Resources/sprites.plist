@@ -4,6 +4,7 @@
 <dict>
 	<key>frames</key>
 	<dict>
+		
 		<key>barrell_01.png</key>
 		<dict>
 			<key>aliases</key>
@@ -19,10 +20,11 @@
 			<key>spriteTrimmed</key>
 			<true/>
 			<key>textureRect</key>
-			<string>{{204, 38}, {8, 16}}</string>
+			<string>{{102, 147}, {8, 16}}</string>
 			<key>textureRotated</key>
 			<false/>
 		</dict>
+		
 		<key>barrell_02.png</key>
 		<dict>
 			<key>aliases</key>
@@ -38,10 +40,11 @@
 			<key>spriteTrimmed</key>
 			<true/>
 			<key>textureRect</key>
-			<string>{{214, 38}, {8, 16}}</string>
+			<string>{{55, 144}, {8, 16}}</string>
 			<key>textureRotated</key>
 			<false/>
 		</dict>
+		
 		<key>barrellman_stand_01.png</key>
 		<dict>
 			<key>aliases</key>
@@ -57,10 +60,11 @@
 			<key>spriteTrimmed</key>
 			<true/>
 			<key>textureRect</key>
-			<string>{{236, 37}, {9, 16}}</string>
+			<string>{{52, 100}, {9, 16}}</string>
 			<key>textureRotated</key>
 			<false/>
 		</dict>
+		
 		<key>barrelman_climb_01.png</key>
 		<dict>
 			<key>aliases</key>
@@ -76,10 +80,11 @@
 			<key>spriteTrimmed</key>
 			<true/>
 			<key>textureRect</key>
-			<string>{{134, 69}, {10, 16}}</string>
+			<string>{{90, 147}, {10, 16}}</string>
 			<key>textureRotated</key>
 			<false/>
 		</dict>
+		
 		<key>barrelman_climb_02.png</key>
 		<dict>
 			<key>aliases</key>
@@ -95,10 +100,11 @@
 			<key>spriteTrimmed</key>
 			<true/>
 			<key>textureRect</key>
-			<string>{{486, 20}, {10, 16}}</string>
+			<string>{{78, 151}, {10, 16}}</string>
 			<key>textureRotated</key>
 			<false/>
 		</dict>
+		
 		<key>barrelman_walk_01.png</key>
 		<dict>
 			<key>aliases</key>
@@ -114,10 +120,11 @@
 			<key>spriteTrimmed</key>
 			<true/>
 			<key>textureRect</key>
-			<string>{{83, 69}, {15, 16}}</string>
+			<string>{{2, 160}, {15, 16}}</string>
 			<key>textureRotated</key>
 			<false/>
 		</dict>
+		
 		<key>barrelman_walk_02.png</key>
 		<dict>
 			<key>aliases</key>
@@ -133,10 +140,11 @@
 			<key>spriteTrimmed</key>
 			<true/>
 			<key>textureRect</key>
-			<string>{{100, 69}, {15, 16}}</string>
+			<string>{{38, 144}, {15, 16}}</string>
 			<key>textureRotated</key>
 			<false/>
 		</dict>
+		
 		<key>barrelman_walk_03.png</key>
 		<dict>
 			<key>aliases</key>
@@ -152,10 +160,11 @@
 			<key>spriteTrimmed</key>
 			<true/>
 			<key>textureRect</key>
-			<string>{{255, 2}, {14, 16}}</string>
+			<string>{{126, 75}, {14, 16}}</string>
 			<key>textureRotated</key>
 			<false/>
 		</dict>
+		
 		<key>barrelman_walk_04.png</key>
 		<dict>
 			<key>aliases</key>
@@ -171,10 +180,11 @@
 			<key>spriteTrimmed</key>
 			<true/>
 			<key>textureRect</key>
-			<string>{{117, 69}, {15, 16}}</string>
+			<string>{{65, 133}, {15, 16}}</string>
 			<key>textureRotated</key>
 			<false/>
 		</dict>
+		
 		<key>barrelman_walk_05.png</key>
 		<dict>
 			<key>aliases</key>
@@ -190,10 +200,11 @@
 			<key>spriteTrimmed</key>
 			<true/>
 			<key>textureRect</key>
-			<string>{{204, 2}, {15, 16}}</string>
+			<string>{{65, 115}, {15, 16}}</string>
 			<key>textureRotated</key>
 			<false/>
 		</dict>
+		
 		<key>barrelman_walk_06.png</key>
 		<dict>
 			<key>aliases</key>
@@ -209,10 +220,31 @@
 			<key>spriteTrimmed</key>
 			<true/>
 			<key>textureRect</key>
-			<string>{{221, 2}, {15, 16}}</string>
+			<string>{{21, 142}, {15, 16}}</string>
 			<key>textureRotated</key>
 			<false/>
 		</dict>
+		
+		<key>dirt.png</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{0, 0}, {48, 48}}</string>
+			<key>spriteOffset</key>
+			<string>{0, -0}</string>
+			<key>spriteSize</key>
+			<string>{48, 48}</string>
+			<key>spriteSourceSize</key>
+			<string>{48, 48}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{2, 75}, {48, 48}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		
 		<key>kindar_stand_01.png</key>
 		<dict>
 			<key>aliases</key>
@@ -228,48 +260,11 @@
 			<key>spriteTrimmed</key>
 			<true/>
 			<key>textureRect</key>
-			<string>{{238, 19}, {14, 16}}</string>
+			<string>{{111, 93}, {14, 16}}</string>
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		<key>kingar_attack_02.png</key>
-		<dict>
-			<key>aliases</key>
-			<array/>
-			<key>spriteColorRect</key>
-			<string>{{1, 1}, {17, 16}}</string>
-			<key>spriteOffset</key>
-			<string>{0, -0}</string>
-			<key>spriteSize</key>
-			<string>{17, 16}</string>
-			<key>spriteSourceSize</key>
-			<string>{19, 18}</string>
-			<key>spriteTrimmed</key>
-			<true/>
-			<key>textureRect</key>
-			<string>{{21, 86}, {17, 16}}</string>
-			<key>textureRotated</key>
-			<false/>
-		</dict>
-		<key>kingar_attack_03.png</key>
-		<dict>
-			<key>aliases</key>
-			<array/>
-			<key>spriteColorRect</key>
-			<string>{{1, 3}, {21, 14}}</string>
-			<key>spriteOffset</key>
-			<string>{0, -1}</string>
-			<key>spriteSize</key>
-			<string>{21, 14}</string>
-			<key>spriteSourceSize</key>
-			<string>{23, 18}</string>
-			<key>spriteTrimmed</key>
-			<true/>
-			<key>textureRect</key>
-			<string>{{2, 69}, {21, 14}}</string>
-			<key>textureRotated</key>
-			<false/>
-		</dict>
+		
 		<key>kingar_attack_01.png</key>
 		<dict>
 			<key>aliases</key>
@@ -285,10 +280,51 @@
 			<key>spriteTrimmed</key>
 			<true/>
 			<key>textureRect</key>
-			<string>{{434, 2}, {11, 20}}</string>
+			<string>{{63, 75}, {11, 20}}</string>
 			<key>textureRotated</key>
 			<false/>
 		</dict>
+		
+		<key>kingar_attack_02.png</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{1, 1}, {17, 16}}</string>
+			<key>spriteOffset</key>
+			<string>{0, -0}</string>
+			<key>spriteSize</key>
+			<string>{17, 16}</string>
+			<key>spriteSourceSize</key>
+			<string>{19, 18}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{63, 97}, {17, 16}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		
+		<key>kingar_attack_03.png</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{1, 3}, {21, 14}}</string>
+			<key>spriteOffset</key>
+			<string>{0, -1}</string>
+			<key>spriteSize</key>
+			<string>{21, 14}</string>
+			<key>spriteSourceSize</key>
+			<string>{23, 18}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{2, 125}, {21, 14}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		
 		<key>kingar_climb_01.png</key>
 		<dict>
 			<key>aliases</key>
@@ -304,10 +340,11 @@
 			<key>spriteTrimmed</key>
 			<true/>
 			<key>textureRect</key>
-			<string>{{350, 2}, {12, 16}}</string>
+			<string>{{141, 93}, {12, 16}}</string>
 			<key>textureRotated</key>
 			<false/>
 		</dict>
+		
 		<key>kingar_climb_02.png</key>
 		<dict>
 			<key>aliases</key>
@@ -323,10 +360,11 @@
 			<key>spriteTrimmed</key>
 			<true/>
 			<key>textureRect</key>
-			<string>{{364, 2}, {12, 16}}</string>
+			<string>{{128, 111}, {12, 16}}</string>
 			<key>textureRotated</key>
 			<false/>
 		</dict>
+		
 		<key>kingar_walk_01.png</key>
 		<dict>
 			<key>aliases</key>
@@ -342,10 +380,11 @@
 			<key>spriteTrimmed</key>
 			<true/>
 			<key>textureRect</key>
-			<string>{{204, 20}, {14, 16}}</string>
+			<string>{{98, 111}, {14, 16}}</string>
 			<key>textureRotated</key>
 			<false/>
 		</dict>
+		
 		<key>kingar_walk_02.png</key>
 		<dict>
 			<key>aliases</key>
@@ -361,10 +400,11 @@
 			<key>spriteTrimmed</key>
 			<true/>
 			<key>textureRect</key>
-			<string>{{378, 2}, {12, 16}}</string>
+			<string>{{127, 129}, {12, 16}}</string>
 			<key>textureRotated</key>
 			<false/>
 		</dict>
+		
 		<key>kingar_walk_03.png</key>
 		<dict>
 			<key>aliases</key>
@@ -380,10 +420,11 @@
 			<key>spriteTrimmed</key>
 			<true/>
 			<key>textureRect</key>
-			<string>{{392, 2}, {12, 16}}</string>
+			<string>{{127, 93}, {12, 16}}</string>
 			<key>textureRotated</key>
 			<false/>
 		</dict>
+		
 		<key>kingar_walk_04.png</key>
 		<dict>
 			<key>aliases</key>
@@ -399,10 +440,11 @@
 			<key>spriteTrimmed</key>
 			<true/>
 			<key>textureRect</key>
-			<string>{{220, 20}, {14, 16}}</string>
+			<string>{{110, 75}, {14, 16}}</string>
 			<key>textureRotated</key>
 			<false/>
 		</dict>
+		
 		<key>kingar_walk_05.png</key>
 		<dict>
 			<key>aliases</key>
@@ -418,10 +460,11 @@
 			<key>spriteTrimmed</key>
 			<true/>
 			<key>textureRect</key>
-			<string>{{406, 2}, {12, 16}}</string>
+			<string>{{114, 111}, {12, 16}}</string>
 			<key>textureRotated</key>
 			<false/>
 		</dict>
+		
 		<key>kingar_walk_06.png</key>
 		<dict>
 			<key>aliases</key>
@@ -437,10 +480,11 @@
 			<key>spriteTrimmed</key>
 			<true/>
 			<key>textureRect</key>
-			<string>{{420, 2}, {12, 16}}</string>
+			<string>{{113, 129}, {12, 16}}</string>
 			<key>textureRotated</key>
 			<false/>
 		</dict>
+		
 		<key>knight_attack_01.png</key>
 		<dict>
 			<key>aliases</key>
@@ -456,10 +500,11 @@
 			<key>spriteTrimmed</key>
 			<true/>
 			<key>textureRect</key>
-			<string>{{2, 85}, {17, 17}}</string>
+			<string>{{46, 125}, {17, 17}}</string>
 			<key>textureRotated</key>
 			<false/>
 		</dict>
+		
 		<key>knight_attack_02.png</key>
 		<dict>
 			<key>aliases</key>
@@ -475,10 +520,11 @@
 			<key>spriteTrimmed</key>
 			<true/>
 			<key>textureRect</key>
-			<string>{{254, 20}, {9, 23}}</string>
+			<string>{{52, 75}, {9, 23}}</string>
 			<key>textureRotated</key>
 			<false/>
 		</dict>
+		
 		<key>knight_attack_03.png</key>
 		<dict>
 			<key>aliases</key>
@@ -494,10 +540,11 @@
 			<key>spriteTrimmed</key>
 			<true/>
 			<key>textureRect</key>
-			<string>{{25, 69}, {19, 15}}</string>
+			<string>{{25, 125}, {19, 15}}</string>
 			<key>textureRotated</key>
 			<false/>
 		</dict>
+		
 		<key>knight_stand_01.png</key>
 		<dict>
 			<key>aliases</key>
@@ -513,10 +560,11 @@
 			<key>spriteTrimmed</key>
 			<true/>
 			<key>textureRect</key>
-			<string>{{335, 2}, {13, 16}}</string>
+			<string>{{98, 129}, {13, 16}}</string>
 			<key>textureRotated</key>
 			<false/>
 		</dict>
+		
 		<key>knight_walk_01.png</key>
 		<dict>
 			<key>aliases</key>
@@ -532,10 +580,11 @@
 			<key>spriteTrimmed</key>
 			<true/>
 			<key>textureRect</key>
-			<string>{{271, 2}, {14, 16}}</string>
+			<string>{{82, 129}, {14, 16}}</string>
 			<key>textureRotated</key>
 			<false/>
 		</dict>
+		
 		<key>knight_walk_02.png</key>
 		<dict>
 			<key>aliases</key>
@@ -551,10 +600,11 @@
 			<key>spriteTrimmed</key>
 			<true/>
 			<key>textureRect</key>
-			<string>{{447, 2}, {11, 16}}</string>
+			<string>{{15, 178}, {11, 16}}</string>
 			<key>textureRotated</key>
 			<false/>
 		</dict>
+		
 		<key>knight_walk_03.png</key>
 		<dict>
 			<key>aliases</key>
@@ -570,10 +620,11 @@
 			<key>spriteTrimmed</key>
 			<true/>
 			<key>textureRect</key>
-			<string>{{460, 2}, {11, 16}}</string>
+			<string>{{2, 178}, {11, 16}}</string>
 			<key>textureRotated</key>
 			<false/>
 		</dict>
+		
 		<key>knight_walk_04.png</key>
 		<dict>
 			<key>aliases</key>
@@ -589,10 +640,11 @@
 			<key>spriteTrimmed</key>
 			<true/>
 			<key>textureRect</key>
-			<string>{{287, 2}, {14, 16}}</string>
+			<string>{{82, 111}, {14, 16}}</string>
 			<key>textureRotated</key>
 			<false/>
 		</dict>
+		
 		<key>knight_walk_05.png</key>
 		<dict>
 			<key>aliases</key>
@@ -608,10 +660,11 @@
 			<key>spriteTrimmed</key>
 			<true/>
 			<key>textureRect</key>
-			<string>{{473, 2}, {11, 16}}</string>
+			<string>{{36, 162}, {11, 16}}</string>
 			<key>textureRotated</key>
 			<false/>
 		</dict>
+		
 		<key>knight_walk_06.png</key>
 		<dict>
 			<key>aliases</key>
@@ -627,10 +680,31 @@
 			<key>spriteTrimmed</key>
 			<true/>
 			<key>textureRect</key>
-			<string>{{486, 2}, {11, 16}}</string>
+			<string>{{65, 151}, {11, 16}}</string>
 			<key>textureRotated</key>
 			<false/>
 		</dict>
+		
+		<key>menu.png</key>
+		<dict>
+			<key>aliases</key>
+			<array/>
+			<key>spriteColorRect</key>
+			<string>{{0, 0}, {256, 71}}</string>
+			<key>spriteOffset</key>
+			<string>{0, -0}</string>
+			<key>spriteSize</key>
+			<string>{256, 71}</string>
+			<key>spriteSourceSize</key>
+			<string>{256, 71}</string>
+			<key>spriteTrimmed</key>
+			<true/>
+			<key>textureRect</key>
+			<string>{{2, 2}, {256, 71}}</string>
+			<key>textureRotated</key>
+			<false/>
+		</dict>
+		
 		<key>soldier_attack_01.png</key>
 		<dict>
 			<key>aliases</key>
@@ -646,10 +720,11 @@
 			<key>spriteTrimmed</key>
 			<true/>
 			<key>textureRect</key>
-			<string>{{65, 69}, {16, 16}}</string>
+			<string>{{76, 75}, {16, 16}}</string>
 			<key>textureRotated</key>
 			<false/>
 		</dict>
+		
 		<key>soldier_attack_02.png</key>
 		<dict>
 			<key>aliases</key>
@@ -665,10 +740,11 @@
 			<key>spriteTrimmed</key>
 			<true/>
 			<key>textureRect</key>
-			<string>{{46, 69}, {17, 17}}</string>
+			<string>{{2, 141}, {17, 17}}</string>
 			<key>textureRotated</key>
 			<false/>
 		</dict>
+		
 		<key>soldier_attack_03.png</key>
 		<dict>
 			<key>aliases</key>
@@ -684,10 +760,11 @@
 			<key>spriteTrimmed</key>
 			<true/>
 			<key>textureRect</key>
-			<string>{{238, 2}, {15, 15}}</string>
+			<string>{{19, 160}, {15, 15}}</string>
 			<key>textureRotated</key>
 			<false/>
 		</dict>
+		
 		<key>soldier_stand_01.png</key>
 		<dict>
 			<key>aliases</key>
@@ -703,10 +780,11 @@
 			<key>spriteTrimmed</key>
 			<true/>
 			<key>textureRect</key>
-			<string>{{499, 2}, {11, 16}}</string>
+			<string>{{142, 111}, {11, 16}}</string>
 			<key>textureRotated</key>
 			<false/>
 		</dict>
+		
 		<key>soldier_walk_01.png</key>
 		<dict>
 			<key>aliases</key>
@@ -722,10 +800,11 @@
 			<key>spriteTrimmed</key>
 			<true/>
 			<key>textureRect</key>
-			<string>{{303, 2}, {14, 16}}</string>
+			<string>{{94, 75}, {14, 16}}</string>
 			<key>textureRotated</key>
 			<false/>
 		</dict>
+		
 		<key>soldier_walk_02.png</key>
 		<dict>
 			<key>aliases</key>
@@ -741,10 +820,11 @@
 			<key>spriteTrimmed</key>
 			<true/>
 			<key>textureRect</key>
-			<string>{{447, 20}, {11, 16}}</string>
+			<string>{{141, 138}, {11, 16}}</string>
 			<key>textureRotated</key>
 			<false/>
 		</dict>
+		
 		<key>soldier_walk_03.png</key>
 		<dict>
 			<key>aliases</key>
@@ -760,10 +840,11 @@
 			<key>spriteTrimmed</key>
 			<true/>
 			<key>textureRect</key>
-			<string>{{460, 20}, {11, 16}}</string>
+			<string>{{142, 75}, {11, 16}}</string>
 			<key>textureRotated</key>
 			<false/>
 		</dict>
+		
 		<key>soldier_walk_04.png</key>
 		<dict>
 			<key>aliases</key>
@@ -779,10 +860,11 @@
 			<key>spriteTrimmed</key>
 			<true/>
 			<key>textureRect</key>
-			<string>{{498, 20}, {10, 16}}</string>
+			<string>{{49, 162}, {10, 16}}</string>
 			<key>textureRotated</key>
 			<false/>
 		</dict>
+		
 		<key>soldier_walk_05.png</key>
 		<dict>
 			<key>aliases</key>
@@ -798,10 +880,11 @@
 			<key>spriteTrimmed</key>
 			<true/>
 			<key>textureRect</key>
-			<string>{{319, 2}, {14, 16}}</string>
+			<string>{{82, 93}, {14, 16}}</string>
 			<key>textureRotated</key>
 			<false/>
 		</dict>
+		
 		<key>soldier_walk_06.png</key>
 		<dict>
 			<key>aliases</key>
@@ -817,10 +900,11 @@
 			<key>spriteTrimmed</key>
 			<true/>
 			<key>textureRect</key>
-			<string>{{473, 20}, {11, 16}}</string>
+			<string>{{98, 93}, {11, 16}}</string>
 			<key>textureRotated</key>
 			<false/>
 		</dict>
+		
 		<key>tent_01.png</key>
 		<dict>
 			<key>aliases</key>
@@ -836,10 +920,11 @@
 			<key>spriteTrimmed</key>
 			<true/>
 			<key>textureRect</key>
-			<string>{{2, 2}, {70, 65}}</string>
+			<string>{{318, 2}, {70, 65}}</string>
 			<key>textureRotated</key>
 			<false/>
 		</dict>
+		
 		<key>tent_02.png</key>
 		<dict>
 			<key>aliases</key>
@@ -855,10 +940,11 @@
 			<key>spriteTrimmed</key>
 			<true/>
 			<key>textureRect</key>
-			<string>{{74, 2}, {70, 65}}</string>
+			<string>{{260, 71}, {70, 65}}</string>
 			<key>textureRotated</key>
 			<false/>
 		</dict>
+		
 		<key>tree.png</key>
 		<dict>
 			<key>aliases</key>
@@ -874,10 +960,11 @@
 			<key>spriteTrimmed</key>
 			<true/>
 			<key>textureRect</key>
-			<string>{{146, 2}, {56, 67}}</string>
+			<string>{{260, 2}, {56, 67}}</string>
 			<key>textureRotated</key>
 			<false/>
 		</dict>
+		
 	</dict>
 	<key>metadata</key>
 	<dict>
