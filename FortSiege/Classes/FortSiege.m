@@ -19,7 +19,7 @@
 	CCScene *scene = [CCScene node];
 	
 	// 'layer' is an autorelease object.
-	FortSiege *layer = [FortSiege node];
+	LevelScene *layer = [LevelScene node];
     
 	// add layer as a child to scene
 	[scene addChild: layer];
@@ -34,20 +34,6 @@
 	// always call "super" init
 	// Apple recommends to re-assign "self" with the "super" return value
 	if( (self=[super init] )) {
-		
-		// create and initialize a Label
-		CCLabelTTF *label = [CCLabelTTF labelWithString:@"Hello World" fontName:@"Helvetica" fontSize:64];
-
-		// ask director the the window size
-		CGSize size = [[CCDirector sharedDirector] winSize];
-	
-		// position the label on the center of the screen
-        label.position =  ccp( size.width /2 , size.height/2 );
-        
-        [[CCDirector sharedDirector] replaceScene:[LevelScene scene]];
-		
-		// add the label as a child to this Layer
-		[self addChild: label];
         
 	}
 	return self;
