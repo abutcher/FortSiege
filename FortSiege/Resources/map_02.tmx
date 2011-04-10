@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" orientation="orthogonal" width="32" height="24" tilewidth="32" tileheight="32">
  <tileset firstgid="1" name="dirt" tilewidth="32" tileheight="32">
-  <image source="../../../Desktop/sprites/dirt.png" width="32" height="32"/>
+  <image source="dirt.png" width="32" height="32"/>
   <tile id="0">
    <properties>
     <property name="ground" value="1"/>
@@ -9,7 +9,7 @@
   </tile>
  </tileset>
  <tileset firstgid="2" name="tree" tilewidth="32" tileheight="32">
-  <image source="../../../Desktop/sprites/tree.png" width="64" height="64"/>
+  <image source="tree.png" width="64" height="64"/>
   <tile id="0">
    <properties>
     <property name="tree" value="1"/>
@@ -32,7 +32,7 @@
   </tile>
  </tileset>
  <tileset firstgid="6" name="tent_01" tilewidth="32" tileheight="32">
-  <image source="../../../Desktop/sprites/tent_01.png" width="64" height="64"/>
+  <image source="tent_01.png" width="64" height="64"/>
   <tile id="0">
    <properties>
     <property name="tent" value="1"/>
@@ -55,7 +55,7 @@
   </tile>
  </tileset>
  <tileset firstgid="10" name="mountain_backdrop" tilewidth="32" tileheight="32">
-  <image source="../../../Desktop/sprites/mountain_backdrop.png" width="1024" height="416"/>
+  <image source="mountain_backdrop.png" width="1024" height="416"/>
  </tileset>
  <layer name="Sky" width="32" height="24">
   <data encoding="base64">
