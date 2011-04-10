@@ -26,19 +26,21 @@
 
 -(void) startGame
 {
-    
+    NSLog(@"Start game");
     [[CCDirector sharedDirector] replaceScene:[LevelScene node]];
     
 }
 
 -(void) aboutUs
 {
+    NSLog(@"About us");
     [[CCDirector sharedDirector] replaceScene:[AboutUsScene node]]; 
                                                
 }
 
 -(id) init
 {
+    self.isTouchEnabled = YES;
     
     if ( ( self=[super init] )) 
     {
@@ -48,15 +50,18 @@
         _title.position = ccp(winSize.width/2, 700);
         [self addChild:_title];
         
+        NSLog(@"init a la fortsiege");
+        
         CCLabelTTF *_startGame = [[CCLabelTTF labelWithString:@"Start Game" fontName:@"Arial" fontSize:32.0] retain];
-        //_startGame.position = ccp(winSize.width/2, 500);
-        CCMenuItem *startGameItem = [CCMenuItemLabel itemWithLabel:_startGame target:nil selector:@selector(startGame)];
+        //_startGame.position = ccp(winSize.width/2, 200);
+        CCMenuItem *startGameItem = [CCMenuItemLabel itemWithLabel:_startGame target:self selector:@selector(startGame)];
         
         CCLabelTTF *_aboutUs = [[CCLabelTTF labelWithString:@"About" fontName:@"Arial" fontSize:32.0] retain];
-        _aboutUs.position = ccp(winSize.width/2, 450);
-        CCMenuItem *aboutUsItem = [CCMenuItemLabel itemWithLabel:_aboutUs target:nil selector:@selector(aboutUs)];
+        _aboutUs.position = ccp(winSize.width/2, 150);
+        CCMenuItem *aboutUsItem = [CCMenuItemLabel itemWithLabel:_aboutUs target:self selector:@selector(aboutUs)];
         
         CCMenu *homeMenu = [CCMenu menuWithItems:startGameItem,aboutUsItem,nil];
+        //homeMenu.position = CGPointZero;
         [self addChild:homeMenu];
     }
     

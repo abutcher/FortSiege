@@ -37,12 +37,8 @@
         self.tileMap = [CCTMXTiledMap tiledMapWithTMXFile:@"map_02.tmx"];
         
         self.background = [_tileMap layerNamed:@"Sky"];
-        [self addChild:_tileMap z:-1];
-        
-        
         self.background2 = [_tileMap layerNamed:@"Background"];
         [self addChild:_tileMap z:-1];
-        
         
     }
     
