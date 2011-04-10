@@ -68,6 +68,7 @@
 		5E059A4D13521BA300C6D7C8 /* tent_02.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E059A4B13521BA300C6D7C8 /* tent_02.png */; };
 		5E059A4F13521BA900C6D7C8 /* dirt.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E059A4E13521BA900C6D7C8 /* dirt.png */; };
 		5E059A5113521BAF00C6D7C8 /* tree.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E059A5013521BAF00C6D7C8 /* tree.png */; };
+		5E059A63135221F300C6D7C8 /* map_01.tmx in Resources */ = {isa = PBXBuildFile; fileRef = 5E059A62135221F300C6D7C8 /* map_01.tmx */; };
 		5E0D7E17134994C700885677 /* soldier_attack.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5E0D7E15134994C700885677 /* soldier_attack.plist */; };
 		5E0D7E18134994C700885677 /* soldier_attack.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E0D7E16134994C700885677 /* soldier_attack.png */; };
 		5E0D7E1B134994F000885677 /* soldier_stand.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5E0D7E19134994F000885677 /* soldier_stand.plist */; };
@@ -342,6 +343,7 @@
 		5E059A4B13521BA300C6D7C8 /* tent_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tent_02.png; sourceTree = "<group>"; };
 		5E059A4E13521BA900C6D7C8 /* dirt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dirt.png; sourceTree = "<group>"; };
 		5E059A5013521BAF00C6D7C8 /* tree.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tree.png; sourceTree = "<group>"; };
+		5E059A62135221F300C6D7C8 /* map_01.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = map_01.tmx; sourceTree = "<group>"; };
 		5E0D7E15134994C700885677 /* soldier_attack.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = soldier_attack.plist; sourceTree = "<group>"; };
 		5E0D7E16134994C700885677 /* soldier_attack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = soldier_attack.png; sourceTree = "<group>"; };
 		5E0D7E19134994F000885677 /* soldier_stand.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = soldier_stand.plist; sourceTree = "<group>"; };
@@ -758,6 +760,7 @@
 		50F414EB1069373D002A0D5E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5E059A65135221FB00C6D7C8 /* Maps */,
 				5E059A4813521B8B00C6D7C8 /* Tiles */,
 				5EE0DFF213497522008C0A93 /* sprites */,
 				5E724D3912F88AAD00319E12 /* icon.png */,
@@ -779,6 +782,14 @@
 				5E059A4B13521BA300C6D7C8 /* tent_02.png */,
 			);
 			name = Tiles;
+			sourceTree = "<group>";
+		};
+		5E059A65135221FB00C6D7C8 /* Maps */ = {
+			isa = PBXGroup;
+			children = (
+				5E059A62135221F300C6D7C8 /* map_01.tmx */,
+			);
+			name = Maps;
 			sourceTree = "<group>";
 		};
 		5EE0DFF213497522008C0A93 /* sprites */ = {
@@ -1256,6 +1267,7 @@
 				5E059A4D13521BA300C6D7C8 /* tent_02.png in Resources */,
 				5E059A4F13521BA900C6D7C8 /* dirt.png in Resources */,
 				5E059A5113521BAF00C6D7C8 /* tree.png in Resources */,
+				5E059A63135221F300C6D7C8 /* map_01.tmx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
