@@ -13,6 +13,7 @@
     
     CCTMXTiledMap *_tileMap;
     CCTMXLayer *_background;
+    CCTMXLayer *_background2;
     
 }
 
@@ -20,5 +21,6 @@
 
 @property (nonatomic, retain) CCTMXTiledMap *tileMap;
 @property (nonatomic, retain) CCTMXLayer *background;
+@property (nonatomic, retain) CCTMXLayer *background2;
 
 @end

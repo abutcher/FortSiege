@@ -13,6 +13,7 @@
 
 @synthesize tileMap = _tileMap;
 @synthesize background = _background;
+@synthesize background2 = _background2;
 
 +(id) scene
 {
@@ -33,10 +34,15 @@
 
     if ( ( self=[super init] )) {
         
-        self.tileMap = [CCTMXTiledMap tiledMapWithTMXFile:@"map_01.tmx"];
-        self.background = [_tileMap layerNamed:@"Tile Layer 1"];
+        self.tileMap = [CCTMXTiledMap tiledMapWithTMXFile:@"map_02.tmx"];
         
+        self.background = [_tileMap layerNamed:@"Sky"];
         [self addChild:_tileMap z:-1];
+        
+        
+        self.background2 = [_tileMap layerNamed:@"Background"];
+        //[self addChild:_tileMap z:-1];
+        
         
     }
     

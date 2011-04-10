@@ -7,6 +7,7 @@
 //
 
 #import "MainMenuScene.h"
+#import "LevelScene.h"
 
 
 @implementation MainMenuScene
@@ -24,6 +25,14 @@
     
 }
 
+-(void) startGame
+{
+    
+    [[CCDirector sharedDirector] runWithScene:[LevelScene node]];
+    
+}
+
+
 -(id) init
 {
     
@@ -35,6 +44,14 @@
         _title.position = ccp(winSize.width/2, 20);
         [self addChild:_title];
         
+        CCLabelTTF *_startGame = [[CCLabelTTF labelWithString:@"Start Game" fontName:@"Arial" fontSize:32.0] retain];
+        CCMenuItem *startGameItem = [CCMenuItemLabel itemWithLabel:_startGame target:nil selector:@selector(startGame)];
+        
+        CCLabelTTF *_aboutUs = [[CCLabelTTF labelWithString:@"About" fontName:@"Arial" fontSize:32.0] retain];
+        CCMenuItem *aboutUsItem = [CCMenuItemLabel itemWithLabel:_aboutUs target:nil selector:@selector(aboutUs)];
+        
+        CCMenu *homeMenu = [CCMenu menuWithItems:startGameItem,nil];
+        [self addChild:homeMenu];
     }
     
     return self;
