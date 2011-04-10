@@ -91,6 +91,7 @@
 		5E0D7E3C1349954C00885677 /* kingar_walk.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E0D7E3A1349954C00885677 /* kingar_walk.png */; };
 		5E724D2E12F889A100319E12 /* icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 5E724D2D12F889A100319E12 /* icon.icns */; };
 		5E724D3A12F88AAD00319E12 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E724D3912F88AAD00319E12 /* icon.png */; };
+		B96F7B44135228A500DC5313 /* LevelScene.m in Sources */ = {isa = PBXBuildFile; fileRef = B96F7B43135228A500DC5313 /* LevelScene.m */; };
 		B977EB7E134A2C4B001298FC /* GameObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B977EB7D134A2C4B001298FC /* GameObject.m */; };
 		B977EB82134A582D001298FC /* DynamicGameObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B977EB81134A582D001298FC /* DynamicGameObject.m */; };
 		B977EB85134A59C7001298FC /* StaticGameObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B977EB84134A59C7001298FC /* StaticGameObject.m */; };
@@ -366,6 +367,8 @@
 		5E0D7E3A1349954C00885677 /* kingar_walk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kingar_walk.png; sourceTree = "<group>"; };
 		5E724D2D12F889A100319E12 /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = icon.icns; sourceTree = "<group>"; };
 		5E724D3912F88AAD00319E12 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		B96F7B42135228A500DC5313 /* LevelScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelScene.h; sourceTree = "<group>"; };
+		B96F7B43135228A500DC5313 /* LevelScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelScene.m; sourceTree = "<group>"; };
 		B977EB7C134A2C4B001298FC /* GameObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameObject.h; sourceTree = "<group>"; };
 		B977EB7D134A2C4B001298FC /* GameObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameObject.m; sourceTree = "<group>"; };
 		B977EB80134A582D001298FC /* DynamicGameObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynamicGameObject.h; sourceTree = "<group>"; };
@@ -638,6 +641,8 @@
 		2D500B1D0D5A766B00DBA0E3 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				B96F7B42135228A500DC5313 /* LevelScene.h */,
+				B96F7B43135228A500DC5313 /* LevelScene.m */,
 				E0F80F5D120A0182005866B8 /* GameConfig.h */,
 				506EDC2F102F528A00A389B3 /* FortSiege.h */,
 				506EDC30102F528A00A389B3 /* FortSiege.m */,
@@ -1285,6 +1290,7 @@
 				B977EB7E134A2C4B001298FC /* GameObject.m in Sources */,
 				B977EB82134A582D001298FC /* DynamicGameObject.m in Sources */,
 				B977EB85134A59C7001298FC /* StaticGameObject.m in Sources */,
+				B96F7B44135228A500DC5313 /* LevelScene.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

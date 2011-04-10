@@ -7,7 +7,6 @@
 //
 
 #import "cocos2d.h"
-
 #import "FortSiegeAppDelegate.h"
 #import "GameConfig.h"
 #import "FortSiege.h"

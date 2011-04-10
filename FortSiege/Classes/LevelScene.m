@@ -29,8 +29,14 @@
 
 -(id) init
 {
+    self.isTouchEnabled = YES;
 
     if ( ( self=[super init] )) {
+        
+        self.tileMap = [CCTMXTiledMap tiledMapWithTMXFile:@"map_01.tmx"];
+        self.background = [_tileMap layerNamed:@"Tile Layer 1"];
+        
+        [self addChild:_tileMap z:-1];
         
     }
     
@@ -38,8 +44,15 @@
 
 }
 
+- (void) ccTouchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    
+}
+
 -(id) initWithLevel:(NSString*)FileName
 {
+    self.isTouchEnabled = YES;
+    
     if ( ( self=[super init] )) {
         
         self.tileMap = [CCTMXTiledMap tiledMapWithTMXFile:FileName];
