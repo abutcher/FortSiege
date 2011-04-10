@@ -7,7 +7,6 @@
 //
 
 #import "MainMenuScene.h"
-#import "LevelScene.h"
 
 
 @implementation MainMenuScene
@@ -28,10 +27,15 @@
 -(void) startGame
 {
     
-    [[CCDirector sharedDirector] runWithScene:[LevelScene node]];
+    [[CCDirector sharedDirector] replaceScene:[LevelScene node]];
     
 }
 
+-(void) aboutUs
+{
+    [[CCDirector sharedDirector] replaceScene:[AboutUsScene node]]; 
+                                               
+}
 
 -(id) init
 {
@@ -40,17 +44,19 @@
     {
         CGSize winSize = [[CCDirector sharedDirector] winSize];
         
-        _title = [[CCLabelTTF labelWithString:@"FortSiege" dimensions:CGSizeMake(320, 50) alignment:UITextAlignmentCenter fontName:@"Arial" fontSize:32.0] retain];
-        _title.position = ccp(winSize.width/2, 20);
+        _title = [[CCLabelTTF labelWithString:@"FortSiege" dimensions:CGSizeMake(320, 30) alignment:UITextAlignmentCenter fontName:@"Arial" fontSize:32.0] retain];
+        _title.position = ccp(winSize.width/2, 700);
         [self addChild:_title];
         
         CCLabelTTF *_startGame = [[CCLabelTTF labelWithString:@"Start Game" fontName:@"Arial" fontSize:32.0] retain];
+        //_startGame.position = ccp(winSize.width/2, 500);
         CCMenuItem *startGameItem = [CCMenuItemLabel itemWithLabel:_startGame target:nil selector:@selector(startGame)];
         
         CCLabelTTF *_aboutUs = [[CCLabelTTF labelWithString:@"About" fontName:@"Arial" fontSize:32.0] retain];
+        _aboutUs.position = ccp(winSize.width/2, 450);
         CCMenuItem *aboutUsItem = [CCMenuItemLabel itemWithLabel:_aboutUs target:nil selector:@selector(aboutUs)];
         
-        CCMenu *homeMenu = [CCMenu menuWithItems:startGameItem,nil];
+        CCMenu *homeMenu = [CCMenu menuWithItems:startGameItem,aboutUsItem,nil];
         [self addChild:homeMenu];
     }
     

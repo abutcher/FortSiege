@@ -9,7 +9,7 @@
 
 // When you import this file, you import all the cocos2d classes
 #import "cocos2d.h"
-#import "LevelScene.h"
+#import "MainMenuScene.h"
 
 // HelloWorld Layer
 @interface FortSiege : CCLayer

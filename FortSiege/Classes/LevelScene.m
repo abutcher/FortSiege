@@ -41,7 +41,7 @@
         
         
         self.background2 = [_tileMap layerNamed:@"Background"];
-        //[self addChild:_tileMap z:-1];
+        [self addChild:_tileMap z:-1];
         
         
     }

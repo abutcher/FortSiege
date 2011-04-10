@@ -8,7 +8,6 @@
 
 // Import the interfaces
 #import "FortSiege.h"
-#import "GameObject.h"
 
 // HelloWorld implementation
 @implementation FortSiege
@@ -19,7 +18,7 @@
 	CCScene *scene = [CCScene node];
 	
 	// 'layer' is an autorelease object.
-	LevelScene *layer = [LevelScene node];
+	MainMenuScene *layer = [MainMenuScene node];
     
 	// add layer as a child to scene
 	[scene addChild: layer];
