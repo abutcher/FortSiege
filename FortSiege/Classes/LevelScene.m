@@ -11,6 +11,9 @@
 
 @implementation LevelScene
 
+@synthesize tileMap = _tileMap;
+@synthesize background = _background;
+
 +(id) scene
 {
 
@@ -29,17 +32,29 @@
 
     if ( ( self=[super init] )) {
         
-        
-        
     }
     
     return self;
 
 }
 
+-(id) initWithLevel:(NSString*)FileName
+{
+    if ( ( self=[super init] )) {
+        
+        self.tileMap = [CCTMXTiledMap tiledMapWithTMXFile:FileName];
+        self.background = [_tileMap layerNamed:@"Background"];
+        
+        [self addChild:_tileMap z:-1];
+    }
+    
+    return self;
+}
+
 -(void) dealloc
 {
-    
+    self.tileMap = nil;
+    self.background = nil;
     [super dealloc];
     
 }

@@ -11,8 +11,14 @@
 
 @interface LevelScene : CCLayer {
     
+    CCTMXTiledMap *_tileMap;
+    CCTMXLayer *_background;
+    
 }
 
 + (id) scene;
+
+@property (nonatomic, retain) CCTMXTiledMap *tileMap;
+@property (nonatomic, retain) CCTMXLayer *background;
 
 @end
