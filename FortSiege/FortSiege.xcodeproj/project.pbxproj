@@ -74,6 +74,7 @@
 		5E059A7813523AE300C6D7C8 /* mountain_backdrop.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E059A7713523AE300C6D7C8 /* mountain_backdrop.png */; };
 		5E059A7A13523AFC00C6D7C8 /* map_02.tmx in Resources */ = {isa = PBXBuildFile; fileRef = 5E059A7913523AFC00C6D7C8 /* map_02.tmx */; };
 		5E059A7C13523B1C00C6D7C8 /* tree.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E059A7B13523B1C00C6D7C8 /* tree.png */; };
+		5E059A7E135242E900C6D7C8 /* map_02_tiles.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E059A7D135242E900C6D7C8 /* map_02_tiles.png */; };
 		5E724D2E12F889A100319E12 /* icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 5E724D2D12F889A100319E12 /* icon.icns */; };
 		5E724D3A12F88AAD00319E12 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E724D3912F88AAD00319E12 /* icon.png */; };
 		B96F7B44135228A500DC5313 /* LevelScene.m in Sources */ = {isa = PBXBuildFile; fileRef = B96F7B43135228A500DC5313 /* LevelScene.m */; };
@@ -336,6 +337,7 @@
 		5E059A7713523AE300C6D7C8 /* mountain_backdrop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mountain_backdrop.png; sourceTree = "<group>"; };
 		5E059A7913523AFC00C6D7C8 /* map_02.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = map_02.tmx; sourceTree = "<group>"; };
 		5E059A7B13523B1C00C6D7C8 /* tree.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tree.png; sourceTree = "<group>"; };
+		5E059A7D135242E900C6D7C8 /* map_02_tiles.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_02_tiles.png; sourceTree = "<group>"; };
 		5E724D2D12F889A100319E12 /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = icon.icns; sourceTree = "<group>"; };
 		5E724D3912F88AAD00319E12 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		B96F7B42135228A500DC5313 /* LevelScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelScene.h; sourceTree = "<group>"; };
@@ -758,6 +760,7 @@
 		5E059A4813521B8B00C6D7C8 /* Tiles */ = {
 			isa = PBXGroup;
 			children = (
+				5E059A7D135242E900C6D7C8 /* map_02_tiles.png */,
 				5E059A7B13523B1C00C6D7C8 /* tree.png */,
 				5E059A7713523AE300C6D7C8 /* mountain_backdrop.png */,
 				5E059A7513523AD800C6D7C8 /* dirt.png */,
@@ -1186,6 +1189,7 @@
 				5E059A7813523AE300C6D7C8 /* mountain_backdrop.png in Resources */,
 				5E059A7A13523AFC00C6D7C8 /* map_02.tmx in Resources */,
 				5E059A7C13523B1C00C6D7C8 /* tree.png in Resources */,
+				5E059A7E135242E900C6D7C8 /* map_02_tiles.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
