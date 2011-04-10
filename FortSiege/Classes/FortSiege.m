@@ -20,16 +20,10 @@
 	
 	// 'layer' is an autorelease object.
 	FortSiege *layer = [FortSiege node];
-	
-    GameObject* GO = [[GameObject alloc] init];
-    GO.position.x = 40;
-    GO.velocity.deltaX = 30;
     
 	// add layer as a child to scene
 	[scene addChild: layer];
-    
-    [GO dealloc];
-    
+        
 	// return the scene
 	return scene;
 }
@@ -48,10 +42,13 @@
 		CGSize size = [[CCDirector sharedDirector] winSize];
 	
 		// position the label on the center of the screen
-		label.position =  ccp( size.width /2 , size.height/2 );
+        label.position =  ccp( size.width /2 , size.height/2 );
+        
+        [[CCDirector sharedDirector] replaceScene:[LevelScene scene]];
 		
 		// add the label as a child to this Layer
 		[self addChild: label];
+        
 	}
 	return self;
 }
