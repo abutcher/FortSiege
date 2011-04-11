@@ -37,6 +37,7 @@
 
     if ( ( self=[super init] )) {
         
+        gameObjects = [NSMutableArray new];
         
         self.tileMap = [CCTMXTiledMap tiledMapWithTMXFile:@"map_02.tmx"];
         self.background = [_tileMap layerNamed:@"Sky"];
