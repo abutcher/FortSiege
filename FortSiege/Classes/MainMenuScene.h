@@ -10,6 +10,7 @@
 #import <Foundation/Foundation.h>
 #import "AboutUsScene.h"
 #import "LevelScene.h"
+#import "SimpleAudioEngine.h"
 
 
 @interface MainMenuScene : CCLayer {

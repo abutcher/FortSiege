@@ -27,6 +27,7 @@
 -(void) startGame
 {
     NSLog(@"Start game");
+    [[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
     [[CCDirector sharedDirector] replaceScene:[LevelScene scene]];
     
 }
@@ -34,6 +35,7 @@
 -(void) aboutUs
 {
     NSLog(@"About us");
+    [[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
     [[CCDirector sharedDirector] replaceScene:[AboutUsScene node]]; 
                                                
 }
@@ -63,6 +65,8 @@
         CCMenu *homeMenu = [CCMenu menuWithItems:startGameItem,aboutUsItem,nil];
         homeMenu.position = CGPointZero;
         [self addChild:homeMenu];
+        
+        [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"saltarello.mp3" loop:YES];
     }
     
     return self;
