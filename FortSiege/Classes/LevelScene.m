@@ -7,7 +7,6 @@
 //
 
 #import "LevelScene.h"
-#import "DynamicGameObject.h"
 
 @implementation LevelScene
 
@@ -57,17 +56,20 @@
         knight.position = ccp(1024/2, 768/3+40);
         [sprites addChild:knight];
         */
-        DynamicGameObject *object_1 = [DynamicGameObject init];
-        object_1.objectType = knight;
+        DynamicGameObject *object_1 = [[DynamicGameObject alloc] initWithObjectType:knight];
+        NSLog(@"object 1 is: %i",object_1.objectType);
         [gameObjects addObject:object_1];
         
         for (DynamicGameObject *object in gameObjects) {
-            printf("%d", object.objectType);
+            NSLog(@"Checking loop");
+            NSLog(@"%i", object.objectType);
         }    
         
         NSLog(@"Adding demo guys to scene.");
      
         // add update callback loop
+        
+        [object_1 dealloc];
     }
     
     return self;

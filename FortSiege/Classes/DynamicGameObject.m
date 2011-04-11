@@ -14,14 +14,14 @@
 
 -(DynamicGameObject*) init {
     if ((self = [super init])) {
-        objectType = 0;
+        self.objectType = 0;
     }
     return self;
 }
 
 -(DynamicGameObject*) initWithObjectType:(enum ObjectType) incomingType {
     if ((self = [super init])) {
-        objectType = incomingType;
+        self.objectType = incomingType;
     }
     return self;
 }

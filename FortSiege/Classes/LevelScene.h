@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
 #import "UnitMenu.h"
+#import "DynamicGameObject.h"
 
 @interface LevelScene : CCLayer {
     
