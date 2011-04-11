@@ -7,7 +7,7 @@
 //
 
 #import "LevelScene.h"
-
+#import "DynamicGameObject.h"
 
 @implementation LevelScene
 
@@ -42,26 +42,42 @@
         
         NSLog(@"Map added to scene.");
         
+        [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"sprites.plist"];
+        CCSpriteBatchNode *sprites = [CCSpriteBatchNode batchNodeWithFile:@"sprites.png"];
+		[self addChild:sprites];
         
-        // Here add a bunch of gameObjects
-        // Add them to scene
+        NSLog(@"Sprite sheet loaded.");
+        
+        /*
+        CCSprite *knight = [CCSprite spriteWithSpriteFrameName:@"knight_stand_01.png"];
+        knight.position = ccp(1024/2, 768/3+40);
+        [sprites addChild:knight];
+        */
+        DynamicGameObject *object_1 = [DynamicGameObject init];
+        object_1.objectType = knight;
+        [gameObjects addObject:object_1];
+        
+        for (DynamicGameObject *object in gameObjects) {
+            printf("%d", object.objectType);
+        }    
         
         NSLog(@"Adding demo guys to scene.");
-        
+     
+        // add update callback loop
     }
     
     return self;
 
 }
 
-- (NSArray *) gameObjects {
+- (NSMutableArray *) gameObjects {
     return gameObjects;
 }
 
-- (void) setGameObjects:(NSArray *) new_gameObjects {
-    [new_gameObjects retain];
+- (void) setGameObjects:(NSMutableArray *) newGameObjects {
+    [newGameObjects retain];
     [gameObjects release];
-    gameObjects = new_gameObjects;
+    gameObjects = newGameObjects;
 }
 
 - (void) ccTouchesEnded:(NSSet *)touches withEvent:(UIEvent *)event

@@ -42,11 +42,12 @@
 @private
     Position* position;
     Velocity* velocity;
+    int tag;
 }
 
 @property (retain) Position* position;
 @property (retain) Velocity* velocity;
-
+@property int tag;
 
 @end
 

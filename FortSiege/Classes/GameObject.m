@@ -13,6 +13,7 @@
 
 @synthesize position;
 @synthesize velocity;
+@synthesize tag;
 
 -(GameObject*) init {
     
