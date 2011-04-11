@@ -44,7 +44,23 @@
 }
 
 -(void) update {
-    
+    if (self.state == WALKING) {
+        if (self.facing == LEFT) {
+            self.position.x -= self.velocity.deltaX;
+            self.character.position = ccp(self.character.position.x - self.velocity.deltaX, self.character.position.y);
+        } else if (self.facing == RIGHT) {
+            self.position.x += self.velocity.deltaX;
+            self.character.position = ccp(self.character.position.x + self.velocity.deltaX, self.character.position.y);
+        } else {
+            NSLog(@"No position set.");
+        }
+    } else if (self.state == ATTACKING) {
+        
+    } else if (self.state == STANDING) {
+        
+    } else {
+        NSLog(@"No state set.");
+    }
 }
 
 -(void) dealloc {

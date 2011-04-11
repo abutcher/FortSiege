@@ -71,6 +71,8 @@
             tmp.position.y = 298;
             tmp.character.position = ccp(768,298);
             [gameObjects addObject:tmp];
+            tmp.state = WALKING;
+            tmp.facing = LEFT;
             [tmp runWalkAction];
             [sprites addChild:tmp.character];
         }
