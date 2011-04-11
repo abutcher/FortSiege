@@ -10,6 +10,17 @@
 #import "cocos2d.h"
 #import <Foundation/Foundation.h>
 
+enum State {
+    ATTACKING = 0,
+    STANDING = 1,
+    WALKING = 2
+    };
+
+enum Facing {
+    RIGHT = 0,
+    LEFT = 0
+};
+
 @interface Position : NSObject {
 @private
     int x;
@@ -44,12 +55,14 @@ static int GameObjectTag;
     Position* position;
     Velocity* velocity;
     int tag;
-    
+    enum State state;
+    enum Facing facing;
     CCSprite* _character;
 }
 
+@property enum State state;
+@property enum Facing facing;
 @property (retain) CCSprite* character;
-
 @property (retain) Position* position;
 @property (retain) Velocity* velocity;
 @property int tag;

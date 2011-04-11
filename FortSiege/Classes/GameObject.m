@@ -15,6 +15,8 @@
 @synthesize velocity;
 @synthesize tag;
 @synthesize character = _character;
+@synthesize state;
+@synthesize facing;
 
 +(int) getTagAndIncrement
 {
