@@ -21,8 +21,11 @@
     CCScene *scene = [CCScene node];
     
     LevelScene *layer = [LevelScene node];
+    UnitMenu *menuLayer = [UnitMenu node];
+    
     
     [scene addChild: layer];
+    [scene addChild:menuLayer z:1];
     
     return scene;
 
