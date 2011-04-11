@@ -57,20 +57,23 @@
         knight.position = ccp(1024/2, 768/3+40);
         [sprites addChild:knight];
         */
-        DynamicGameObject *object_1 = [[DynamicGameObject alloc] initWithObjectType:knight];
-        NSLog(@"object 1 is: %i",object_1.objectType);
-        [gameObjects addObject:object_1];
-        
+ 
+        for (int i = 0; i < 10; i++) {
+            [gameObjects addObject: [[DynamicGameObject alloc] initWithObjectType:knight]];
+        }
+
         for (DynamicGameObject *object in gameObjects) {
-            NSLog(@"Checking loop");
-            NSLog(@"%i", object.objectType);
+            // Move this into dynamic object somehow
+            if ( object.objectType == knight) {
+                CCSprite *temp = [CCSprite spriteWithSpriteFrameName:@"knight_stand_01.png"];
+                // set position
+                // add temp
+            }
         }    
         
         NSLog(@"Adding demo guys to scene.");
      
         // add update callback loop
-        
-        [object_1 dealloc];
     }
     
     return self;

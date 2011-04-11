@@ -22,6 +22,7 @@ enum ObjectType {
     knight = 3,
     soldier = 4
 };
+
 @property enum ObjectType objectType;
 
 -(DynamicGameObject*) init;
