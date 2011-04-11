@@ -13,24 +13,12 @@
 
 @implementation UnitMenu
 
-+(CCScene *) scene
-{
-	// 'scene' is an autorelease object.
-	CCScene *scene = [CCScene node];
-	
-	// 'layer' is an autorelease object.
-	UnitMenu *layer = [UnitMenu node];
-	
-	// add layer as a child to scene
-	[scene addChild: layer];
-	
-	// return the scene
-	return scene;
-}
-
 // on "init" you need to initialize your instance
 -(id) init
 {
+    
+    self.isTouchEnabled = YES;
+    
     if( (self=[super init] )) {
         [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"sprites.plist"];		
         
