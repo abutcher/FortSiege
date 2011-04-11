@@ -43,7 +43,7 @@
     return self;
 }
 
--(void) update {
+-(void) updateObject {
     if (self.state == WALKING) {
         if (self.facing == LEFT) {
             self.position.x -= self.velocity.deltaX;
@@ -104,8 +104,8 @@
 
 -(Velocity*) init {
     if ((self = [super init])) {
-        self.deltaX = 0;
-        self.deltaY = 0;
+        self.deltaX = 2;
+        self.deltaY = 2;
     }
     return self;
 }

@@ -91,12 +91,19 @@
         
         NSLog(@"Adding demo guys to scene.");
      
-        // add update callback loop
+        [self schedule:@selector(nextFrame:)];
     }
     
     return self;
 
 }
+
+- (void) nextFrame:(ccTime)dt {
+	for (GameObject *object in gameObjects) {
+        [object updateObject];
+    }
+}
+
 
 - (NSMutableArray *) gameObjects {
     return gameObjects;

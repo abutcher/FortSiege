@@ -67,7 +67,7 @@ static int GameObjectTag;
 @property (retain) Velocity* velocity;
 @property int tag;
 
--(void) update;
+-(void) updateObject;
 -(void) runWalkAction;
 -(void) runAttackAction;
 -(void) runStandAction;
