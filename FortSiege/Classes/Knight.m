@@ -20,21 +20,21 @@
         [walkingAnimationFrames addObject: [[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName: [NSString stringWithFormat:@"knight_walk_0%d.png", i]]];
     }
     
-    knight_walk = [CCAnimation animationWithFrames:walkingAnimationFrames];
+    knight_walk = [CCAnimation animationWithFrames:walkingAnimationFrames delay:0.1f];
     knight_walk_action = [CCRepeatForever actionWithAction: [CCAnimate actionWithAnimation:knight_walk restoreOriginalFrame:NO]];
     
     for (int i = 1; i <=1; ++i) {
         [standingAnimationFrames addObject: [[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:[NSString stringWithFormat:@"knight_stand_0%d.png",i]]];
     }
     
-    knight_stand = [CCAnimation animationWithFrames:standingAnimationFrames];
+    knight_stand = [CCAnimation animationWithFrames:standingAnimationFrames delay:0.1f];
     knight_stand_action = [CCRepeatForever actionWithAction:[CCAnimate actionWithAnimation:knight_stand restoreOriginalFrame:NO]];
     
     for (int i = 1; i<=3; ++i) {
         [attackingAnimationFrames addObject: [[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:[NSString stringWithFormat:@"knight_attack_0%d.png",i]]];
     }
     
-    knight_attack = [CCAnimation animationWithFrames:attackingAnimationFrames];
+    knight_attack = [CCAnimation animationWithFrames:attackingAnimationFrames delay:0.1f];
     knight_attack_action = [CCRepeatForever actionWithAction:[CCAnimate actionWithAnimation:knight_attack restoreOriginalFrame:NO]];
 }
 

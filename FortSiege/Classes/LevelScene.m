@@ -42,7 +42,7 @@
 
     if ( ( self=[super init] )) {
         
-        gameObjects = [NSMutableArray new];
+        gameObjects = [NSMutableArray array];
         
         self.tileMap = [CCTMXTiledMap tiledMapWithTMXFile:@"map_02.tmx"];
         self.background = [_tileMap layerNamed:@"Sky"];
@@ -68,12 +68,11 @@
         for (int i = 0; i < 1; i++) {
             Knight* tmp = [[Knight alloc] init];
             tmp.position.x = 768;
-            tmp.position.y = 500;
-            tmp.character.position = ccp(768,500);
+            tmp.position.y = 298;
+            tmp.character.position = ccp(768,298);
             [gameObjects addObject:tmp];
             [tmp runWalkAction];
             [sprites addChild:tmp.character];
-            
         }
 
         for (GameObject *object in gameObjects) {
