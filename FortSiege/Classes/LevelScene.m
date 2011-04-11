@@ -21,11 +21,13 @@
     CCScene *scene = [CCScene node];
     
     LevelScene *layer = [LevelScene node];
-    UnitMenu *menuLayer = [UnitMenu node];
+    [scene addChild:layer];
     
+    UnitMenu *menuLayer = [UnitMenu node];
+    menuLayer.scale = 3.5;
+    menuLayer.position = ccp(920,916);
     
     [scene addChild:menuLayer];
-    [scene addChild:layer];
     
     return scene;
 
