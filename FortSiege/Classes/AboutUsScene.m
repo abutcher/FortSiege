@@ -43,7 +43,7 @@
         CCMenu *aboutMenu = [CCMenu menuWithItems:_backItem,nil];
         aboutMenu.position = CGPointZero;
         [self addChild:aboutMenu];        
-        
+         
     }
     
     return self;
