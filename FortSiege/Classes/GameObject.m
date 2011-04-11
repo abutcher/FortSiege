@@ -15,13 +15,29 @@
 @synthesize velocity;
 @synthesize tag;
 
++(int) getTagAndIncrement
+{
+    int returnValue = GameObjectTag;
+    GameObjectTag++;
+    return returnValue;
+}
+
++(void) incrementTag {
+    GameObjectTag++;
+}
+
 -(GameObject*) init {
     
     if ( (self = [super init]) ) {
-        position = [[Position alloc] init];
-        velocity = [[Velocity alloc] init];
+        self.position = [[Position alloc] init];
+        self.velocity = [[Velocity alloc] init];
+        self.tag = [GameObject getTagAndIncrement];
     }
     return self;
+}
+
+-(void) update {
+    
 }
 
 -(void) dealloc {

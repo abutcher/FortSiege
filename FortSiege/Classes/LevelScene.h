@@ -9,7 +9,13 @@
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
 #import "UnitMenu.h"
-#import "DynamicGameObject.h"
+#import "GameObject.h"
+
+#import "Knight.h"
+#import "KingArthur.h"
+#import "Barrelman.h"
+#import "Soldier.h"
+#import "Archer.h"
 
 @interface LevelScene : CCLayer {
     

@@ -7,7 +7,6 @@
 //
 //  Not using @synthesize to reinforce the syntax of the new language.
 //
-
 #import "cocos2d.h"
 #import <Foundation/Foundation.h>
 
@@ -38,6 +37,8 @@
 -(Velocity*) init;
 @end
 
+static int GameObjectTag = 0;
+
 @interface GameObject : NSObject {
 @private
     Position* position;
@@ -48,6 +49,8 @@
 @property (retain) Position* position;
 @property (retain) Velocity* velocity;
 @property int tag;
+
+-(void) update;
 
 @end
 

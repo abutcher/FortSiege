@@ -59,16 +59,19 @@
         */
  
         for (int i = 0; i < 10; i++) {
-            [gameObjects addObject: [[DynamicGameObject alloc] initWithObjectType:knight]];
+            [gameObjects addObject:[[Knight alloc] init]];
         }
 
-        for (DynamicGameObject *object in gameObjects) {
+        for (GameObject *object in gameObjects) {
             // Move this into dynamic object somehow
-            if ( object.objectType == knight) {
+            
+            NSLog(@"%s",object_getClassName(object));
+            
+/*            if ( object.objectType == knight) {
                 CCSprite *temp = [CCSprite spriteWithSpriteFrameName:@"knight_stand_01.png"];
                 // set position
                 // add temp
-            }
+            }*/
         }    
         
         NSLog(@"Adding demo guys to scene.");
