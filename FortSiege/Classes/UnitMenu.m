@@ -128,17 +128,6 @@
     [_label setString:@"Last button: Seven"];
 }
 
-/*
- - (void)plusMinusButtonTapped:(id)sender {  
- CCMenuItemToggle *toggleItem = (CCMenuItemToggle *)sender;
- if (toggleItem.selectedItem == _plusItem) {
- [_label setString:@"Visible button: +"];    
- } else if (toggleItem.selectedItem == _minusItem) {
- [_label setString:@"Visible button: -"];
- }  
- }
- */
-
 // on "dealloc" you need to release all your retained objects
 - (void) dealloc
 {
