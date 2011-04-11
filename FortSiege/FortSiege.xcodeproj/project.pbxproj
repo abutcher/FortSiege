@@ -82,10 +82,13 @@
 		B96F7B54135231AC00DC5313 /* MainMenuScene.m in Sources */ = {isa = PBXBuildFile; fileRef = B96F7B53135231AC00DC5313 /* MainMenuScene.m */; };
 		B96F7B821352475D00DC5313 /* AboutUsScene.m in Sources */ = {isa = PBXBuildFile; fileRef = B96F7B811352475D00DC5313 /* AboutUsScene.m */; };
 		B977EB7E134A2C4B001298FC /* GameObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B977EB7D134A2C4B001298FC /* GameObject.m */; };
-		B977EB82134A582D001298FC /* DynamicGameObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B977EB81134A582D001298FC /* DynamicGameObject.m */; };
-		B977EB85134A59C7001298FC /* StaticGameObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B977EB84134A59C7001298FC /* StaticGameObject.m */; };
 		B9CCC9FF135371EA00F92CEF /* revecy.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B9CCC9FD135371EA00F92CEF /* revecy.mp3 */; };
 		B9CCCA00135371EA00F92CEF /* saltarello.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B9CCC9FE135371EA00F92CEF /* saltarello.mp3 */; };
+		B9CCCA0D1353809300F92CEF /* Archer.m in Sources */ = {isa = PBXBuildFile; fileRef = B9CCCA0C1353809300F92CEF /* Archer.m */; };
+		B9CCCA131353811400F92CEF /* Barrelman.m in Sources */ = {isa = PBXBuildFile; fileRef = B9CCCA121353811400F92CEF /* Barrelman.m */; };
+		B9CCCA161353812F00F92CEF /* Knight.m in Sources */ = {isa = PBXBuildFile; fileRef = B9CCCA151353812E00F92CEF /* Knight.m */; };
+		B9CCCA191353817A00F92CEF /* KingArthur.m in Sources */ = {isa = PBXBuildFile; fileRef = B9CCCA181353817A00F92CEF /* KingArthur.m */; };
+		B9CCCA1C135381AE00F92CEF /* Soldier.m in Sources */ = {isa = PBXBuildFile; fileRef = B9CCCA1B135381AE00F92CEF /* Soldier.m */; };
 		DC6640030F83B3EA000B3E49 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC6640020F83B3EA000B3E49 /* AudioToolbox.framework */; };
 		DC6640050F83B3EA000B3E49 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC6640040F83B3EA000B3E49 /* OpenAL.framework */; };
 		DCCBF1B70F6022AE0040855A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCCBF1B60F6022AE0040855A /* CoreGraphics.framework */; };
@@ -354,12 +357,18 @@
 		B96F7B811352475D00DC5313 /* AboutUsScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutUsScene.m; sourceTree = "<group>"; };
 		B977EB7C134A2C4B001298FC /* GameObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameObject.h; sourceTree = "<group>"; };
 		B977EB7D134A2C4B001298FC /* GameObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameObject.m; sourceTree = "<group>"; };
-		B977EB80134A582D001298FC /* DynamicGameObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynamicGameObject.h; sourceTree = "<group>"; };
-		B977EB81134A582D001298FC /* DynamicGameObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DynamicGameObject.m; sourceTree = "<group>"; };
-		B977EB83134A59C7001298FC /* StaticGameObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StaticGameObject.h; sourceTree = "<group>"; };
-		B977EB84134A59C7001298FC /* StaticGameObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StaticGameObject.m; sourceTree = "<group>"; };
 		B9CCC9FD135371EA00F92CEF /* revecy.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = revecy.mp3; sourceTree = "<group>"; };
 		B9CCC9FE135371EA00F92CEF /* saltarello.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = saltarello.mp3; sourceTree = "<group>"; };
+		B9CCCA0B1353809300F92CEF /* Archer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Archer.h; sourceTree = "<group>"; };
+		B9CCCA0C1353809300F92CEF /* Archer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Archer.m; sourceTree = "<group>"; };
+		B9CCCA111353811400F92CEF /* Barrelman.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Barrelman.h; sourceTree = "<group>"; };
+		B9CCCA121353811400F92CEF /* Barrelman.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Barrelman.m; sourceTree = "<group>"; };
+		B9CCCA141353812E00F92CEF /* Knight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Knight.h; sourceTree = "<group>"; };
+		B9CCCA151353812E00F92CEF /* Knight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Knight.m; sourceTree = "<group>"; };
+		B9CCCA171353817A00F92CEF /* KingArthur.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KingArthur.h; sourceTree = "<group>"; };
+		B9CCCA181353817A00F92CEF /* KingArthur.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KingArthur.m; sourceTree = "<group>"; };
+		B9CCCA1A135381AD00F92CEF /* Soldier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Soldier.h; sourceTree = "<group>"; };
+		B9CCCA1B135381AE00F92CEF /* Soldier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Soldier.m; sourceTree = "<group>"; };
 		DC6640020F83B3EA000B3E49 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		DC6640040F83B3EA000B3E49 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
 		DCCBF1B60F6022AE0040855A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -626,6 +635,7 @@
 		2D500B1D0D5A766B00DBA0E3 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				B9CCCA091353807000F92CEF /* Characters */,
 				B96F7B42135228A500DC5313 /* LevelScene.h */,
 				B96F7B43135228A500DC5313 /* LevelScene.m */,
 				E0F80F5D120A0182005866B8 /* GameConfig.h */,
@@ -637,10 +647,6 @@
 				1F3B9A2B0EF2145700286867 /* FortSiegeAppDelegate.m */,
 				B977EB7C134A2C4B001298FC /* GameObject.h */,
 				B977EB7D134A2C4B001298FC /* GameObject.m */,
-				B977EB80134A582D001298FC /* DynamicGameObject.h */,
-				B977EB81134A582D001298FC /* DynamicGameObject.m */,
-				B977EB83134A59C7001298FC /* StaticGameObject.h */,
-				B977EB84134A59C7001298FC /* StaticGameObject.m */,
 				B96F7B52135231AC00DC5313 /* MainMenuScene.h */,
 				B96F7B53135231AC00DC5313 /* MainMenuScene.m */,
 				B96F7B801352475D00DC5313 /* AboutUsScene.h */,
@@ -801,6 +807,23 @@
 				B9CCC9FE135371EA00F92CEF /* saltarello.mp3 */,
 			);
 			name = Music;
+			sourceTree = "<group>";
+		};
+		B9CCCA091353807000F92CEF /* Characters */ = {
+			isa = PBXGroup;
+			children = (
+				B9CCCA0B1353809300F92CEF /* Archer.h */,
+				B9CCCA0C1353809300F92CEF /* Archer.m */,
+				B9CCCA111353811400F92CEF /* Barrelman.h */,
+				B9CCCA121353811400F92CEF /* Barrelman.m */,
+				B9CCCA141353812E00F92CEF /* Knight.h */,
+				B9CCCA151353812E00F92CEF /* Knight.m */,
+				B9CCCA171353817A00F92CEF /* KingArthur.h */,
+				B9CCCA181353817A00F92CEF /* KingArthur.m */,
+				B9CCCA1A135381AD00F92CEF /* Soldier.h */,
+				B9CCCA1B135381AE00F92CEF /* Soldier.m */,
+			);
+			name = Characters;
 			sourceTree = "<group>";
 		};
 		E02BB764126CC223006E46A2 /* cocos2d */ = {
@@ -1231,12 +1254,15 @@
 				506EDC31102F528A00A389B3 /* FortSiege.m in Sources */,
 				E0F80F60120A0182005866B8 /* RootViewController.m in Sources */,
 				B977EB7E134A2C4B001298FC /* GameObject.m in Sources */,
-				B977EB82134A582D001298FC /* DynamicGameObject.m in Sources */,
-				B977EB85134A59C7001298FC /* StaticGameObject.m in Sources */,
 				B96F7B44135228A500DC5313 /* LevelScene.m in Sources */,
 				B96F7B54135231AC00DC5313 /* MainMenuScene.m in Sources */,
 				B96F7B821352475D00DC5313 /* AboutUsScene.m in Sources */,
 				6BB5868D1352C6DD00DA1B7F /* UnitMenu.m in Sources */,
+				B9CCCA0D1353809300F92CEF /* Archer.m in Sources */,
+				B9CCCA131353811400F92CEF /* Barrelman.m in Sources */,
+				B9CCCA161353812F00F92CEF /* Knight.m in Sources */,
+				B9CCCA191353817A00F92CEF /* KingArthur.m in Sources */,
+				B9CCCA1C135381AE00F92CEF /* Soldier.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
