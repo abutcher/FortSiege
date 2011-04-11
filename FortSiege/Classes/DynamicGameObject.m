@@ -10,10 +10,18 @@
 
 
 @implementation DynamicGameObject
+@synthesize objectType;
 
 -(DynamicGameObject*) init {
     if ((self = [super init])) {
-        
+        objectType = 0;
+    }
+    return self;
+}
+
+-(DynamicGameObject*) initWithObjectType:(enum ObjectType) incomingType {
+    if ((self = [super init])) {
+        objectType = incomingType;
     }
     return self;
 }
