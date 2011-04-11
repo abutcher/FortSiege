@@ -34,11 +34,19 @@
 
     if ( ( self=[super init] )) {
         
-        self.tileMap = [CCTMXTiledMap tiledMapWithTMXFile:@"map_02.tmx"];
         
+        self.tileMap = [CCTMXTiledMap tiledMapWithTMXFile:@"map_02.tmx"];
         self.background = [_tileMap layerNamed:@"Sky"];
         self.background2 = [_tileMap layerNamed:@"Background"];
         [self addChild:_tileMap z:-1];
+        
+        NSLog(@"Map added to scene.");
+        
+        
+        // Here add a bunch of gameObjects
+        // Add them to scene
+        
+        NSLog(@"Adding demo guys to scene.");
         
     }
     
