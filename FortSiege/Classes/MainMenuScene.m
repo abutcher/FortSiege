@@ -27,7 +27,7 @@
 -(void) startGame
 {
     NSLog(@"Start game");
-    [[CCDirector sharedDirector] replaceScene:[LevelScene node]];
+    [[CCDirector sharedDirector] replaceScene:[LevelScene scene]];
     
 }
 
@@ -53,15 +53,15 @@
         NSLog(@"init a la fortsiege");
         
         CCLabelTTF *_startGame = [[CCLabelTTF labelWithString:@"Start Game" fontName:@"Arial" fontSize:32.0] retain];
-        //_startGame.position = ccp(winSize.width/2, 200);
         CCMenuItem *startGameItem = [CCMenuItemLabel itemWithLabel:_startGame target:self selector:@selector(startGame)];
+        startGameItem.position = ccp(winSize.width/2, 200);
         
         CCLabelTTF *_aboutUs = [[CCLabelTTF labelWithString:@"About" fontName:@"Arial" fontSize:32.0] retain];
-        _aboutUs.position = ccp(winSize.width/2, 150);
         CCMenuItem *aboutUsItem = [CCMenuItemLabel itemWithLabel:_aboutUs target:self selector:@selector(aboutUs)];
+        aboutUsItem.position = ccp(winSize.width/2,150);
         
         CCMenu *homeMenu = [CCMenu menuWithItems:startGameItem,aboutUsItem,nil];
-        //homeMenu.position = CGPointZero;
+        homeMenu.position = CGPointZero;
         [self addChild:homeMenu];
     }
     
