@@ -14,10 +14,13 @@
     CCTMXTiledMap *_tileMap;
     CCTMXLayer *_background;
     CCTMXLayer *_background2;
+    NSArray *gameObjects;
     
 }
 
 + (id) scene;
+- (NSArray *) gameObjects;
+- (void) setGameObjects: (NSArray *) gameObjects;
 
 @property (nonatomic, retain) CCTMXTiledMap *tileMap;
 @property (nonatomic, retain) CCTMXLayer *background;

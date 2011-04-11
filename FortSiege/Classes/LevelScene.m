@@ -46,6 +46,16 @@
 
 }
 
+- (NSArray *) gameObjects {
+    return gameObjects;
+}
+
+- (void) setGameObjects:(NSArray *) new_gameObjects {
+    [new_gameObjects retain];
+    [gameObjects release];
+    gameObjects = new_gameObjects;
+}
+
 - (void) ccTouchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
     
