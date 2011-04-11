@@ -107,6 +107,9 @@
 	
 	// Removes the startup flicker
 	[self removeStartupFlicker];
+    
+    // Load master sprite sheet.
+    [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"sprites.plist"];
 	
 	// Run the intro Scene
 	[[CCDirector sharedDirector] runWithScene: [FortSiege scene]];		

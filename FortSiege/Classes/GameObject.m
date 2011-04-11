@@ -14,16 +14,21 @@
 @synthesize position;
 @synthesize velocity;
 @synthesize tag;
+@synthesize character = _character;
 
 +(int) getTagAndIncrement
 {
     int returnValue = GameObjectTag;
-    GameObjectTag++;
+    GameObjectTag = GameObjectTag + 1;
     return returnValue;
 }
 
 +(void) incrementTag {
     GameObjectTag++;
+}
+
++(void) prepareFrames {
+    
 }
 
 -(GameObject*) init {

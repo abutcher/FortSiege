@@ -17,6 +17,8 @@
 #import "Soldier.h"
 #import "Archer.h"
 
+extern int GameObjectTag;
+
 @interface LevelScene : CCLayer {
     
     CCTMXTiledMap *_tileMap;

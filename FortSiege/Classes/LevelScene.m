@@ -36,6 +36,9 @@
 -(id) init
 {
     self.isTouchEnabled = YES;
+    
+    // Must be reset at the beginning of each level.
+    GameObjectTag = 0;
 
     if ( ( self=[super init] )) {
         
@@ -48,9 +51,11 @@
         
         NSLog(@"Map added to scene.");
         
-        [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"sprites.plist"];
+        // Moved to FortSiegeAppDelegate.m
+        // [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"sprites.plist"];
+        
         CCSpriteBatchNode *sprites = [CCSpriteBatchNode batchNodeWithFile:@"sprites.png"];
-		[self addChild:sprites];
+		[self addChild:sprites z:1];
         
         NSLog(@"Sprite sheet loaded.");
         
@@ -60,8 +65,15 @@
         [sprites addChild:knight];
         */
  
-        for (int i = 0; i < 10; i++) {
-            [gameObjects addObject:[[Knight alloc] init]];
+        for (int i = 0; i < 1; i++) {
+            Knight* tmp = [[Knight alloc] init];
+            tmp.position.x = 768;
+            tmp.position.y = 500;
+            tmp.character.position = ccp(768,500);
+            [gameObjects addObject:tmp];
+            [tmp runWalkAction];
+            [sprites addChild:tmp.character];
+            
         }
 
         for (GameObject *object in gameObjects) {

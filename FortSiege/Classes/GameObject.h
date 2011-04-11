@@ -37,20 +37,27 @@
 -(Velocity*) init;
 @end
 
-static int GameObjectTag = 0;
+static int GameObjectTag;
 
 @interface GameObject : NSObject {
 @private
     Position* position;
     Velocity* velocity;
     int tag;
+    
+    CCSprite* _character;
 }
+
+@property (retain) CCSprite* character;
 
 @property (retain) Position* position;
 @property (retain) Velocity* velocity;
 @property int tag;
 
 -(void) update;
+-(void) runWalkAction;
+-(void) runAttackAction;
+-(void) runStandAction;
 
 @end
 
