@@ -27,7 +27,7 @@
 -(void) startGame
 {
     NSLog(@"Start game");
-    [[CCDirector sharedDirector] replaceScene:[LevelScene node]];
+    [[CCDirector sharedDirector] replaceScene:[LevelScene scene]];
     
 }
 

@@ -18,14 +18,15 @@
 +(id) scene
 {
 
+    NSLog(@"init levelscene");
     CCScene *scene = [CCScene node];
     
     LevelScene *layer = [LevelScene node];
     UnitMenu *menuLayer = [UnitMenu node];
     
     
-    [scene addChild: layer];
-    [scene addChild:menuLayer z:1];
+    [scene addChild:menuLayer];
+    [scene addChild:layer];
     
     return scene;
 
@@ -83,6 +84,7 @@
 {
     self.tileMap = nil;
     self.background = nil;
+    
     [super dealloc];
     
 }
