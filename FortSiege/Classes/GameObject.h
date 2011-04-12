@@ -67,10 +67,12 @@ static int GameObjectTag;
 @property (retain) Velocity* velocity;
 @property int tag;
 
+-(id) summonWithParameters: (int)x y: (int)y state: (enum State) state facing: (enum Facing) facing;
 -(void) updateObject:(ccTime) dt;
 -(void) runWalkAction;
 -(void) runAttackAction;
 -(void) runStandAction;
+
 
 @end
 

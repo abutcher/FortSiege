@@ -53,6 +53,31 @@
     return self;
 }
 
+-(id) summonWithParameters: (int)x y: (int)y state: (enum State) state facing: (enum Facing) facing {
+    if (( self = [super init])) {
+        if (knight_walk == nil)
+            [Knight prepareFrames];
+        
+        self.state = state;
+        self.facing = facing;
+        
+        if (self.state == WALKING) {
+            self.character = [CCSprite spriteWithSpriteFrameName:@"knight_walk_01.png"];
+            [self.character runAction:knight_walk_action];
+        }
+        else if (self.state == STANDING) {
+            self.character = [CCSprite spriteWithSpriteFrameName:@"knight_stand_01.png"];
+            [self.character runAction:knight_stand_action];
+        }
+        
+        self.position.x = x;
+        self.position.y = y;
+        self.character.position = ccp(x, y);
+        
+    }
+    return self;
+}
+
 -(void) runStandAction {
     [self.character runAction:knight_stand_action];
 }
@@ -65,8 +90,8 @@
     [self.character runAction:knight_attack_action];
 }
 
--(void) update {
-    [self update];
+-(void) updateObject:(ccTime)dt {
+    [super updateObject:dt];
 }
 
 @end

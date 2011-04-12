@@ -13,6 +13,8 @@
 @synthesize tileMap = _tileMap;
 @synthesize background = _background;
 @synthesize background2 = _background2;
+@synthesize sprites = _sprites;
+
 
 +(id) scene
 {
@@ -56,40 +58,13 @@
         // Moved to FortSiegeAppDelegate.m
         // [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"sprites.plist"];
         
-        CCSpriteBatchNode *sprites = [CCSpriteBatchNode batchNodeWithFile:@"sprites.png"];
-		[self addChild:sprites z:1];
+        self.sprites = [CCSpriteBatchNode batchNodeWithFile:@"sprites.png"];
+		[self addChild:self.sprites z:1];
         
         NSLog(@"Sprite sheet loaded.");
         
-        /*
-        CCSprite *knight = [CCSprite spriteWithSpriteFrameName:@"knight_stand_01.png"];
-        knight.position = ccp(1024/2, 768/3+40);
-        [sprites addChild:knight];
-        */
- 
-        for (int i = 0; i < 1; i++) {
-            Knight* tmp = [[Knight alloc] init];
-            tmp.position.x = 768;
-            tmp.position.y = 298;
-            tmp.character.position = ccp(768+i*20,296);
-            [gameObjects addObject:tmp];
-            tmp.state = WALKING;
-            tmp.facing = LEFT;
-            [tmp runWalkAction];
-            [sprites addChild:tmp.character];
-        }
-
-        for (GameObject *object in gameObjects) {
-            // Move this into dynamic object somehow
-            
-            NSLog(@"%s",object_getClassName(object));
-            
-/*            if ( object.objectType == knight) {
-                CCSprite *temp = [CCSprite spriteWithSpriteFrameName:@"knight_stand_01.png"];
-                // set position
-                // add temp
-            }*/
-        }    
+        // Stream-lined demo guy addition.
+        [self addGameObject:[[Knight alloc] summonWithParameters: 758 y:296 state:WALKING facing:LEFT]]; 
         
         NSLog(@"Adding demo guys to scene.");
      
@@ -114,6 +89,11 @@
     [newGameObjects retain];
     [gameObjects release];
     gameObjects = newGameObjects;
+}
+
+- (void) addGameObject:(GameObject *)object {
+    [self.gameObjects addObject:object];
+    [self.sprites addChild:object.character];
 }
 
 - (void) ccTouchesEnded:(NSSet *)touches withEvent:(UIEvent *)event

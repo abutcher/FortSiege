@@ -21,7 +21,7 @@ static CCAction* knight_attack_action;
 }
 
 +(void)prepareFrames;
--(void) update;
+-(void) updateObject:(ccTime)dt;
 -(void) runWalkAction;
 -(void) runAttackAction;
 -(void) runStandAction;

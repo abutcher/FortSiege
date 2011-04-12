@@ -51,11 +51,11 @@
                 self.character.position = ccp(1056, self.character.position.y);  
             } else {
                 self.position.x -= self.velocity.deltaX;
-                self.character.position = ccp(self.character.position.x - self.velocity.deltaX, self.character.position.y);
+                self.character.position = ccp(self.character.position.x - 25*dt, self.character.position.y);
             }
         } else if (self.facing == RIGHT) {
             self.position.x += self.velocity.deltaX;
-            self.character.position = ccp(self.character.position.x + self.velocity.deltaX, self.character.position.y);
+            self.character.position = ccp(self.character.position.x + 25*dt, self.character.position.y);
         } else {
             NSLog(@"No position set.");
         }
