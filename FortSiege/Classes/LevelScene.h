@@ -26,19 +26,18 @@ extern int GameObjectTag;
     CCTMXTiledMap *_tileMap;
     CCTMXLayer *_background;
     CCTMXLayer *_background2;
-    NSMutableArray *gameObjects;
+    NSMutableArray *_gameObjects;
     CCSpriteBatchNode *_sprites;
     
 }
 
 + (id) scene;
-- (NSMutableArray *) gameObjects;
-- (void) setGameObjects: (NSMutableArray *) gameObjects;
 - (void) addGameObject: (GameObject *) object;
 
 @property (nonatomic, retain) CCTMXTiledMap *tileMap;
 @property (nonatomic, retain) CCTMXLayer *background;
 @property (nonatomic, retain) CCTMXLayer *background2;
+@property (nonatomic, retain) NSMutableArray *gameObjects;
 @property (nonatomic, retain) CCSpriteBatchNode *sprites;
 
 @end

@@ -14,6 +14,7 @@
 @synthesize background = _background;
 @synthesize background2 = _background2;
 @synthesize sprites = _sprites;
+@synthesize gameObjects = _gameObjects;
 
 
 +(id) scene
@@ -79,16 +80,6 @@
 	for (GameObject *object in self.gameObjects) {
         [object updateObject: dt];
     }
-}
-
-- (NSMutableArray *) gameObjects {
-    return gameObjects;
-}
-
-- (void) setGameObjects:(NSMutableArray *) newGameObjects {
-    [newGameObjects retain];
-    [gameObjects release];
-    gameObjects = newGameObjects;
 }
 
 - (void) addGameObject:(GameObject *)object {
