@@ -28,6 +28,7 @@
 {
     NSLog(@"Start game");
     [[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
+    [[SimpleAudioEngine sharedEngine] playEffect:@"swords.mp3"];
     [[CCDirector sharedDirector] replaceScene:[LevelScene scene]];
     
 }
@@ -35,7 +36,7 @@
 -(void) aboutUs
 {
     NSLog(@"About us");
-    [[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
+    [[SimpleAudioEngine sharedEngine] playEffect:@"swords.mp3"];
     [[CCDirector sharedDirector] replaceScene:[AboutUsScene node]]; 
                                                
 }
@@ -66,7 +67,9 @@
         homeMenu.position = CGPointZero;
         [self addChild:homeMenu];
         
-        [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"saltarello.mp3" loop:YES];
+        if ([[SimpleAudioEngine sharedEngine] isBackgroundMusicPlaying] == NO) {
+            [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"saltarello.mp3" loop:YES];
+        }
     }
     
     return self;

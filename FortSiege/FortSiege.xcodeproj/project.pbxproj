@@ -82,6 +82,7 @@
 		B96F7B54135231AC00DC5313 /* MainMenuScene.m in Sources */ = {isa = PBXBuildFile; fileRef = B96F7B53135231AC00DC5313 /* MainMenuScene.m */; };
 		B96F7B821352475D00DC5313 /* AboutUsScene.m in Sources */ = {isa = PBXBuildFile; fileRef = B96F7B811352475D00DC5313 /* AboutUsScene.m */; };
 		B977EB7E134A2C4B001298FC /* GameObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B977EB7D134A2C4B001298FC /* GameObject.m */; };
+		B9B813B71353E182005A6121 /* swords.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B9B813B61353E182005A6121 /* swords.mp3 */; };
 		B9CCC9FF135371EA00F92CEF /* revecy.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B9CCC9FD135371EA00F92CEF /* revecy.mp3 */; };
 		B9CCCA00135371EA00F92CEF /* saltarello.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B9CCC9FE135371EA00F92CEF /* saltarello.mp3 */; };
 		B9CCCA0D1353809300F92CEF /* Archer.m in Sources */ = {isa = PBXBuildFile; fileRef = B9CCCA0C1353809300F92CEF /* Archer.m */; };
@@ -357,6 +358,7 @@
 		B96F7B811352475D00DC5313 /* AboutUsScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutUsScene.m; sourceTree = "<group>"; };
 		B977EB7C134A2C4B001298FC /* GameObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameObject.h; sourceTree = "<group>"; };
 		B977EB7D134A2C4B001298FC /* GameObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameObject.m; sourceTree = "<group>"; };
+		B9B813B61353E182005A6121 /* swords.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = swords.mp3; sourceTree = "<group>"; };
 		B9CCC9FD135371EA00F92CEF /* revecy.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = revecy.mp3; sourceTree = "<group>"; };
 		B9CCC9FE135371EA00F92CEF /* saltarello.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = saltarello.mp3; sourceTree = "<group>"; };
 		B9CCCA0B1353809300F92CEF /* Archer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Archer.h; sourceTree = "<group>"; };
@@ -762,6 +764,7 @@
 		50F414EB1069373D002A0D5E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				B9B813AC1353E0E3005A6121 /* Effects */,
 				B9CCC9FB135371C600F92CEF /* Music */,
 				5E059A6D13522DE500C6D7C8 /* sprites.plist */,
 				5E059A6E13522DE500C6D7C8 /* sprites.png */,
@@ -798,6 +801,14 @@
 				5E059A62135221F300C6D7C8 /* map_01.tmx */,
 			);
 			name = Maps;
+			sourceTree = "<group>";
+		};
+		B9B813AC1353E0E3005A6121 /* Effects */ = {
+			isa = PBXGroup;
+			children = (
+				B9B813B61353E182005A6121 /* swords.mp3 */,
+			);
+			name = Effects;
 			sourceTree = "<group>";
 		};
 		B9CCC9FB135371C600F92CEF /* Music */ = {
@@ -1239,6 +1250,7 @@
 				5E059A7E135242E900C6D7C8 /* map_02_tiles.png in Resources */,
 				B9CCC9FF135371EA00F92CEF /* revecy.mp3 in Resources */,
 				B9CCCA00135371EA00F92CEF /* saltarello.mp3 in Resources */,
+				B9B813B71353E182005A6121 /* swords.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
