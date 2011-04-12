@@ -11,6 +11,7 @@
 #import "CCTouchDispatcher.h"
 #import "UnitMenu.h"
 #import "GameObject.h"
+#import "SimpleAudioEngine.h"
 
 #import "Knight.h"
 #import "KingArthur.h"

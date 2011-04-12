@@ -109,8 +109,8 @@
 
 -(Velocity*) init {
     if ((self = [super init])) {
-        self.deltaX = 2;
-        self.deltaY = 2;
+        self.deltaX = 1;
+        self.deltaY = 1;
     }
     return self;
 }

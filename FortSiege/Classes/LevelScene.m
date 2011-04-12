@@ -24,8 +24,8 @@
     [scene addChild:layer];
     
     UnitMenu *menuLayer = [UnitMenu node];
-    menuLayer.scale = 3.5;
-    menuLayer.position = ccp(920,916);
+    menuLayer.scale = 2.75;
+    menuLayer.position = ccp(720,680);
     
     [scene addChild:menuLayer];
     
@@ -41,6 +41,8 @@
     GameObjectTag = 0;
 
     if ( ( self=[super init] )) {
+        
+        [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"revecy.mp3" loop:YES];
         
         self.gameObjects = [NSMutableArray array];
         
@@ -69,7 +71,7 @@
             Knight* tmp = [[Knight alloc] init];
             tmp.position.x = 768;
             tmp.position.y = 298;
-            tmp.character.position = ccp(768+i*20,298);
+            tmp.character.position = ccp(768+i*20,296);
             [gameObjects addObject:tmp];
             tmp.state = WALKING;
             tmp.facing = LEFT;
