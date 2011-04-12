@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
+#import "CCTouchDispatcher.h"
 #import "UnitMenu.h"
 #import "GameObject.h"
 

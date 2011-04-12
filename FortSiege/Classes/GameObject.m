@@ -43,11 +43,16 @@
     return self;
 }
 
--(void) updateObject {
+-(void) updateObject:(ccTime)dt {
     if (self.state == WALKING) {
         if (self.facing == LEFT) {
-            self.position.x -= self.velocity.deltaX;
-            self.character.position = ccp(self.character.position.x - self.velocity.deltaX, self.character.position.y);
+            if (self.position.x < 0) {
+                self.position.x = 1056;
+                self.character.position = ccp(1056, self.character.position.y);  
+            } else {
+                self.position.x -= self.velocity.deltaX;
+                self.character.position = ccp(self.character.position.x - self.velocity.deltaX, self.character.position.y);
+            }
         } else if (self.facing == RIGHT) {
             self.position.x += self.velocity.deltaX;
             self.character.position = ccp(self.character.position.x + self.velocity.deltaX, self.character.position.y);
