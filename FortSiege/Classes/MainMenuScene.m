@@ -70,6 +70,9 @@
         if ([[SimpleAudioEngine sharedEngine] isBackgroundMusicPlaying] == NO) {
             [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"saltarello.mp3" loop:YES];
         }
+        
+        [_startGame release];
+        [_aboutUs release];
     }
     
     return self;

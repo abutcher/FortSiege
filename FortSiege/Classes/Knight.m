@@ -11,7 +11,7 @@
 
 @implementation Knight
 
-+(void) prepareFrames{
+-(void) prepareFrames{
     NSMutableArray* walkingAnimationFrames = [NSMutableArray array];
     NSMutableArray* standingAnimationFrames = [NSMutableArray array];
     NSMutableArray* attackingAnimationFrames = [NSMutableArray array];
@@ -20,33 +20,32 @@
         [walkingAnimationFrames addObject: [[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName: [NSString stringWithFormat:@"knight_walk_0%d.png", i]]];
     }
     
-    knight_walk = [CCAnimation animationWithFrames:walkingAnimationFrames delay:0.1f];
-    knight_walk_action = [CCRepeatForever actionWithAction: [CCAnimate actionWithAnimation:knight_walk restoreOriginalFrame:YES]];
+    self.walkAnimation = [CCAnimation animationWithFrames:walkingAnimationFrames delay:0.1f];
+    self.walkAction = [CCRepeatForever actionWithAction: [CCAnimate actionWithAnimation:self.walkAnimation restoreOriginalFrame:YES]];
     
     for (int i = 1; i <=1; ++i) {
         [standingAnimationFrames addObject: [[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:[NSString stringWithFormat:@"knight_stand_0%d.png",i]]];
     }
     
-    knight_stand = [CCAnimation animationWithFrames:standingAnimationFrames delay:0.1f];
-    knight_stand_action = [CCRepeatForever actionWithAction:[CCAnimate actionWithAnimation:knight_stand restoreOriginalFrame:YES]];
+    self.standAnimation = [CCAnimation animationWithFrames:standingAnimationFrames delay:0.1f];
+    self.standAction = [CCRepeatForever actionWithAction:[CCAnimate actionWithAnimation:self.standAnimation restoreOriginalFrame:YES]];
     
     for (int i = 1; i<=3; ++i) {
         [attackingAnimationFrames addObject: [[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:[NSString stringWithFormat:@"knight_attack_0%d.png",i]]];
     }
     
-    knight_attack = [CCAnimation animationWithFrames:attackingAnimationFrames delay:0.1f];
-    knight_attack_action = [CCRepeatForever actionWithAction:[CCAnimate actionWithAnimation:knight_attack restoreOriginalFrame:YES]];
+    self.attackAnimation = [CCAnimation animationWithFrames:attackingAnimationFrames delay:0.1f];
+    self.attackAction = [CCRepeatForever actionWithAction:[CCAnimate actionWithAnimation:self.attackAnimation restoreOriginalFrame:YES]];
 }
 
 -(id) init {
     
     if ( ( self = [super init] )) {
         
-        if (knight_walk == nil)
-            [Knight prepareFrames];
+        [self prepareFrames];
         
         self.character = [CCSprite spriteWithSpriteFrameName:@"knight_walk_01.png"];
-        [self.character runAction:knight_stand_action];
+        [self runWalkAction];
         
     }
     
@@ -55,19 +54,19 @@
 
 -(id) summonWithParameters: (int)x y: (int)y state: (enum State) state facing: (enum Facing) facing {
     if (( self = [super init])) {
-        if (knight_walk == nil)
-            [Knight prepareFrames];
+        
+        [self prepareFrames];
         
         self.state = state;
         self.facing = facing;
         
         if (self.state == WALKING) {
             self.character = [CCSprite spriteWithSpriteFrameName:@"knight_walk_01.png"];
-            [self.character runAction:knight_walk_action];
+            [self runWalkAction];
         }
         else if (self.state == STANDING) {
             self.character = [CCSprite spriteWithSpriteFrameName:@"knight_stand_01.png"];
-            [self.character runAction:knight_stand_action];
+            [self runStandAction];
         }
         
         self.position.x = x;
@@ -76,18 +75,6 @@
         
     }
     return self;
-}
-
--(void) runStandAction {
-    [self.character runAction:knight_stand_action];
-}
-
--(void) runWalkAction {
-    [self.character runAction:knight_walk_action];
-}
-
--(void) runAttackAction {
-    [self.character runAction:knight_attack_action];
 }
 
 -(void) updateObject:(ccTime)dt {

@@ -58,6 +58,12 @@ static int GameObjectTag;
     enum State state;
     enum Facing facing;
     CCSprite* _character;
+    CCAnimation* _walkAnimation;
+    CCAnimation* _standAnimation;
+    CCAnimation* _attackAnimation;
+    CCAction* _walkAction;
+    CCAction* _standAction;
+    CCAction* _attackAction;    
 }
 
 @property enum State state;
@@ -65,9 +71,14 @@ static int GameObjectTag;
 @property (retain) CCSprite* character;
 @property (retain) Position* position;
 @property (retain) Velocity* velocity;
+@property (retain) CCAnimation* walkAnimation;
+@property (retain) CCAnimation* standAnimation;
+@property (retain) CCAnimation* attackAnimation;
+@property (retain) CCAction* walkAction;
+@property (retain) CCAction* standAction;
+@property (retain) CCAction* attackAction;
 @property int tag;
 
--(id) summonWithParameters: (int)x y: (int)y state: (enum State) state facing: (enum Facing) facing;
 -(void) updateObject:(ccTime) dt;
 -(void) runWalkAction;
 -(void) runAttackAction;

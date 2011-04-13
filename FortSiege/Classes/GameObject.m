@@ -15,6 +15,12 @@
 @synthesize velocity;
 @synthesize tag;
 @synthesize character = _character;
+@synthesize walkAction = _walkAction;
+@synthesize standAction = _standAction;
+@synthesize attackAction = _attackAction;
+@synthesize walkAnimation = _walkAnimation;
+@synthesize standAnimation = _standAnimation;
+@synthesize attackAnimation = _attackAnimation;
 @synthesize state;
 @synthesize facing;
 
@@ -27,10 +33,6 @@
 
 +(void) incrementTag {
     GameObjectTag++;
-}
-
-+(void) prepareFrames {
-    
 }
 
 -(GameObject*) init {
@@ -68,6 +70,17 @@
     }
 }
 
+-(void) runStandAction {
+    [self.character runAction:self.standAction];
+}
+
+-(void) runWalkAction {
+    [self.character runAction:self.walkAction];
+}
+
+-(void) runAttackAction {
+    [self.character runAction:self.attackAction];
+}
 -(void) dealloc {
     [self.position release];
     [self.velocity release];
