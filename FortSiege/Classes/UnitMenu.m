@@ -108,31 +108,25 @@
 }
 
 - (void)butt1Tapped:(id)sender {
-//    [_label setString:@"Last button: One"];
-//((DetailViewController *)detailViewController).currentViewController    
-//    MainMenuScene *mmm;
-//    LevelScene *derp = mmm.mainScene;
-//    LevelScene *derp = MainMenuScene.mainScene;
       [[LevelScene mainLevelScene] addGameObject:[[Knight alloc] summonWithParameters: 758 y:296 state:WALKING facing:LEFT]]; 
-//[[MySingleton sharedMySingleton] sayHello];    
 }
 - (void)butt2Tapped:(id)sender {
-    [_label setString:@"Last button: Two"];
+    [[LevelScene mainLevelScene] addGameObject:[[Knight alloc] summonWithParameters: 758 y:296 state:WALKING facing:LEFT]]; 
 }
 - (void)butt3Tapped:(id)sender {
-    [_label setString:@"Last button: Three"];
+    [[LevelScene mainLevelScene] addGameObject:[[Archer alloc] summonWithParameters: 758 y:296 state:WALKING facing:LEFT]]; 
 }
 - (void)butt4Tapped:(id)sender {
-    [_label setString:@"Last button: Four"];
+    [[LevelScene mainLevelScene] addGameObject:[[Barrelman alloc] summonWithParameters: 758 y:296 state:WALKING facing:LEFT]]; 
 }
 - (void)butt5Tapped:(id)sender {
-    [_label setString:@"Last button: Five"];
+    [[LevelScene mainLevelScene] addGameObject:[[Knight alloc] summonWithParameters: 758 y:296 state:WALKING facing:LEFT]]; 
 }
 - (void)butt6Tapped:(id)sender {
-    [_label setString:@"Last button: Six"];
+    [[LevelScene mainLevelScene] addGameObject:[[Knight alloc] summonWithParameters: 758 y:296 state:WALKING facing:LEFT]]; 
 }
 - (void)butt7Tapped:(id)sender {
-    [_label setString:@"Last button: Seven"];
+    [[LevelScene mainLevelScene] addGameObject:[[Soldier alloc] summonWithParameters: 758 y:296 state:WALKING facing:LEFT]]; 
 }
 
 // on "dealloc" you need to release all your retained objects
