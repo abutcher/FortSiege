@@ -13,6 +13,7 @@
 
 @implementation UnitMenu
 
+
 // on "init" you need to initialize your instance
 -(id) init
 {
@@ -107,7 +108,13 @@
 }
 
 - (void)butt1Tapped:(id)sender {
-    [_label setString:@"Last button: One"];
+//    [_label setString:@"Last button: One"];
+//((DetailViewController *)detailViewController).currentViewController    
+//    MainMenuScene *mmm;
+//    LevelScene *derp = mmm.mainScene;
+//    LevelScene *derp = MainMenuScene.mainScene;
+      [[LevelScene mainLevelScene] addGameObject:[[Knight alloc] summonWithParameters: 758 y:296 state:WALKING facing:LEFT]]; 
+//[[MySingleton sharedMySingleton] sayHello];    
 }
 - (void)butt2Tapped:(id)sender {
     [_label setString:@"Last button: Two"];

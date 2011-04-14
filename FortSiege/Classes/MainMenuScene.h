@@ -16,7 +16,6 @@
 @interface MainMenuScene : CCLayer {
     
     CCLabelTTF *_title;
-    
 }
 
 +(id) scene;

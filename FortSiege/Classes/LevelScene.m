@@ -9,6 +9,7 @@
 #import "LevelScene.h"
 
 @implementation LevelScene
+static LevelScene* _mainLevelScene = nil;
 
 @synthesize tileMap = _tileMap;
 @synthesize background = _background;
@@ -16,6 +17,33 @@
 @synthesize sprites = _sprites;
 @synthesize gameObjects = _gameObjects;
 
+
++(LevelScene*)mainLevelScene
+{
+	@synchronized([LevelScene class])
+	{
+		if (!_mainLevelScene)
+			[[self alloc] init];
+        
+		return _mainLevelScene;
+	}
+    
+	return nil;
+}
+
++(id)alloc
+{
+	@synchronized([LevelScene class])
+	{
+		NSAssert(_mainLevelScene == nil, @"Attempted to allocate a second instance of a singleton.");
+		_mainLevelScene = [super alloc];
+		return _mainLevelScene;
+	}
+    
+	return nil;
+}
+
+//HERPIN DERPS
 
 +(id) scene
 {

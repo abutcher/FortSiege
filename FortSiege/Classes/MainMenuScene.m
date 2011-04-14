@@ -14,8 +14,7 @@
 +(id) scene 
 {
     
-    CCScene *scene = [CCScene node];
-    
+    CCScene* scene = [CCScene node];
     MainMenuScene *layer = [MainMenuScene node];
     
     [scene addChild: layer];
@@ -28,7 +27,7 @@
 {
     NSLog(@"Start game");
     [[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
-    [[SimpleAudioEngine sharedEngine] playEffect:@"swords.mp3"];
+    [[SimpleAudioEngine sharedEngine] playEffect:@"swords.mp3"];    
     [[CCDirector sharedDirector] replaceScene:[LevelScene scene]];
     
 }

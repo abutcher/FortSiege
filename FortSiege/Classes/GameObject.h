@@ -10,13 +10,13 @@
 #import "cocos2d.h"
 #import <Foundation/Foundation.h>
 
-enum State {
+extern enum State {
     ATTACKING = 0,
     STANDING = 1,
     WALKING = 2
     };
 
-enum Facing {
+extern enum Facing {
     RIGHT = 0,
     LEFT = 0
 };

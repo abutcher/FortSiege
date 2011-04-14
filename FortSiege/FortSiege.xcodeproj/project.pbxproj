@@ -638,6 +638,7 @@
 			isa = PBXGroup;
 			children = (
 				B9CCCA091353807000F92CEF /* Characters */,
+				B977EB7C134A2C4B001298FC /* GameObject.h */,
 				B96F7B42135228A500DC5313 /* LevelScene.h */,
 				B96F7B43135228A500DC5313 /* LevelScene.m */,
 				E0F80F5D120A0182005866B8 /* GameConfig.h */,
@@ -647,7 +648,6 @@
 				E0F80F5F120A0182005866B8 /* RootViewController.m */,
 				1F3B9A2C0EF2145700286867 /* FortSiegeAppDelegate.h */,
 				1F3B9A2B0EF2145700286867 /* FortSiegeAppDelegate.m */,
-				B977EB7C134A2C4B001298FC /* GameObject.h */,
 				B977EB7D134A2C4B001298FC /* GameObject.m */,
 				B96F7B52135231AC00DC5313 /* MainMenuScene.h */,
 				B96F7B53135231AC00DC5313 /* MainMenuScene.m */,

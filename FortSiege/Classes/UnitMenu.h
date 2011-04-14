@@ -7,7 +7,21 @@
 //
 
 // When you import this file, you import all the cocos2d classes
+#import <Foundation/Foundation.h>
 #import "cocos2d.h"
+#import "CCTouchDispatcher.h"
+#import "UnitMenu.h"
+#import "GameObject.h"
+
+#import "Knight.h"
+#import "KingArthur.h"
+#import "Barrelman.h"
+#import "Soldier.h"
+#import "Archer.h"
+
+#import "LevelScene.h"
+#import "MainMenuScene.h"
+
 
 @interface UnitMenu : CCLayer
 {
@@ -39,5 +53,8 @@
     CCMenuItemSprite *menuItem7;
     
 }
+
+//- (void) addGameObject: (GameObject *) object;
+
 
 @end
