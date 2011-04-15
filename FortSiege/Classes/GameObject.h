@@ -74,7 +74,6 @@ extern enum Facing {
 @property (retain) CCAction* walkAction;
 @property (retain) CCAction* standAction;
 @property (retain) CCAction* attackAction;
-@property int tag;
 
 -(void) updateObject:(ccTime) dt;
 -(void) runWalkAction;
