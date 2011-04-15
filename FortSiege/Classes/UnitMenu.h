@@ -19,12 +19,13 @@
 #import "Soldier.h"
 #import "Archer.h"
 
-#import "LevelScene.h"
 #import "MainMenuScene.h"
-
+@class LevelScene;
 
 @interface UnitMenu : CCLayer
 {
+    LevelScene* parent;
+    
     CCLabelTTF *_label;
     CCSprite *bigMenu;
     
@@ -55,6 +56,6 @@
 }
 
 //- (void) addGameObject: (GameObject *) object;
-
+@property (retain) LevelScene* parent;
 
 @end

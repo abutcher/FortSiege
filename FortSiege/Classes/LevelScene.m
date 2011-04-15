@@ -9,7 +9,6 @@
 #import "LevelScene.h"
 
 @implementation LevelScene
-static LevelScene* _mainLevelScene = nil;
 
 @synthesize tileMap = _tileMap;
 @synthesize background = _background;
@@ -18,32 +17,6 @@ static LevelScene* _mainLevelScene = nil;
 @synthesize gameObjects = _gameObjects;
 
 
-+(LevelScene*)mainLevelScene
-{
-	@synchronized([LevelScene class])
-	{
-		if (!_mainLevelScene)
-			[[self alloc] init];
-        
-		return _mainLevelScene;
-	}
-    
-	return nil;
-}
-
-+(id)alloc
-{
-	@synchronized([LevelScene class])
-	{
-		NSAssert(_mainLevelScene == nil, @"Attempted to allocate a second instance of a singleton.");
-		_mainLevelScene = [super alloc];
-		return _mainLevelScene;
-	}
-    
-	return nil;
-}
-
-//HERPIN DERPS
 
 +(id) scene
 {
@@ -53,12 +26,6 @@ static LevelScene* _mainLevelScene = nil;
     
     LevelScene *layer = [LevelScene node];
     [scene addChild:layer];
-    
-    UnitMenu *menuLayer = [UnitMenu node];
-    menuLayer.scale = 2.75;
-    menuLayer.position = ccp(720,680);
-    
-    [scene addChild:menuLayer];
     
     return scene;
 
@@ -98,6 +65,15 @@ static LevelScene* _mainLevelScene = nil;
         NSLog(@"Adding demo guys to scene.");
      
         [self schedule:@selector(nextFrame:)];
+        
+        UnitMenu *menuLayer = [UnitMenu node];
+        menuLayer.scale = 2.75;
+        menuLayer.position = ccp(720,680);
+        
+        [self addChild:menuLayer];        
+        menuLayer.parent = self;
+
+        
     }
     
     return self;

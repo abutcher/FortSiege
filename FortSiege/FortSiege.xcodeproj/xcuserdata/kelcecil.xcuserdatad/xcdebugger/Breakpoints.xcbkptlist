@@ -78,20 +78,6 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          isPathRelative = "1"
-         filePath = "Classes/LevelScene.m"
-         timestampString = "324252742.111799"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "57"
-         endingLineNumber = "57"
-         landmarkName = "-initWithLevel:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         isPathRelative = "1"
          filePath = "Classes/MainMenuScene.m"
          timestampString = "324264401.86543"
          startingColumnNumber = "9223372036854775807"
@@ -121,11 +107,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "Classes/LevelScene.m"
-         timestampString = "324253284.921085"
+         timestampString = "324543176.423596"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "75"
-         endingLineNumber = "75"
+         startingLineNumber = "42"
+         endingLineNumber = "42"
          landmarkName = "-init"
          landmarkType = "5">
       </FileBreakpoint>

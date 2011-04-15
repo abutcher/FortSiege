@@ -13,6 +13,7 @@
 
 @implementation UnitMenu
 
+@synthesize parent;
 
 // on "init" you need to initialize your instance
 -(id) init
@@ -108,25 +109,25 @@
 }
 
 - (void)butt1Tapped:(id)sender {
-      [[LevelScene mainLevelScene] addGameObject:[[Knight alloc] summonWithParameters: 758 y:296 state:WALKING facing:LEFT]]; 
+      [self.parent addGameObject:[[Knight alloc] summonWithParameters: 758 y:296 state:WALKING facing:LEFT]]; 
 }
 - (void)butt2Tapped:(id)sender {
-    [[LevelScene mainLevelScene] addGameObject:[[Knight alloc] summonWithParameters: 758 y:296 state:WALKING facing:LEFT]]; 
+    [self.parent addGameObject:[[Knight alloc] summonWithParameters: 758 y:296 state:WALKING facing:LEFT]]; 
 }
 - (void)butt3Tapped:(id)sender {
-    [[LevelScene mainLevelScene] addGameObject:[[Archer alloc] summonWithParameters: 758 y:296 state:WALKING facing:LEFT]]; 
+    [self.parent addGameObject:[[Archer alloc] summonWithParameters: 758 y:296 state:WALKING facing:LEFT]]; 
 }
 - (void)butt4Tapped:(id)sender {
-    [[LevelScene mainLevelScene] addGameObject:[[Barrelman alloc] summonWithParameters: 758 y:296 state:WALKING facing:LEFT]]; 
+    [self.parent addGameObject:[[Barrelman alloc] summonWithParameters: 758 y:296 state:WALKING facing:LEFT]]; 
 }
 - (void)butt5Tapped:(id)sender {
-    [[LevelScene mainLevelScene] addGameObject:[[Knight alloc] summonWithParameters: 758 y:296 state:WALKING facing:LEFT]]; 
+    [self.parent addGameObject:[[Knight alloc] summonWithParameters: 758 y:296 state:WALKING facing:LEFT]]; 
 }
 - (void)butt6Tapped:(id)sender {
-    [[LevelScene mainLevelScene] addGameObject:[[Knight alloc] summonWithParameters: 758 y:296 state:WALKING facing:LEFT]]; 
+    [self.parent addGameObject:[[Knight alloc] summonWithParameters: 758 y:296 state:WALKING facing:LEFT]]; 
 }
 - (void)butt7Tapped:(id)sender {
-    [[LevelScene mainLevelScene] addGameObject:[[Soldier alloc] summonWithParameters: 758 y:296 state:WALKING facing:LEFT]]; 
+    [self.parent addGameObject:[[Soldier alloc] summonWithParameters: 758 y:296 state:WALKING facing:LEFT]]; 
 }
 
 // on "dealloc" you need to release all your retained objects
