@@ -17,5 +17,5 @@
 
 -(void)prepareFrames;
 -(void) updateObject:(ccTime)dt;
-
+-(id) summonWithParameters: (int)x y: (int)y state: (State) state facing: (Facing) facing;
 @end
