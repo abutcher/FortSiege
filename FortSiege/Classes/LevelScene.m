@@ -77,6 +77,20 @@
     }
 }
 
+// Should check this CGPoint struct out further I think...
+-(CGPoint)tileCoordinateGivenCGPoint:(CGPoint)position {
+    int x = position.x / self.tileMap.tileSize.width;
+    int y = ((self.tileMap.mapSize.height * self.tileMap.tileSize.height) -position.y);
+    return ccp(x,y);
+}
+
+// Second tile coordinate function in case we only keep x and y int's.
+-(CGPoint) tileCoordinateGivenX:(int)X andY:(int)Y {
+    int x = X / self.tileMap.tileSize.width;
+    int y = ((self.tileMap.mapSize.height * self.tileMap.tileSize.height) - Y);
+    return ccp(x,y);
+}
+
 - (void) addGameObject:(GameObject *)object {
     [self.gameObjects addObject:object];
     [self.sprites addChild:object.character];
