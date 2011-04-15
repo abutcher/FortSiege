@@ -1,5 +1,5 @@
 //
-//  Fire.h
+//  SmallFire.h
 //  FortSiege
 //
 //  Created by Andrew Butcher on 4/15/11.
