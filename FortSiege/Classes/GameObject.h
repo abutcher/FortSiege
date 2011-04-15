@@ -48,13 +48,10 @@ extern enum Facing {
 -(Velocity*) init;
 @end
 
-static int GameObjectTag;
-
 @interface GameObject : NSObject {
 @private
     Position* position;
     Velocity* velocity;
-    int tag;
     enum State state;
     enum Facing facing;
     CCSprite* _character;

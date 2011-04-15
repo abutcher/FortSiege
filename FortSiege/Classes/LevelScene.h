@@ -20,13 +20,8 @@
 #import "Archer.h"
 #import "LevelScene.h"
 
-extern int GameObjectTag;
-
-
 @interface LevelScene : CCLayer {
-    
-    LevelScene *LS;
-    
+        
     CCTMXTiledMap *_tileMap;
     CCTMXLayer *_background;
     CCTMXLayer *_background2;
@@ -34,8 +29,6 @@ extern int GameObjectTag;
     CCSpriteBatchNode *_sprites;
     
 }
-
-+(LevelScene*)mainLevelScene;
 
 + (id) scene;
 - (void) addGameObject: (GameObject *) object;

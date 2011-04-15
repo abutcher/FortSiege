@@ -33,9 +33,6 @@
 
 -(id) init
 {
-    // Must be reset at the beginning of each level.
-    GameObjectTag = 0;
-
     if ( ( self=[super init] )) {
         
         self.isTouchEnabled = YES;

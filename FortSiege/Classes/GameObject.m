@@ -13,7 +13,6 @@
 
 @synthesize position;
 @synthesize velocity;
-@synthesize tag;
 @synthesize character = _character;
 @synthesize walkAction = _walkAction;
 @synthesize standAction = _standAction;
@@ -24,23 +23,11 @@
 @synthesize state;
 @synthesize facing;
 
-+(int) getTagAndIncrement
-{
-    int returnValue = GameObjectTag;
-    GameObjectTag = GameObjectTag + 1;
-    return returnValue;
-}
-
-+(void) incrementTag {
-    GameObjectTag++;
-}
-
 -(GameObject*) init {
     
     if ( (self = [super init]) ) {
         self.position = [[Position alloc] init];
         self.velocity = [[Velocity alloc] init];
-        self.tag = [GameObject getTagAndIncrement];
     }
     return self;
 }
