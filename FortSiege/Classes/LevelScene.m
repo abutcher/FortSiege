@@ -66,8 +66,6 @@ static LevelScene* _mainLevelScene = nil;
 
 -(id) init
 {
-    self.isTouchEnabled = YES;
-    
     // Must be reset at the beginning of each level.
     GameObjectTag = 0;
 
@@ -98,6 +96,8 @@ static LevelScene* _mainLevelScene = nil;
         NSLog(@"Adding demo guys to scene.");
      
         [self schedule:@selector(nextFrame:)];
+        
+        self.isTouchEnabled = YES;
     }
     
     return self;
@@ -115,14 +115,23 @@ static LevelScene* _mainLevelScene = nil;
     [self.sprites addChild:object.character];
 }
 
-- (void) ccTouchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+-(void) registerWithTouchDispatcher
 {
-    
+	[[CCTouchDispatcher sharedDispatcher] addTargetedDelegate:self priority:0 swallowsTouches:YES];
+}
+
+- (BOOL)ccTouchBegan:(UITouch *)touch withEvent:(UIEvent *)event {
+    return YES;
+}
+
+- (void)ccTouchEnded:(UITouch *)touch withEvent:(UIEvent *)event
+{
+    CGPoint location = [self convertTouchToNodeSpace: touch];
+    NSLog(@"X: %.2f, Y: %.2f", location.x, location.y);
 }
 
 -(id) initWithLevel:(NSString*)FileName
 {
-    self.isTouchEnabled = YES;
     
     if ( ( self=[super init] )) {
         
@@ -130,6 +139,8 @@ static LevelScene* _mainLevelScene = nil;
         self.background = [_tileMap layerNamed:@"Background"];
         
         [self addChild:_tileMap z:-1];
+        
+        self.isTouchEnabled = YES;
     }
     
     return self;
