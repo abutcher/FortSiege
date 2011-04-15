@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "GameObject.h"
+@class LevelScene;
 
 @interface Knight : GameObject {
 
@@ -17,5 +18,5 @@
 
 -(void)prepareFrames;
 -(void) updateObject:(ccTime)dt;
--(id) summonWithParameters: (int)x y: (int)y state: (State) state facing: (Facing) facing;
+-(id) summonWithParameters:(LevelScene*)inputParent x:(int)x y: (int)y state: (State) state facing: (Facing) facing;
 @end

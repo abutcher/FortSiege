@@ -1,4 +1,4 @@
-//
+ //
 //  Barrelman.m
 //  FortSiege
 //
@@ -25,7 +25,7 @@
     self.walkAction = [CCRepeatForever actionWithAction: [CCAnimate actionWithAnimation:self.walkAnimation restoreOriginalFrame:YES]];
     
     for (int i = 1; i <=1; ++i) {
-        [standingAnimationFrames addObject: [[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:[NSString stringWithFormat:@"barrelman_stand_0%d.png",i]]];
+        [standingAnimationFrames addObject: [[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:[NSString stringWithFormat:@"barrellman_stand_0%d.png",i]]];
     }
     
     self.standAnimation = [CCAnimation animationWithFrames:standingAnimationFrames delay:0.1f];
@@ -66,7 +66,7 @@
             [self runWalkAction];
         }
         else if (self.state == STANDING) {
-            self.character = [CCSprite spriteWithSpriteFrameName:@"barrelman_stand_01.png"];
+            self.character = [CCSprite spriteWithSpriteFrameName:@"barrellman_stand_01.png"];
             [self runStandAction];
         }
         

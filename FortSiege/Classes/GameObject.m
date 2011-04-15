@@ -22,6 +22,7 @@
 @synthesize attackAnimation = _attackAnimation;
 @synthesize state;
 @synthesize facing;
+@synthesize parent;
 
 -(GameObject*) init {
     
@@ -32,7 +33,31 @@
     return self;
 }
 
+-(GameObject*) initWithParent:(LevelScene*)inputParent {
+    if ( ( self = [super init] ) ) {
+        self.position = [[Position alloc] init];
+        self.position = [[Velocity alloc] init];
+        self.parent = inputParent;
+    }
+    return self;
+}
+
 -(void) updateObject:(ccTime)dt {
+    
+    static float GRAVITY = 9.81;
+    
+    // Compute to see if gravity would cause a character to fall.
+    CGPoint temp = CGPointMake(self.position.x, self.position.y + (GRAVITY * dt));
+    
+    
+    // Forward compute the position of the character to see if they are preparing to walk into a collidable object.
+    if (self.state == WALKING) {
+        
+        
+        
+    }
+    
+    /*
     if (self.state == WALKING) {
         if (self.facing == LEFT) {
             if (self.position.x < 0) {
@@ -55,6 +80,7 @@
     } else {
         NSLog(@"No state set.");
     }
+     */
 }
 
 -(void) runStandAction {

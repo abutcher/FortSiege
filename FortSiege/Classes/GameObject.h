@@ -8,13 +8,7 @@
 //
 #import "cocos2d.h"
 #import <Foundation/Foundation.h>
-/*
-extern enum State {
-    ATTACKING = 0,
-    STANDING = 1,
-    WALKING = 2
-    };
-*/
+@class LevelScene;
 
 typedef enum {
     ATTACKING,
@@ -22,12 +16,6 @@ typedef enum {
     WALKING
 } State ;
 
-/*
-extern enum Facing {
-    RIGHT = 0,
-    LEFT = 1
-};
- */
 typedef enum {
     RIGHT,
     LEFT
@@ -72,7 +60,9 @@ typedef enum {
     CCAnimation* _attackAnimation;
     CCAction* _walkAction;
     CCAction* _standAction;
-    CCAction* _attackAction;    
+    CCAction* _attackAction;
+    LevelScene* parent;
+    
 }
 
 @property State state;
@@ -86,12 +76,14 @@ typedef enum {
 @property (retain) CCAction* walkAction;
 @property (retain) CCAction* standAction;
 @property (retain) CCAction* attackAction;
+@property (retain) LevelScene* parent;
 
 -(void) updateObject:(ccTime) dt;
 -(void) runWalkAction;
 -(void) runAttackAction;
 -(void) runStandAction;
-
+-(GameObject*) initWithParent:(LevelScene*)inputParent;
+-(id) summonWithParameters:(LevelScene*)inputParent x:(int)x y: (int)y state: (State) state facing: (Facing) facing;
 
 @end
 

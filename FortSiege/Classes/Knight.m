@@ -52,8 +52,11 @@
     return self;
 }
 
--(id) summonWithParameters: (int)x y: (int)y state: (State) state facing: (Facing) facing {
+-(id) summonWithParameters:(LevelScene*)inputParent x:(int)x y: (int)y state: (State) state facing: (Facing) facing {
     if (( self = [super init])) {
+        
+        // May have to set this after we add the child. Not sure.
+        self.parent = inputParent;
         
         [self prepareFrames];
         

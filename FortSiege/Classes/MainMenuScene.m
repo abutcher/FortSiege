@@ -28,7 +28,7 @@
     NSLog(@"Start game");
     [[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
     [[SimpleAudioEngine sharedEngine] playEffect:@"swords.mp3"];    
-    [[CCDirector sharedDirector] replaceScene:[LevelScene scene]];
+    [[CCDirector sharedDirector] replaceScene:[CCTransitionPageTurn transitionWithDuration:2.0f scene:[LevelScene scene]]];
     
 }
 
