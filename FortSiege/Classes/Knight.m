@@ -52,7 +52,7 @@
     return self;
 }
 
--(id) summonWithParameters: (int)x y: (int)y state: (enum State) state facing: (enum Facing) facing {
+-(id) summonWithParameters: (int)x y: (int)y state: (State) state facing: (Facing) facing {
     if (( self = [super init])) {
         
         [self prepareFrames];
