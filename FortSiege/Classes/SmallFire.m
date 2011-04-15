@@ -1,10 +1,11 @@
 //
-//  Fire.m
+//  SmallFire.m
 //  FortSiege
 //
 //  Created by Andrew Butcher on 4/15/11.
 //  Copyright 2011 West Virginia University. All rights reserved.
 //
+//  This is torch sized...
 
 #import "SmallFire.h"
 
@@ -23,8 +24,8 @@
 -(id) initWithPosition: (CGPoint) location {
     if ((self == [super init])) {
         self.position = location;
-        [self setScaleX:0.1];
-        [self setScaleY:0.1];
+        [self setScaleX:0.05];
+        [self setScaleY:0.05];
         self.texture = [[CCTextureCache sharedTextureCache] addImage:@"Fire.png"];
     }
     return self;
