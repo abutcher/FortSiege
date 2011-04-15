@@ -82,19 +82,11 @@ static LevelScene* _mainLevelScene = nil;
         
         NSLog(@"Map added to scene.");
         
-        // Moved to FortSiegeAppDelegate.m
-        // [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"sprites.plist"];
-        
         self.sprites = [CCSpriteBatchNode batchNodeWithFile:@"sprites.png"];
 		[self addChild:self.sprites z:1];
         
         NSLog(@"Sprite sheet loaded.");
-        
-        // Stream-lined demo guy addition.
-        [self addGameObject:[[Knight alloc] summonWithParameters: 758 y:296 state:WALKING facing:LEFT]]; 
-        
-        NSLog(@"Adding demo guys to scene.");
-     
+
         [self schedule:@selector(nextFrame:)];
         
         self.isTouchEnabled = YES;
@@ -127,6 +119,15 @@ static LevelScene* _mainLevelScene = nil;
 - (void)ccTouchEnded:(UITouch *)touch withEvent:(UIEvent *)event
 {
     CGPoint location = [self convertTouchToNodeSpace: touch];
+    
+    CGRect selectionRectangle = CGRectMake(location.x, location.y, 60, 60);
+    
+    for (GameObject *object in self.gameObjects) {
+        if (CGRectContainsPoint(selectionRectangle, object.character.position)) {
+            NSLog(@"Selected: %@", [object class]);
+        }
+    }
+    
     NSLog(@"X: %.2f, Y: %.2f", location.x, location.y);
 }
 

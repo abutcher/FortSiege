@@ -75,6 +75,7 @@
 		5E059A7A13523AFC00C6D7C8 /* map_02.tmx in Resources */ = {isa = PBXBuildFile; fileRef = 5E059A7913523AFC00C6D7C8 /* map_02.tmx */; };
 		5E059A7C13523B1C00C6D7C8 /* tree.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E059A7B13523B1C00C6D7C8 /* tree.png */; };
 		5E059A7E135242E900C6D7C8 /* map_02_tiles.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E059A7D135242E900C6D7C8 /* map_02_tiles.png */; };
+		5E19764E13580DBA0073C3E8 /* SmallFire.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E19764D13580DBA0073C3E8 /* SmallFire.m */; };
 		5E724D2E12F889A100319E12 /* icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 5E724D2D12F889A100319E12 /* icon.icns */; };
 		5E724D3A12F88AAD00319E12 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E724D3912F88AAD00319E12 /* icon.png */; };
 		6BB5868D1352C6DD00DA1B7F /* UnitMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB5868C1352C6DD00DA1B7F /* UnitMenu.m */; };
@@ -346,6 +347,8 @@
 		5E059A7913523AFC00C6D7C8 /* map_02.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = map_02.tmx; sourceTree = "<group>"; };
 		5E059A7B13523B1C00C6D7C8 /* tree.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tree.png; sourceTree = "<group>"; };
 		5E059A7D135242E900C6D7C8 /* map_02_tiles.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_02_tiles.png; sourceTree = "<group>"; };
+		5E19764C13580DBA0073C3E8 /* SmallFire.h */ = {isa = PBXFileReference; fileEncoding = 4; path = SmallFire.h; sourceTree = "<group>"; };
+		5E19764D13580DBA0073C3E8 /* SmallFire.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmallFire.m; sourceTree = "<group>"; };
 		5E724D2D12F889A100319E12 /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = icon.icns; sourceTree = "<group>"; };
 		5E724D3912F88AAD00319E12 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		6BB5868B1352C6DD00DA1B7F /* UnitMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnitMenu.h; sourceTree = "<group>"; };
@@ -637,6 +640,7 @@
 		2D500B1D0D5A766B00DBA0E3 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				5E19764B13580D9D0073C3E8 /* Effects */,
 				B9CCCA091353807000F92CEF /* Characters */,
 				B977EB7C134A2C4B001298FC /* GameObject.h */,
 				B96F7B42135228A500DC5313 /* LevelScene.h */,
@@ -801,6 +805,15 @@
 				5E059A62135221F300C6D7C8 /* map_01.tmx */,
 			);
 			name = Maps;
+			sourceTree = "<group>";
+		};
+		5E19764B13580D9D0073C3E8 /* Effects */ = {
+			isa = PBXGroup;
+			children = (
+				5E19764C13580DBA0073C3E8 /* SmallFire.h */,
+				5E19764D13580DBA0073C3E8 /* SmallFire.m */,
+			);
+			name = Effects;
 			sourceTree = "<group>";
 		};
 		B9B813AC1353E0E3005A6121 /* Effects */ = {
@@ -1275,6 +1288,7 @@
 				B9CCCA161353812F00F92CEF /* Knight.m in Sources */,
 				B9CCCA191353817A00F92CEF /* KingArthur.m in Sources */,
 				B9CCCA1C135381AE00F92CEF /* Soldier.m in Sources */,
+				5E19764E13580DBA0073C3E8 /* SmallFire.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
