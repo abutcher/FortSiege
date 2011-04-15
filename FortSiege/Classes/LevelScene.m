@@ -33,12 +33,12 @@
 
 -(id) init
 {
-    self.isTouchEnabled = YES;
-    
     // Must be reset at the beginning of each level.
     GameObjectTag = 0;
 
     if ( ( self=[super init] )) {
+        
+        self.isTouchEnabled = YES;
         
         [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"revecy.mp3" loop:YES];
         
@@ -51,19 +51,11 @@
         
         NSLog(@"Map added to scene.");
         
-        // Moved to FortSiegeAppDelegate.m
-        // [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"sprites.plist"];
-        
         self.sprites = [CCSpriteBatchNode batchNodeWithFile:@"sprites.png"];
 		[self addChild:self.sprites z:1];
         
         NSLog(@"Sprite sheet loaded.");
-        
-        // Stream-lined demo guy addition.
-        [self addGameObject:[[Knight alloc] summonWithParameters: 758 y:296 state:WALKING facing:LEFT]]; 
-        
-        NSLog(@"Adding demo guys to scene.");
-     
+
         [self schedule:@selector(nextFrame:)];
         
         UnitMenu *menuLayer = [UnitMenu node];
@@ -73,7 +65,6 @@
         [self addChild:menuLayer];        
         menuLayer.parent = self;
 
-        
     }
     
     return self;
@@ -91,14 +82,32 @@
     [self.sprites addChild:object.character];
 }
 
-- (void) ccTouchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+-(void) registerWithTouchDispatcher
 {
+	[[CCTouchDispatcher sharedDispatcher] addTargetedDelegate:self priority:0 swallowsTouches:YES];
+}
+
+- (BOOL)ccTouchBegan:(UITouch *)touch withEvent:(UIEvent *)event {
+    return YES;
+}
+
+- (void)ccTouchEnded:(UITouch *)touch withEvent:(UIEvent *)event
+{
+    CGPoint location = [self convertTouchToNodeSpace: touch];
     
+    CGRect selectionRectangle = CGRectMake(location.x, location.y, 60, 60);
+    
+    for (GameObject *object in self.gameObjects) {
+        if (CGRectContainsPoint(selectionRectangle, object.character.position)) {
+            NSLog(@"Selected: %@", [object class]);
+        }
+    }
+    
+    NSLog(@"X: %.2f, Y: %.2f", location.x, location.y);
 }
 
 -(id) initWithLevel:(NSString*)FileName
 {
-    self.isTouchEnabled = YES;
     
     if ( ( self=[super init] )) {
         
@@ -106,6 +115,8 @@
         self.background = [_tileMap layerNamed:@"Background"];
         
         [self addChild:_tileMap z:-1];
+        
+        self.isTouchEnabled = YES;
     }
     
     return self;

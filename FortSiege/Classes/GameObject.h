@@ -18,7 +18,7 @@ extern enum State {
 
 extern enum Facing {
     RIGHT = 0,
-    LEFT = 0
+    LEFT = 1
 };
 
 @interface Position : NSObject {
