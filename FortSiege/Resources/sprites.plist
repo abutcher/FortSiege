@@ -4,7 +4,6 @@
 <dict>
 	<key>frames</key>
 	<dict>
-		
 		<key>archer_button.png</key>
 		<dict>
 			<key>aliases</key>
@@ -24,8 +23,7 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
-		<key>barrell_01.png</key>
+		<key>barrel_01.png</key>
 		<dict>
 			<key>aliases</key>
 			<array/>
@@ -44,8 +42,7 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
-		<key>barrell_02.png</key>
+		<key>barrel_02.png</key>
 		<dict>
 			<key>aliases</key>
 			<array/>
@@ -64,8 +61,7 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
-		<key>barrell_button.png</key>
+		<key>barrel_button.png</key>
 		<dict>
 			<key>aliases</key>
 			<array/>
@@ -84,8 +80,7 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
-		<key>barrellman_stand_01.png</key>
+		<key>barrelman_stand_01.png</key>
 		<dict>
 			<key>aliases</key>
 			<array/>
@@ -104,7 +99,6 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>barrelman_climb_01.png</key>
 		<dict>
 			<key>aliases</key>
@@ -124,7 +118,6 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>barrelman_climb_02.png</key>
 		<dict>
 			<key>aliases</key>
@@ -144,7 +137,6 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>barrelman_walk_01.png</key>
 		<dict>
 			<key>aliases</key>
@@ -164,7 +156,6 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>barrelman_walk_02.png</key>
 		<dict>
 			<key>aliases</key>
@@ -184,7 +175,6 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>barrelman_walk_03.png</key>
 		<dict>
 			<key>aliases</key>
@@ -204,7 +194,6 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>barrelman_walk_04.png</key>
 		<dict>
 			<key>aliases</key>
@@ -224,7 +213,6 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>barrelman_walk_05.png</key>
 		<dict>
 			<key>aliases</key>
@@ -244,7 +232,6 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>barrelman_walk_06.png</key>
 		<dict>
 			<key>aliases</key>
@@ -264,7 +251,6 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>black_wiz_button.png</key>
 		<dict>
 			<key>aliases</key>
@@ -284,7 +270,6 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>dirt.png</key>
 		<dict>
 			<key>aliases</key>
@@ -304,7 +289,6 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>engineer_button.png</key>
 		<dict>
 			<key>aliases</key>
@@ -324,7 +308,6 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>kindar_stand_01.png</key>
 		<dict>
 			<key>aliases</key>
@@ -344,7 +327,6 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>kingar_attack_01.png</key>
 		<dict>
 			<key>aliases</key>
@@ -364,7 +346,6 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>kingar_attack_02.png</key>
 		<dict>
 			<key>aliases</key>
@@ -384,7 +365,6 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>kingar_attack_03.png</key>
 		<dict>
 			<key>aliases</key>
@@ -404,7 +384,6 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>kingar_climb_01.png</key>
 		<dict>
 			<key>aliases</key>
@@ -424,7 +403,6 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>kingar_climb_02.png</key>
 		<dict>
 			<key>aliases</key>
@@ -444,7 +422,6 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>kingar_walk_01.png</key>
 		<dict>
 			<key>aliases</key>
@@ -464,7 +441,6 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>kingar_walk_02.png</key>
 		<dict>
 			<key>aliases</key>
@@ -484,7 +460,6 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>kingar_walk_03.png</key>
 		<dict>
 			<key>aliases</key>
@@ -504,7 +479,6 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>kingar_walk_04.png</key>
 		<dict>
 			<key>aliases</key>
@@ -524,7 +498,6 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>kingar_walk_05.png</key>
 		<dict>
 			<key>aliases</key>
@@ -544,7 +517,6 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>kingar_walk_06.png</key>
 		<dict>
 			<key>aliases</key>
@@ -564,7 +536,6 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>knight_attack_01.png</key>
 		<dict>
 			<key>aliases</key>
@@ -584,7 +555,6 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>knight_attack_02.png</key>
 		<dict>
 			<key>aliases</key>
@@ -604,7 +574,6 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>knight_attack_03.png</key>
 		<dict>
 			<key>aliases</key>
@@ -624,7 +593,6 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>knight_button.png</key>
 		<dict>
 			<key>aliases</key>
@@ -644,7 +612,6 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>knight_stand_01.png</key>
 		<dict>
 			<key>aliases</key>
@@ -664,7 +631,6 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>knight_walk_01.png</key>
 		<dict>
 			<key>aliases</key>
@@ -684,7 +650,6 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>knight_walk_02.png</key>
 		<dict>
 			<key>aliases</key>
@@ -704,7 +669,6 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>knight_walk_03.png</key>
 		<dict>
 			<key>aliases</key>
@@ -724,7 +688,6 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>knight_walk_04.png</key>
 		<dict>
 			<key>aliases</key>
@@ -744,7 +707,6 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>knight_walk_05.png</key>
 		<dict>
 			<key>aliases</key>
@@ -764,7 +726,6 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>knight_walk_06.png</key>
 		<dict>
 			<key>aliases</key>
@@ -784,7 +745,6 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>menu.png</key>
 		<dict>
 			<key>aliases</key>
@@ -804,7 +764,6 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>selection.png</key>
 		<dict>
 			<key>aliases</key>
@@ -824,7 +783,6 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>soldier_attack_01.png</key>
 		<dict>
 			<key>aliases</key>
@@ -844,7 +802,6 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>soldier_attack_02.png</key>
 		<dict>
 			<key>aliases</key>
@@ -864,7 +821,6 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>soldier_attack_03.png</key>
 		<dict>
 			<key>aliases</key>
@@ -884,7 +840,6 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>soldier_button.png</key>
 		<dict>
 			<key>aliases</key>
@@ -904,7 +859,6 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>soldier_stand_01.png</key>
 		<dict>
 			<key>aliases</key>
@@ -924,7 +878,6 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>soldier_walk_01.png</key>
 		<dict>
 			<key>aliases</key>
@@ -944,7 +897,6 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>soldier_walk_02.png</key>
 		<dict>
 			<key>aliases</key>
@@ -964,7 +916,6 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>soldier_walk_03.png</key>
 		<dict>
 			<key>aliases</key>
@@ -984,7 +935,6 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>soldier_walk_04.png</key>
 		<dict>
 			<key>aliases</key>
@@ -1004,7 +954,6 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>soldier_walk_05.png</key>
 		<dict>
 			<key>aliases</key>
@@ -1024,7 +973,6 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>soldier_walk_06.png</key>
 		<dict>
 			<key>aliases</key>
@@ -1044,7 +992,6 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>tent_01.png</key>
 		<dict>
 			<key>aliases</key>
@@ -1064,7 +1011,6 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>tent_02.png</key>
 		<dict>
 			<key>aliases</key>
@@ -1084,7 +1030,6 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>tree.png</key>
 		<dict>
 			<key>aliases</key>
@@ -1104,7 +1049,6 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 		<key>white_wiz_button.png</key>
 		<dict>
 			<key>aliases</key>
@@ -1124,7 +1068,6 @@
 			<key>textureRotated</key>
 			<false/>
 		</dict>
-		
 	</dict>
 	<key>metadata</key>
 	<dict>
