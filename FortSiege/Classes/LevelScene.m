@@ -55,7 +55,7 @@
 		[self addChild:self.sprites z:1];
         
         NSLog(@"Sprite sheet loaded.");
-
+        
         [self schedule:@selector(nextFrame:)];
         
         UnitMenu *menuLayer = [UnitMenu node];

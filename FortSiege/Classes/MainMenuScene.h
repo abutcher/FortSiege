@@ -12,8 +12,10 @@
 #import "LevelScene.h"
 #import "SimpleAudioEngine.h"
 
+#import "CC3Layer.h"
 
-@interface MainMenuScene : CCLayer {
+
+@interface MainMenuScene : CC3Layer {
     
     CCLabelTTF *_title;
 }
