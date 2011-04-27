@@ -19,6 +19,7 @@
 #define kTeapotWhiteName		@"TeapotWhite"
 
 @interface FortSiegeWorld : CC3World {
+    @public
     CC3Camera * cam;
 }
 +(FortSiegeWorld*)mainWorld;
