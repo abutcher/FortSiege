@@ -12,6 +12,32 @@
 #import "CC3ModelSampleFactory.h"
 
 @implementation FortSiegeWorld
+static FortSiegeWorld* _mainWorld = nil;
+
++(FortSiegeWorld*)mainWorld
+{
+	@synchronized([FortSiegeWorld class])
+	{
+		if (!_mainWorld)
+			[[self alloc] init];
+        
+		return _mainWorld;
+	}
+    
+	return nil;
+}
+
++(id)alloc
+{
+	@synchronized([FortSiegeWorld class])
+	{
+		NSAssert(_mainWorld == nil, @"Attempted to allocate a second instance of a singleton.");
+		_mainWorld = [super alloc];
+		return _mainWorld;
+	}
+    
+	return nil;
+}
 
 -(void) dealloc {
     [super dealloc];
@@ -20,7 +46,7 @@
 -(void) initializeWorld {
     
 	// Create the camera, place it back a bit, and add it to the world
-	CC3Camera* cam = [CC3Camera nodeWithName: @"Camera"];
+	cam = [CC3Camera nodeWithName: @"Camera"];
 	cam.location = cc3v( 0.0, 0.0, -700.0 );
 	[self addChild: cam];
     

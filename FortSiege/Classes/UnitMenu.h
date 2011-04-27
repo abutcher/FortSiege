@@ -20,9 +20,13 @@
 #import "Archer.h"
 
 #import "MainMenuScene.h"
+
+#import "CC3Layer.h"
+#import "CC3Light.h"
+
 @class LevelScene;
 
-@interface UnitMenu : CCLayer
+@interface UnitMenu : CC3Layer
 {
     LevelScene* parent;
     

@@ -80,6 +80,11 @@
 - (void) addGameObject:(GameObject *)object {
     [self.gameObjects addObject:object];
     [self.sprites addChild:object.character];
+
+	CC3Light* bamflamp = [CC3Light nodeWithName: @"BAMFLamp"];
+	bamflamp.location = cc3v( 100.0, 101.0, -500.0 );
+	bamflamp.isDirectionalOnly = NO;
+//	[[FortSiegeWorld mainWorld].cam addChild: bamflamp];
 }
 
 -(void) registerWithTouchDispatcher

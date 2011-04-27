@@ -15,7 +15,7 @@
 @interface FortSiegeAppDelegate : NSObject <UIApplicationDelegate> {
 	UIWindow			*window;
 	CCNodeController    *viewController;
-    CC3World            *cc3world;
+//    CC3World            *cc3world;
 }
 
 @property (nonatomic, retain) UIWindow *window;

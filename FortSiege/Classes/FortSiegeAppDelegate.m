@@ -90,14 +90,14 @@
 	// ******** START OF COCOS3D SETUP CODE... ********
 	
 	// Create the customized 3D world.
-	cc3world = [[FortSiegeWorld world] retain];
+//	cc3world = [[FortSiegeWorld mainWorld] retain];
 	
 	// Create the CC3 layer that supports 3D rendering and give it a nice sky-blue background
 	CC3Layer* cc3Layer = [LevelScene node];
-	cc3Layer.cc3World = cc3world;	// attach 3D world to 3D layer
+	cc3Layer.cc3World = [FortSiegeWorld mainWorld];	// attach 3D world to 3D layer
 	
 	// Start the 3D world model and schedule its periodic updates.
-	[cc3world play];
+	[[FortSiegeWorld mainWorld] play];
 	[cc3Layer scheduleUpdate];
     
 	ControllableCCLayer* mainLayer = cc3Layer;
@@ -139,7 +139,7 @@
 
 - (void)applicationDidReceiveMemoryWarning:(UIApplication *)application {
 	[[CCDirector sharedDirector] purgeCachedData];
-	[cc3world cleanCaches];
+	[[FortSiegeWorld mainWorld] cleanCaches];
 }
 
 -(void) applicationDidEnterBackground:(UIApplication*)application {
@@ -170,7 +170,7 @@
 	[[CCDirector sharedDirector] release];
 	[window release];
     [viewController release];
-    [cc3world release];
+    [[FortSiegeWorld mainWorld] release];
 	[super dealloc];
 }
 
