@@ -79,6 +79,7 @@ static int GameObjectTag;
 @property (retain) CCAction* attackAction;
 @property int tag;
 
+-(void) selected;
 -(void) updateObject:(ccTime) dt;
 -(void) runWalkAction;
 -(void) runAttackAction;

@@ -45,6 +45,10 @@
     return self;
 }
 
+-(void) selected{
+    //draw the selection rectangle?
+}
+
 -(void) updateObject:(ccTime)dt {
     if (self.state == WALKING) {
         if (self.facing == LEFT) {
