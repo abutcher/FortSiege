@@ -49,6 +49,8 @@
         
     }
     
+    
+    
     return self;
 }
 
@@ -74,11 +76,22 @@
         self.character.position = ccp(x, y);
         
     }
+    
+    [[FortSiegeWorld mainWorld]->cam removeChild: [[FortSiegeWorld mainWorld]->cam getNodeNamed: @"selected"]];
+    
+	localSelectedLight = [CC3Light nodeWithName: @"selected"];
+	localSelectedLight.location = cc3v(x, y, -500.0);
+	localSelectedLight.isDirectionalOnly = NO;
+
+    
+	[[FortSiegeWorld mainWorld]->cam addChild: localSelectedLight];
+    
     return self;
 }
 
 -(void) updateObject:(ccTime)dt {
     [super updateObject:dt];
+    localSelectedLight.location = cc3v(self.character.position.x, self.character.position.y, -500.0);
 }
 
 @end
