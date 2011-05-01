@@ -18,11 +18,16 @@
 #import "Barrelman.h"
 #import "Soldier.h"
 #import "Archer.h"
-#import "LevelScene.h"
 
 #import "CC3Layer.h"
 #import "CC3Light.h"
 #import "FortSiegeWorld.h"
+
+#import "SmallFire.h"
+
+#import "LevelScene.h"
+
+
 
 extern int GameObjectTag;
 

@@ -48,7 +48,7 @@
 -(void) updateObject:(ccTime)dt {
     if (self.state == WALKING) {
         if (self.facing == LEFT) {
-            if (self.position.x < 0) {
+            if (self.position.x < -100) {
                 self.position.x = 1500;
                 self.character.position = ccp(1500, self.character.position.y);  
             } else {

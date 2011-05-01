@@ -26,7 +26,7 @@
         self.position = location;
         [self setScaleX:0.05];
         [self setScaleY:0.05];
-        self.texture = [[CCTextureCache sharedTextureCache] addImage:@"Fire.png"];
+        self.texture = [[CCTextureCache sharedTextureCache] addImage:@"fire.png"];
     }
     return self;
 }

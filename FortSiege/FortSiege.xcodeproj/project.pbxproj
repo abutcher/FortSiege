@@ -156,6 +156,7 @@
 		5E935640135A71B400B5FCF8 /* CC3Kazmath.c in Sources */ = {isa = PBXBuildFile; fileRef = 5E9355F0135A71B400B5FCF8 /* CC3Kazmath.c */; };
 		5E935641135A71B400B5FCF8 /* CC3Math.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E9355F4135A71B400B5FCF8 /* CC3Math.m */; };
 		5E93564A135A73E800B5FCF8 /* FortSiegeWorld.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E935649135A73E800B5FCF8 /* FortSiegeWorld.m */; };
+		5EF97827136E0FE600E208C6 /* fire.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EF97826136E0FE600E208C6 /* fire.png */; };
 		6BB5868D1352C6DD00DA1B7F /* UnitMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB5868C1352C6DD00DA1B7F /* UnitMenu.m */; };
 		B96F7B44135228A500DC5313 /* LevelScene.m in Sources */ = {isa = PBXBuildFile; fileRef = B96F7B43135228A500DC5313 /* LevelScene.m */; };
 		B96F7B54135231AC00DC5313 /* MainMenuScene.m in Sources */ = {isa = PBXBuildFile; fileRef = B96F7B53135231AC00DC5313 /* MainMenuScene.m */; };
@@ -591,6 +592,7 @@
 		5E9355F4135A71B400B5FCF8 /* CC3Math.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CC3Math.m; sourceTree = "<group>"; };
 		5E935648135A73E800B5FCF8 /* FortSiegeWorld.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FortSiegeWorld.h; sourceTree = "<group>"; };
 		5E935649135A73E800B5FCF8 /* FortSiegeWorld.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FortSiegeWorld.m; sourceTree = "<group>"; };
+		5EF97826136E0FE600E208C6 /* fire.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fire.png; sourceTree = "<group>"; };
 		6BB5868B1352C6DD00DA1B7F /* UnitMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnitMenu.h; sourceTree = "<group>"; };
 		6BB5868C1352C6DD00DA1B7F /* UnitMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnitMenu.m; sourceTree = "<group>"; };
 		B96F7B42135228A500DC5313 /* LevelScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelScene.h; sourceTree = "<group>"; };
@@ -1011,6 +1013,7 @@
 		50F414EB1069373D002A0D5E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5EF97826136E0FE600E208C6 /* fire.png */,
 				B9B813AC1353E0E3005A6121 /* Effects */,
 				B9CCC9FB135371C600F92CEF /* Music */,
 				5E059A6D13522DE500C6D7C8 /* sprites.plist */,
@@ -1739,6 +1742,7 @@
 				B9CCCA00135371EA00F92CEF /* saltarello.mp3 in Resources */,
 				B9B813B71353E182005A6121 /* swords.mp3 in Resources */,
 				5E935605135A71B400B5FCF8 /* PVRT_Removed_Files.txt in Resources */,
+				5EF97827136E0FE600E208C6 /* fire.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

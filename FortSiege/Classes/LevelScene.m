@@ -63,6 +63,8 @@
         [self addChild:menuLayer];        
         menuLayer.parent = self;
         
+        [self addChild:[[SmallFire alloc] initWithPosition:ccp(845, 305)] z:-1 tag:99];
+        [self addChild:[[SmallFire alloc] initWithPosition:ccp(135, 305)] z:-1 tag:99];
     }
     
     return self;
@@ -101,17 +103,34 @@
     
     CGPoint diff = ccpSub(touchLocation, prevLocation);
     
+    // Move the map itself.
     [self.tileMap setPosition:ccpAdd([self.tileMap position], diff)];
     
+    // Move characters.
     for (GameObject *object in self.gameObjects) {
         [object.character setPosition:ccpAdd([object.character position], diff)];
     }
     
+    // Move scene objects with tag value 99, such as torch flames.
+    for (CCNode *node in self.children) {
+        if ([node tag] == 99) {
+            [node setPosition:ccpAdd([node position], diff)];
+            [node setAnchorPoint:ccpAdd([node anchorPoint], diff)];
+        }
+    }
+    
+    // Revert any changes that would move map/characters off screen.
     if (self.tileMap.position.x > 0) {
         [self.tileMap setPosition:ccp(0, self.tileMap.position.y)];
         for (GameObject *object in self.gameObjects) {
             [object.character setPosition:ccpSub([object.character position], diff)];
         }
+        for (CCNode *node in self.children) {
+            if ([node tag] == 99) {
+                [node setPosition:ccpSub([node position], diff)];
+                [node setAnchorPoint:ccpSub([node anchorPoint], diff)];
+            }
+        }        
     } 
     
     if (self.tileMap.position.x < -515) {
@@ -119,8 +138,14 @@
         for (GameObject *object in self.gameObjects) {
             [object.character setPosition:ccpSub([object.character position], diff)];
         }        
+        for (CCNode *node in self.children) {
+            if ([node tag] == 99) {
+                [node setPosition:ccpSub([node position], diff)];
+                [node setAnchorPoint:ccpSub([node anchorPoint], diff)];
+            }
+        }
     }
-    
+     
     NSLog(@"tileMap moved to (%.1f, %.1f)", self.tileMap.position.x, self.tileMap.position.y);
     
 }
