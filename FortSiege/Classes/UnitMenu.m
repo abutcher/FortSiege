@@ -60,8 +60,8 @@
                                             selectedSprite:selected3
                                                     target:self selector:@selector(butt3Tapped:)];
         
-        normal4 = [CCSprite spriteWithSpriteFrameName:@"barrell_button.png"];
-        selected4 = [CCSprite spriteWithSpriteFrameName:@"barrell_button.png"];
+        normal4 = [CCSprite spriteWithSpriteFrameName:@"barrel_button.png"];
+        selected4 = [CCSprite spriteWithSpriteFrameName:@"barrel_button.png"];
         
         menuItem4 = [CCMenuItemSprite itemFromNormalSprite:normal4
                                             selectedSprite:selected4
@@ -112,7 +112,7 @@
       [self.parent addGameObject:[[Knight alloc] summonWithParameters: 758 y:296 state:WALKING facing:LEFT]]; 
 }
 - (void)butt2Tapped:(id)sender {
-    [self.parent addGameObject:[[Knight alloc] summonWithParameters: 758 y:296 state:WALKING facing:LEFT]]; 
+    [self.parent addGameObject:[[KingArthur alloc] summonWithParameters: 758 y:296 state:WALKING facing:LEFT]]; 
 }
 - (void)butt3Tapped:(id)sender {
     [self.parent addGameObject:[[Archer alloc] summonWithParameters: 758 y:296 state:WALKING facing:LEFT]]; 
@@ -121,10 +121,10 @@
     [self.parent addGameObject:[[Barrelman alloc] summonWithParameters: 758 y:296 state:WALKING facing:LEFT]]; 
 }
 - (void)butt5Tapped:(id)sender {
-    [self.parent addGameObject:[[Knight alloc] summonWithParameters: 758 y:296 state:WALKING facing:LEFT]]; 
+    [self.parent addGameObject:[[KingArthur alloc] summonWithParameters: 758 y:296 state:WALKING facing:LEFT]]; 
 }
 - (void)butt6Tapped:(id)sender {
-    [self.parent addGameObject:[[Knight alloc] summonWithParameters: 758 y:296 state:WALKING facing:LEFT]]; 
+    [self.parent addGameObject:[[KingArthur alloc] summonWithParameters: 758 y:296 state:WALKING facing:LEFT]]; 
 }
 - (void)butt7Tapped:(id)sender {
     [self.parent addGameObject:[[Soldier alloc] summonWithParameters: 758 y:296 state:WALKING facing:LEFT]]; 

@@ -13,4 +13,8 @@
     
 }
 
+-(void)prepareFrames;
+-(void) updateObject:(ccTime)dt;
+
+
 @end

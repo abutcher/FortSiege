@@ -49,7 +49,7 @@
         self.background2 = [_tileMap layerNamed:@"Background"];
         [self addChild:_tileMap z:-1];
         
-        NSLog(@"Map added to scene.");
+        NSLog(@"Map added to scene. Orientation: %d, Size: %f, %f", self.tileMap.mapOrientation, self.tileMap.position.x, self.tileMap.position.y);
         
         self.sprites = [CCSpriteBatchNode batchNodeWithFile:@"sprites.png"];
 		[self addChild:self.sprites z:1];
