@@ -24,6 +24,7 @@
 }
 
 -(void)prepareFrames;
+-(void)selected;
 -(void) updateObject:(ccTime)dt;
 
 @end

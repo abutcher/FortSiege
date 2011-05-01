@@ -159,6 +159,7 @@
     for (GameObject *object in self.gameObjects) {
         if (CGRectContainsPoint(selectionRectangle, object.character.position)) {
             NSLog(@"Selected: %@", [object class]);
+            [object selected];
         }
     }
 
