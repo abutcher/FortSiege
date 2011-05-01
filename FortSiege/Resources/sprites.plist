@@ -5,8 +5,6 @@
 	<key>frames</key>
 	<dict>
 		
-<<<<<<< HEAD
-=======
 		<key>archer_arrow_01.png</key>
 		<dict>
 			<key>aliases</key>
@@ -187,7 +185,6 @@
 			<false/>
 		</dict>
 		
->>>>>>> 0d00e2a... Updating the archer sprites.
 		<key>archer_button.png</key>
 		<dict>
 			<key>aliases</key>
@@ -308,8 +305,6 @@
 			<false/>
 		</dict>
 		
-<<<<<<< HEAD
-=======
 		<key>archer_walk_05.png</key>
 		<dict>
 			<key>aliases</key>
@@ -350,7 +345,6 @@
 			<false/>
 		</dict>
 		
->>>>>>> 0d00e2a... Updating the archer sprites.
 		<key>barrell_01.png</key>
 		<dict>
 			<key>aliases</key>
