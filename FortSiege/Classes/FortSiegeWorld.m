@@ -51,7 +51,7 @@ static FortSiegeWorld* _mainWorld = nil;
 	[self addChild: cam];
     
 	CC3Light* lamp = [CC3Light nodeWithName: @"Lamp"];
-	lamp.location = cc3v( 100.0, 100.0, -500.0 );
+	lamp.location = cc3v( 100.0, 100.0, -600.0 );
 	lamp.isDirectionalOnly = NO;
 	[cam addChild: lamp];
   
