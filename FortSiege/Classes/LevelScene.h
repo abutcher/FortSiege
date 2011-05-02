@@ -36,7 +36,7 @@ extern int GameObjectTag;
     CCTMXLayer *_background2;
     NSMutableArray *_gameObjects;
     CCSpriteBatchNode *_sprites;
-    
+        
 }
 
 +(LevelScene*)mainLevelScene;

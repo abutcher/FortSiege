@@ -61,25 +61,38 @@ static int GameObjectTag;
     CCAnimation* _walkAnimation;
     CCAnimation* _standAnimation;
     CCAnimation* _attackAnimation;
+    
     CCAction* _walkAction;
     CCAction* _standAction;
-    CCAction* _attackAction;    
+    CCAction* _attackAction;        
+    
+    CCSprite* _selectRect;
+    
+    BOOL selectedP;
+    
 }
 
 @property enum State state;
 @property enum Facing facing;
+@property (retain) CCSprite* selectRect;
 @property (retain) CCSprite* character;
 @property (retain) Position* position;
 @property (retain) Velocity* velocity;
 @property (retain) CCAnimation* walkAnimation;
 @property (retain) CCAnimation* standAnimation;
 @property (retain) CCAnimation* attackAnimation;
+
 @property (retain) CCAction* walkAction;
 @property (retain) CCAction* standAction;
 @property (retain) CCAction* attackAction;
+
+@property BOOL selectedP;
+
 @property int tag;
 
 -(void) selected;
+-(void) unselected;
+
 -(void) updateObject:(ccTime) dt;
 -(void) runWalkAction;
 -(void) runAttackAction;

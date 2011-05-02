@@ -78,7 +78,7 @@
 - (void) addGameObject:(GameObject *)object {
     [self.gameObjects addObject:object];
     [self.sprites addChild:object.character];
-
+    [self.sprites addChild:object.selectRect];
 }
 
 -(void) registerWithTouchDispatcher
@@ -104,20 +104,24 @@
     [self.tileMap setPosition:ccpAdd([self.tileMap position], diff)];
     
     for (GameObject *object in self.gameObjects) {
-        [object.character setPosition:ccpAdd([object.character position], diff)];
+        [object.selectRect setPosition:ccpAdd([object.character position], diff)];        
+        [object.character setPosition:ccpAdd([object.character position], diff)];        
     }
     
     if (self.tileMap.position.x > 0) {
         [self.tileMap setPosition:ccp(0, self.tileMap.position.y)];
         for (GameObject *object in self.gameObjects) {
-            [object.character setPosition:ccpSub([object.character position], diff)];
+            [object.selectRect setPosition:ccpSub([object.character position], diff)];            
+            [object.character setPosition:ccpSub([object.character position], diff)];            
         }
     } 
     
     if (self.tileMap.position.x < -515) {
         [self.tileMap setPosition:ccp(-515, self.tileMap.position.y)];
         for (GameObject *object in self.gameObjects) {
+            [object.selectRect setPosition:ccpSub([object.character position], diff)];            
             [object.character setPosition:ccpSub([object.character position], diff)];
+            
         }        
     }
     
@@ -129,13 +133,22 @@
 {
     CGPoint location = [self convertTouchToNodeSpace: touch];
     
-    CGRect selectionRectangle = CGRectMake(location.x-80, location.y, 80, 80);
+    CGRect selectionRectangle = CGRectMake(location.x-40, location.y, 40, 40);
+
+    for (GameObject *object in self.gameObjects) {
+        if (object.selectedP)
+        {
+            [object unselected];
+            [self.sprites removeChild:object.selectRect cleanup:TRUE];                    
+        }
+    }
     
     for (GameObject *object in self.gameObjects) {
         if (CGRectContainsPoint(selectionRectangle, object.character.position)) {
             NSLog(@"Selected: %@", [object class]);
             [object selected];
-        }
+            [self.sprites addChild:object.selectRect];                       
+        }        
     }
 
     NSLog(@"X: %.2f, Y: %.2f", location.x, location.y);
