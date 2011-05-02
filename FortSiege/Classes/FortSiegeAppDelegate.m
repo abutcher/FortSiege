@@ -11,6 +11,8 @@
 #import "GameConfig.h"
 #import "FortSiege.h"
 #import "RootViewController.h"
+#import "FortSiegeWorld.h"
+#import "LevelScene.h"
 
 @implementation FortSiegeAppDelegate
 
@@ -37,8 +39,7 @@
 	
 #endif // GAME_AUTOROTATION == kGameAutorotationUIViewController	
 }
-- (void) applicationDidFinishLaunching:(UIApplication*)application
-{
+- (void) applicationDidFinishLaunching:(UIApplication*)application {
 	// Init the window
 	window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 	
@@ -47,74 +48,86 @@
 	if( ! [CCDirector setDirectorType:kCCDirectorTypeDisplayLink] )
 		[CCDirector setDirectorType:kCCDirectorTypeDefault];
 	
-	
 	CCDirector *director = [CCDirector sharedDirector];
-	
-	// Init the View Controller
-	viewController = [[RootViewController alloc] initWithNibName:nil bundle:nil];
-	viewController.wantsFullScreenLayout = YES;
-	
-	//
-	// Create the EAGLView manually
-	//  1. Create a RGB565 format. Alternative: RGBA8
-	//	2. depth format of 0 bit. Use 16 or 24 bit for 3d effects, like CCPageTurnTransition
-	//
-	//
-	EAGLView *glView = [EAGLView viewWithFrame:[window bounds]
-								   pixelFormat:kEAGLColorFormatRGB565	// kEAGLColorFormatRGBA8
-								   depthFormat:0						// GL_DEPTH_COMPONENT16_OES
-						];
-	
-	// attach the openglView to the director
-	[director setOpenGLView:glView];
-	
-//	// Enables High Res mode (Retina Display) on iPhone 4 and maintains low res on all other devices
-//	if( ! [director enableRetinaDisplay:YES] )
-//		CCLOG(@"Retina Display Not supported");
-	
-	//
-	// VERY IMPORTANT:
+    
 	// If the rotation is going to be controlled by a UIViewController
 	// then the device orientation should be "Portrait".
-	//
-	// IMPORTANT:
-	// By default, this template only supports Landscape orientations.
-	// Edit the RootViewController.m file to edit the supported orientations.
-	//
-#if GAME_AUTOROTATION == kGameAutorotationUIViewController
-	[director setDeviceOrientation:kCCDeviceOrientationPortrait];
-#else
 	[director setDeviceOrientation:kCCDeviceOrientationLandscapeLeft];
-#endif
-	
+    
 	[director setAnimationInterval:1.0/60];
 	[director setDisplayFPS:YES];
 	
+	// Alloc & init the EAGLView
+	//  1. Transparency (alpha blending), and device camera overlay requires an alpha channel,
+	//     so must use RGBA8 color format. If not using device overlay or alpha blending
+	//     (transparency) in any 3D or 2D graphics this can be changed to kEAGLColorFormatRGB565.
+	//	2. 3D rendering requires a depth format of 16 bit.
+	EAGLView *glView = [EAGLView viewWithFrame: [window bounds]
+								   pixelFormat: kEAGLColorFormatRGBA8
+								   depthFormat: GL_DEPTH_COMPONENT16_OES];
 	
-	// make the OpenGLView a child of the view controller
-	[viewController setView:glView];
+	// Turn on multiple touches if needed
+	[glView setMultipleTouchEnabled: YES];
 	
-	// make the View Controller a child of the main window
-	[window addSubview: viewController.view];
+	// attach the openglView to the director
+	[director setOpenGLView:glView];
+    
+	// Enables High Res mode (Retina Display) on iPhone 4 and maintains low res on all other devices
+    //	if( ! [director enableRetinaDisplay:YES] )
+    //		CCLOG(@"Retina Display Not supported");
+    
 	
+	// make the GL view a child of the main window and present it
+	[window addSubview: glView];
 	[window makeKeyAndVisible];
-	
+    
 	// Default texture format for PNG/BMP/TIFF/JPEG/GIF images
 	// It can be RGBA8888, RGBA4444, RGB5_A1, RGB565
 	// You can change anytime.
 	[CCTexture2D setDefaultAlphaPixelFormat:kCCTexture2DPixelFormat_RGBA8888];
-
 	
-	// Removes the startup flicker
-	[self removeStartupFlicker];
+	
+	// ******** START OF COCOS3D SETUP CODE... ********
+	
+	// Create the customized 3D world.
+//	cc3world = [[FortSiegeWorld mainWorld] retain];
+	
+	// Create the CC3 layer that supports 3D rendering and give it a nice sky-blue background
+	CC3Layer* cc3Layer = [MainMenuScene node];
+	cc3Layer.cc3World = [FortSiegeWorld mainWorld];	// attach 3D world to 3D layer
+	
+	// Start the 3D world model and schedule its periodic updates.
+	[[FortSiegeWorld mainWorld] play];
+	[cc3Layer scheduleUpdate];
     
-    // Load master sprite sheet.
-    [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"sprites.plist"];
+	ControllableCCLayer* mainLayer = cc3Layer;
 	
-	// Run the intro Scene
-	[[CCDirector sharedDirector] runWithScene: [FortSiege scene]];		
+	// The 3D layer can run either direcly in the scene, or it can run as a smaller "sub-window"
+	// within any standard CCLayer. So you can have a mostly 2D window, with a smaller 3D window
+	// embedded in it. To experiment with this smaller embedded 3D window, uncomment the following lines:
+    //	CGSize winSize = [[CCDirector sharedDirector] winSize];
+    //	cc3Layer.position = CGPointMake(30.0, 40.0);
+    //	cc3Layer.contentSize = CGSizeMake(winSize.width - 70.0, winSize.width - 40.0);
+    //	cc3Layer.alignContentSizeWithDeviceOrientation = YES;
+    //	mainLayer = [ControllableCCLayer layerWithColor: ccc4(0, 0, 0, 255)];
+    //	[mainLayer addChild: cc3Layer];
+	
+	// The controller is optional. If you want to auto-rotate the view when the device orientation
+	// changes, or if you want to display a device camera behind a combined 3D & 2D scene
+	// (augmented reality), use a controller. Otherwise you can simply remove the following lines
+	// and uncomment the lines below these lines that uses the traditional CCDirector scene startup.
+	viewController = [[CCNodeController controller] retain];
+	//viewController.doesAutoRotate = YES;
+    viewController.wantsFullScreenLayout = YES;
+	[viewController runSceneOnNode: mainLayer];		// attach the layer to the controller and run a scene with it
+	
+	// If a controller is NOT used, uncomment the following standard CCDirector scene startup lines,
+	// and remove the lines above that reference viewContoller.
+    //	CCScene *scene = [CCScene node];
+    //	[scene addChild: mainLayer];
+    //	[[CCDirector sharedDirector] runWithScene: scene];
+	
 }
-
 
 - (void)applicationWillResignActive:(UIApplication *)application {
 	[[CCDirector sharedDirector] pause];
@@ -126,6 +139,7 @@
 
 - (void)applicationDidReceiveMemoryWarning:(UIApplication *)application {
 	[[CCDirector sharedDirector] purgeCachedData];
+	[[FortSiegeWorld mainWorld] cleanCaches];
 }
 
 -(void) applicationDidEnterBackground:(UIApplication*)application {
@@ -155,6 +169,8 @@
 - (void)dealloc {
 	[[CCDirector sharedDirector] release];
 	[window release];
+    [viewController release];
+    [[FortSiegeWorld mainWorld] release];
 	[super dealloc];
 }
 

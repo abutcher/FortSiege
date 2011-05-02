@@ -16,8 +16,6 @@
 @synthesize sprites = _sprites;
 @synthesize gameObjects = _gameObjects;
 
-
-
 +(id) scene
 {
 
@@ -40,6 +38,8 @@
         
         self.isTouchEnabled = YES;
         
+        self.cc3World = [FortSiegeWorld mainWorld];
+    
         [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"revecy.mp3" loop:YES];
         
         self.gameObjects = [NSMutableArray array];
@@ -49,13 +49,13 @@
         self.background2 = [_tileMap layerNamed:@"Background"];
         [self addChild:_tileMap z:-1];
         
-        NSLog(@"Map added to scene.");
+        NSLog(@"Map added to scene. Orientation: %d, Position: (%f, %f)", self.tileMap.mapOrientation, self.tileMap.position.x, self.tileMap.position.y);
         
         self.sprites = [CCSpriteBatchNode batchNodeWithFile:@"sprites.png"];
 		[self addChild:self.sprites z:1];
         
         NSLog(@"Sprite sheet loaded.");
-
+        
         [self schedule:@selector(nextFrame:)];
         
         UnitMenu *menuLayer = [UnitMenu node];
@@ -64,7 +64,13 @@
         
         [self addChild:menuLayer];        
         menuLayer.parent = self;
-
+        
+        [self addChild:[[SmallFire alloc] initWithPosition:ccp(845, 305)] z:0 tag:99];
+        [self addChild:[[SmallSmoke alloc] initWithPosition:ccp(845, 310)] z: -1 tag:99];
+        [self addChild:[[SmallFire alloc] initWithPosition:ccp(135, 305)] z:0 tag:99];
+        [self addChild:[[SmallSmoke alloc] initWithPosition:ccp(135, 310)] z: -1 tag:99];
+        
+        [[FortSiegeWorld mainWorld] addMoon];
     }
     
     return self;
@@ -80,6 +86,7 @@
 - (void) addGameObject:(GameObject *)object {
     [self.gameObjects addObject:object];
     [self.sprites addChild:object.character];
+
 }
 
 -(void) registerWithTouchDispatcher
@@ -91,18 +98,78 @@
     return YES;
 }
 
+-(void)ccTouchMoved:(UITouch *)touch withEvent:(UIEvent *)event 
+{
+    CGPoint touchLocation = [touch locationInView:[touch view]];
+    CGPoint prevLocation = [touch previousLocationInView:[touch view]];
+    
+    touchLocation = [[CCDirector sharedDirector] convertToGL:touchLocation];
+    prevLocation = [[CCDirector sharedDirector] convertToGL:prevLocation];
+    prevLocation.y = touchLocation.y;
+    
+    CGPoint diff = ccpSub(touchLocation, prevLocation);
+    
+    // Move the map itself.
+    [self.tileMap setPosition:ccpAdd([self.tileMap position], diff)];
+    
+    // Move characters.
+    for (GameObject *object in self.gameObjects) {
+        [object.character setPosition:ccpAdd([object.character position], diff)];
+    }
+    
+    // Move scene objects with tag value 99, such as torch flames.
+    for (CCNode *node in self.children) {
+        if ([node tag] == 99) {
+            [node setPosition:ccpAdd([node position], diff)];
+            [(CCParticleSystem*)node setSourcePosition:ccpAdd([(CCParticleSystem*)node sourcePosition], diff)];
+        }
+    }
+    
+    // Revert any changes that would move map/characters off screen.
+    if (self.tileMap.position.x > 0) {
+        [self.tileMap setPosition:ccp(0, self.tileMap.position.y)];
+        for (GameObject *object in self.gameObjects) {
+            [object.character setPosition:ccpSub([object.character position], diff)];
+        }
+        for (CCNode *node in self.children) {
+            if ([node tag] == 99) {
+                [node setPosition:ccpSub([node position], diff)];
+                [(CCParticleSystem*)node setSourcePosition:ccpSub([(CCParticleSystem*)node sourcePosition], diff)];
+
+            }
+        }        
+    } 
+    
+    if (self.tileMap.position.x < -515) {
+        [self.tileMap setPosition:ccp(-515, self.tileMap.position.y)];
+        for (GameObject *object in self.gameObjects) {
+            [object.character setPosition:ccpSub([object.character position], diff)];
+        }        
+        for (CCNode *node in self.children) {
+            if ([node tag] == 99) {
+                [node setPosition:ccpSub([node position], diff)];
+                [(CCParticleSystem*)node setSourcePosition:ccpSub([(CCParticleSystem*)node sourcePosition], diff)];
+            }
+        }
+    }
+     
+    NSLog(@"tileMap moved to (%.1f, %.1f)", self.tileMap.position.x, self.tileMap.position.y);
+    
+}
+
 - (void)ccTouchEnded:(UITouch *)touch withEvent:(UIEvent *)event
 {
     CGPoint location = [self convertTouchToNodeSpace: touch];
     
-    CGRect selectionRectangle = CGRectMake(location.x, location.y, 60, 60);
+    CGRect selectionRectangle = CGRectMake(location.x-80, location.y, 80, 80);
     
     for (GameObject *object in self.gameObjects) {
         if (CGRectContainsPoint(selectionRectangle, object.character.position)) {
             NSLog(@"Selected: %@", [object class]);
+            [object selected];
         }
     }
-    
+
     NSLog(@"X: %.2f, Y: %.2f", location.x, location.y);
 }
 
