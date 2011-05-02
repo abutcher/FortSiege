@@ -93,7 +93,7 @@
 //	cc3world = [[FortSiegeWorld mainWorld] retain];
 	
 	// Create the CC3 layer that supports 3D rendering and give it a nice sky-blue background
-	CC3Layer* cc3Layer = [LevelScene node];
+	CC3Layer* cc3Layer = [MainMenuScene node];
 	cc3Layer.cc3World = [FortSiegeWorld mainWorld];	// attach 3D world to 3D layer
 	
 	// Start the 3D world model and schedule its periodic updates.

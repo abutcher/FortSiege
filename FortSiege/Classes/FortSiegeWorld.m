@@ -58,6 +58,15 @@ static FortSiegeWorld* _mainWorld = nil;
 	lamp.isDirectionalOnly = NO;
 	[cam addChild: lamp];
     
+    
+    // Create OpenGL ES buffers for the vertex arrays to keep things fast and efficient,
+	// and to save memory, release the vertex data in main memory because it is now redundant.
+	[self createGLBuffers];
+	[self releaseRedundantData];
+}
+
+-(void) addMoon {
+
 	CC3MeshNode* teapotTextured;
 	CC3MeshNode* teapotSatellite;
     
@@ -80,10 +89,6 @@ static FortSiegeWorld* _mainWorld = nil;
 	[teapotHolder addChild: teapotSatellite];
 	[self addChild: teapotHolder];
     
-    // Create OpenGL ES buffers for the vertex arrays to keep things fast and efficient,
-	// and to save memory, release the vertex data in main memory because it is now redundant.
-	[self createGLBuffers];
-	[self releaseRedundantData];
 }
 
 @end

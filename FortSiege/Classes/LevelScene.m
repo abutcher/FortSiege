@@ -38,6 +38,8 @@
         
         self.isTouchEnabled = YES;
         
+        self.cc3World = [FortSiegeWorld mainWorld];
+    
         [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"revecy.mp3" loop:YES];
         
         self.gameObjects = [NSMutableArray array];
@@ -67,6 +69,8 @@
         [self addChild:[[SmallSmoke alloc] initWithPosition:ccp(845, 310)] z: -1 tag:99];
         [self addChild:[[SmallFire alloc] initWithPosition:ccp(135, 305)] z:0 tag:99];
         [self addChild:[[SmallSmoke alloc] initWithPosition:ccp(135, 310)] z: -1 tag:99];
+        
+        [[FortSiegeWorld mainWorld] addMoon];
     }
     
     return self;

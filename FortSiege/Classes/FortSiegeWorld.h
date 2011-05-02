@@ -22,7 +22,9 @@
     @public
     CC3Camera * cam;
 }
+
 +(FortSiegeWorld*)mainWorld;
+-(void) addMoon;
 
 @property (nonatomic, retain) CC3Camera *cam;
 
