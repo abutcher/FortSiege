@@ -10,6 +10,9 @@
 #import "CC3Light.h"
 #import "CC3Camera.h"
 #import "CC3ModelSampleFactory.h"
+#import "CC3PODMeshModel.h"
+#import "CC3PODResourceNode.h"
+#import "CC3PODLight.h"
 
 @implementation FortSiegeWorld
 static FortSiegeWorld* _mainWorld = nil;
@@ -54,8 +57,7 @@ static FortSiegeWorld* _mainWorld = nil;
 	lamp.location = cc3v( 100.0, 100.0, -600.0 );
 	lamp.isDirectionalOnly = NO;
 	[cam addChild: lamp];
-  
-    CC3MeshNode* teapotWhite;
+    
 	CC3MeshNode* teapotTextured;
 	CC3MeshNode* teapotSatellite;
     
@@ -64,7 +66,7 @@ static FortSiegeWorld* _mainWorld = nil;
 	
 	teapotSatellite = [[CC3ModelSampleFactory factory] makeMultiColoredTeapotNamed: kRainbowTeapotName];
 	teapotSatellite.location = cc3v(0.0, 0.0, -2.0);
-	teapotSatellite.uniformScale = 0.4;
+	teapotSatellite.uniformScale = 1.0;
 	teapotSatellite.isTouchEnabled = YES;		// allow this node to be selected by touch events
 	
 	// Because we want to highlight the satellite and textured teapot separately, we can't make
@@ -72,7 +74,7 @@ static FortSiegeWorld* _mainWorld = nil;
 	// when the textured teapot was highlighted. So...we create a node that holds onto both
 	// teapots and rotates them together, but allows each to be individually highlighted.
 	CC3Node* teapotHolder = [CC3Node nodeWithName: kTeapotHolderName];
-	teapotHolder.location = cc3v(0.0, 0.0, -650.0);
+	teapotHolder.location = cc3v(-200.0, 200.0, -650.0);
 	teapotHolder.uniformScale = 500.0;
 	[teapotHolder addChild: teapotTextured];
 	[teapotHolder addChild: teapotSatellite];
