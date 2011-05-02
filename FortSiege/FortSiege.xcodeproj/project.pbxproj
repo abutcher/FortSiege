@@ -76,6 +76,8 @@
 		5E059A7C13523B1C00C6D7C8 /* tree.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E059A7B13523B1C00C6D7C8 /* tree.png */; };
 		5E059A7E135242E900C6D7C8 /* map_02_tiles.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E059A7D135242E900C6D7C8 /* map_02_tiles.png */; };
 		5E19764E13580DBA0073C3E8 /* SmallFire.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E19764D13580DBA0073C3E8 /* SmallFire.m */; };
+		5E541509136E527500222F1D /* SmallSmoke.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E541508136E527500222F1D /* SmallSmoke.m */; };
+		5E54150C136E52F700222F1D /* smoke.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E54150B136E52F700222F1D /* smoke.png */; };
 		5E724D2E12F889A100319E12 /* icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 5E724D2D12F889A100319E12 /* icon.icns */; };
 		5E724D3A12F88AAD00319E12 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E724D3912F88AAD00319E12 /* icon.png */; };
 		5E9355F5135A71B400B5FCF8 /* CC3ModelSampleFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E93554F135A71B400B5FCF8 /* CC3ModelSampleFactory.m */; };
@@ -429,6 +431,9 @@
 		5E059A7D135242E900C6D7C8 /* map_02_tiles.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_02_tiles.png; sourceTree = "<group>"; };
 		5E19764C13580DBA0073C3E8 /* SmallFire.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmallFire.h; sourceTree = "<group>"; };
 		5E19764D13580DBA0073C3E8 /* SmallFire.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmallFire.m; sourceTree = "<group>"; };
+		5E541507136E527500222F1D /* SmallSmoke.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmallSmoke.h; sourceTree = "<group>"; };
+		5E541508136E527500222F1D /* SmallSmoke.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmallSmoke.m; sourceTree = "<group>"; };
+		5E54150B136E52F700222F1D /* smoke.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = smoke.png; sourceTree = "<group>"; };
 		5E724D2D12F889A100319E12 /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = icon.icns; sourceTree = "<group>"; };
 		5E724D3912F88AAD00319E12 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		5E93554E135A71B400B5FCF8 /* CC3ModelSampleFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CC3ModelSampleFactory.h; sourceTree = "<group>"; };
@@ -1015,6 +1020,7 @@
 		50F414EB1069373D002A0D5E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5E54150B136E52F700222F1D /* smoke.png */,
 				5EF97830136E395700E208C6 /* moon.png */,
 				5EF97826136E0FE600E208C6 /* fire.png */,
 				B9B813AC1353E0E3005A6121 /* Effects */,
@@ -1061,6 +1067,8 @@
 			children = (
 				5E19764C13580DBA0073C3E8 /* SmallFire.h */,
 				5E19764D13580DBA0073C3E8 /* SmallFire.m */,
+				5E541507136E527500222F1D /* SmallSmoke.h */,
+				5E541508136E527500222F1D /* SmallSmoke.m */,
 			);
 			name = Effects;
 			sourceTree = "<group>";
@@ -1747,6 +1755,7 @@
 				5E935605135A71B400B5FCF8 /* PVRT_Removed_Files.txt in Resources */,
 				5EF97827136E0FE600E208C6 /* fire.png in Resources */,
 				5EF97831136E395700E208C6 /* moon.png in Resources */,
+				5E54150C136E52F700222F1D /* smoke.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1849,6 +1858,7 @@
 				5E935640135A71B400B5FCF8 /* CC3Kazmath.c in Sources */,
 				5E935641135A71B400B5FCF8 /* CC3Math.m in Sources */,
 				5E93564A135A73E800B5FCF8 /* FortSiegeWorld.m in Sources */,
+				5E541509136E527500222F1D /* SmallSmoke.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

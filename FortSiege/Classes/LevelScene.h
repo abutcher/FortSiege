@@ -24,6 +24,7 @@
 #import "FortSiegeWorld.h"
 
 #import "SmallFire.h"
+#import "SmallSmoke.h"
 
 #import "LevelScene.h"
 

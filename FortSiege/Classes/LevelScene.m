@@ -63,8 +63,10 @@
         [self addChild:menuLayer];        
         menuLayer.parent = self;
         
-        [self addChild:[[SmallFire alloc] initWithPosition:ccp(845, 305)] z:-1 tag:99];
-        [self addChild:[[SmallFire alloc] initWithPosition:ccp(135, 305)] z:-1 tag:99];
+        [self addChild:[[SmallFire alloc] initWithPosition:ccp(845, 305)] z:0 tag:99];
+        [self addChild:[[SmallSmoke alloc] initWithPosition:ccp(845, 310)] z: -1 tag:99];
+        [self addChild:[[SmallFire alloc] initWithPosition:ccp(135, 305)] z:0 tag:99];
+        [self addChild:[[SmallSmoke alloc] initWithPosition:ccp(135, 310)] z: -1 tag:99];
     }
     
     return self;
@@ -115,7 +117,7 @@
     for (CCNode *node in self.children) {
         if ([node tag] == 99) {
             [node setPosition:ccpAdd([node position], diff)];
-            [node setAnchorPoint:ccpAdd([node anchorPoint], diff)];
+            [(CCParticleSystem*)node setSourcePosition:ccpAdd([(CCParticleSystem*)node sourcePosition], diff)];
         }
     }
     
@@ -128,7 +130,8 @@
         for (CCNode *node in self.children) {
             if ([node tag] == 99) {
                 [node setPosition:ccpSub([node position], diff)];
-                [node setAnchorPoint:ccpSub([node anchorPoint], diff)];
+                [(CCParticleSystem*)node setSourcePosition:ccpSub([(CCParticleSystem*)node sourcePosition], diff)];
+
             }
         }        
     } 
@@ -141,7 +144,7 @@
         for (CCNode *node in self.children) {
             if ([node tag] == 99) {
                 [node setPosition:ccpSub([node position], diff)];
-                [node setAnchorPoint:ccpSub([node anchorPoint], diff)];
+                [(CCParticleSystem*)node setSourcePosition:ccpSub([(CCParticleSystem*)node sourcePosition], diff)];
             }
         }
     }
