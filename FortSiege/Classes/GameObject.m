@@ -13,7 +13,9 @@
 
 @synthesize position;
 @synthesize velocity;
+@synthesize selectedP;
 @synthesize tag;
+@synthesize selectRect = _selectRect;
 @synthesize character = _character;
 @synthesize walkAction = _walkAction;
 @synthesize standAction = _standAction;
@@ -21,6 +23,7 @@
 @synthesize walkAnimation = _walkAnimation;
 @synthesize standAnimation = _standAnimation;
 @synthesize attackAnimation = _attackAnimation;
+
 @synthesize state;
 @synthesize facing;
 
@@ -42,12 +45,27 @@
         self.velocity = [[Velocity alloc] init];
         self.tag = [GameObject getTagAndIncrement];
     }
+    
+    self.selectRect = [CCSprite spriteWithSpriteFrameName:@"dirt.png"];
+    
     return self;
 }
 
 -(void) selected{
-    //draw the selection rectangle?
+    self.selectRect = [CCSprite spriteWithSpriteFrameName:@"selection.png"];
+    self.selectedP = true;
+    
 }
+
+-(void) unselected{
+    //erase selection rect?
+//    [self.selectRect dealloc];    
+//    self.selectRect = NULL;
+//    self.selectRect = [CCSprite spriteWithSpriteFrameName:@"dirt.png"];
+    self.selectedP = false;
+        
+}
+
 
 -(void) updateObject:(ccTime)dt {
     if (self.state == WALKING) {
@@ -72,6 +90,11 @@
     } else {
         NSLog(@"No state set.");
     }
+    
+    if (self.selectedP)
+    {
+        self.selectRect.position = ccp(self.character.position.x, self.character.position.y); 
+    }
 }
 
 -(void) runStandAction {
@@ -85,6 +108,8 @@
 -(void) runAttackAction {
     [self.character runAction:self.attackAction];
 }
+
+
 -(void) dealloc {
     [self.position release];
     [self.velocity release];

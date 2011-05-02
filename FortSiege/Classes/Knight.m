@@ -34,8 +34,8 @@
         [attackingAnimationFrames addObject: [[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:[NSString stringWithFormat:@"knight_attack_0%d.png",i]]];
     }
     
-    self.attackAnimation = [CCAnimation animationWithFrames:attackingAnimationFrames delay:0.1f];
-    self.attackAction = [CCRepeatForever actionWithAction:[CCAnimate actionWithAnimation:self.attackAnimation restoreOriginalFrame:YES]];
+    
+    
 }
 
 -(id) init {
@@ -46,6 +46,7 @@
         
         self.character = [CCSprite spriteWithSpriteFrameName:@"knight_walk_01.png"];
         [self runWalkAction];
+        
         
     }
     
@@ -74,6 +75,8 @@
         self.position.x = x;
         self.position.y = y;
         self.character.position = ccp(x, y);
+
+            
         
     }
         
@@ -81,6 +84,7 @@
 }
 
 -(void) selected {
+    [super selected];
     [[FortSiegeWorld mainWorld]->cam removeChild: [[FortSiegeWorld mainWorld]->cam getNodeNamed: @"selected"]];
     
 	localSelectedLight = [CC3Light nodeWithName: @"selected"];
@@ -89,7 +93,14 @@
     
     
 	[[FortSiegeWorld mainWorld]->cam addChild: localSelectedLight];
+    
+            
 }
+
+-(void) unselected {
+    [super unselected];    
+}
+
 
 -(void) updateObject:(ccTime)dt {
     [super updateObject:dt];
