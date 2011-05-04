@@ -26,9 +26,6 @@
 #import "SmallFire.h"
 #import "SmallSmoke.h"
 
-#import "LevelScene.h"
-
-
 
 extern int GameObjectTag;
 
