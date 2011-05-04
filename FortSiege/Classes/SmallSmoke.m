@@ -22,9 +22,11 @@
 
 -(id) initWithPosition: (CGPoint) location {
     if ((self == [super init])) {
+        self.positionType = kCCPositionTypeGrouped;
         self.position = location;
         [self setScaleX:0.1];
         [self setScaleY:0.1];
+        //self.sourcePosition = location;
         self.texture = [[CCTextureCache sharedTextureCache] addImage:@"smoke.png"];
     }
     return self;

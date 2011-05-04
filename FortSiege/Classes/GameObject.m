@@ -46,7 +46,7 @@
         self.tag = [GameObject getTagAndIncrement];
     }
     
-    self.selectRect = [CCSprite spriteWithSpriteFrameName:@"dirt.png"];
+    self.selectRect = [CCSprite spriteWithSpriteFrameName:@"blank.png"];
     
     return self;
 }

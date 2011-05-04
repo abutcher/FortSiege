@@ -122,7 +122,7 @@
     for (CCNode *node in self.children) {
         if ([node tag] == 99) {
             [node setPosition:ccpAdd([node position], diff)];
-            [(CCParticleSystem*)node setSourcePosition:ccpAdd([(CCParticleSystem*)node sourcePosition], diff)];
+            //[(CCParticleSystem*)node setSourcePosition:ccpAdd([(CCParticleSystem*)node sourcePosition], diff)];
         }
     }
     
@@ -136,7 +136,7 @@
         for (CCNode *node in self.children) {
             if ([node tag] == 99) {
                 [node setPosition:ccpSub([node position], diff)];
-                [(CCParticleSystem*)node setSourcePosition:ccpSub([(CCParticleSystem*)node sourcePosition], diff)];
+                //[(CCParticleSystem*)node setSourcePosition:ccpSub([(CCParticleSystem*)node sourcePosition], diff)];
 
             }
         }        
@@ -152,7 +152,7 @@
         for (CCNode *node in self.children) {
             if ([node tag] == 99) {
                 [node setPosition:ccpSub([node position], diff)];
-                [(CCParticleSystem*)node setSourcePosition:ccpSub([(CCParticleSystem*)node sourcePosition], diff)];
+                //[(CCParticleSystem*)node setSourcePosition:ccpSub([(CCParticleSystem*)node sourcePosition], diff)];
             }
         }
     }

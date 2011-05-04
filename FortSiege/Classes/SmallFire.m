@@ -23,9 +23,11 @@
 
 -(id) initWithPosition: (CGPoint) location {
     if ((self == [super init])) {
+        self.positionType = kCCPositionTypeGrouped;
         self.position = location;
         [self setScaleX:0.05];
         [self setScaleY:0.05];
+        //self.sourcePosition = location;
         self.texture = [[CCTextureCache sharedTextureCache] addImage:@"fire.png"];
     }
     return self;

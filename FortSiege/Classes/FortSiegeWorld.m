@@ -73,7 +73,8 @@ static FortSiegeWorld* _mainWorld = nil;
     teapotTextured = [[CC3ModelSampleFactory factory] makeLogoTexturedTeapotNamed: kTexturedTeapotName];
 	teapotTextured.isTouchEnabled = YES;		// allow this node to be selected by touch events
 	
-	teapotSatellite = [[CC3ModelSampleFactory factory] makeMultiColoredTeapotNamed: kRainbowTeapotName];
+	teapotSatellite = [[CC3ModelSampleFactory factory] makeUniColoredTeapotNamed:kRainbowTeapotName withColor:ccc4FFromccc3B(ccc3(256.0, 256.0, 256.0))];
+    
 	teapotSatellite.location = cc3v(0.0, 0.0, -2.0);
 	teapotSatellite.uniformScale = 1.0;
 	teapotSatellite.isTouchEnabled = YES;		// allow this node to be selected by touch events
@@ -87,8 +88,11 @@ static FortSiegeWorld* _mainWorld = nil;
 	teapotHolder.uniformScale = 500.0;
 	[teapotHolder addChild: teapotTextured];
 	[teapotHolder addChild: teapotSatellite];
-	[self addChild: teapotHolder];
-    
+	[self addChild: teapotHolder]; 
+
+
 }
 
 @end
+
+
