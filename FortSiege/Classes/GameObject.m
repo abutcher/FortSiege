@@ -66,7 +66,7 @@
     {
         self.localSelectedLight.location = cc3v(self.character.position.x, self.character.position.y, -500.0);
         self.localSelectedLight.isDirectionalOnly = NO;        
-        [[FortSiegeWorld mainWorld]->cam addChild: _localSelectedLight];
+        [[FortSiegeWorld mainWorld]->cam addChild: self.localSelectedLight];
     }
     
     
