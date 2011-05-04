@@ -23,6 +23,8 @@
 @synthesize walkAnimation = _walkAnimation;
 @synthesize standAnimation = _standAnimation;
 @synthesize attackAnimation = _attackAnimation;
+@synthesize localSelectedLight = _localSelectedLight;
+
 
 @synthesize state;
 @synthesize facing;
@@ -54,6 +56,19 @@
 -(void) selected{
     self.selectRect = [CCSprite spriteWithSpriteFrameName:@"selection.png"];
     self.selectedP = true;
+    
+    
+    [[FortSiegeWorld mainWorld]->cam removeChild: [[FortSiegeWorld mainWorld]->cam getNodeNamed: @"selected"]];
+    
+	self.localSelectedLight = [CC3Light nodeWithName: @"selected"];
+    
+    if (self.localSelectedLight != NULL)
+    {
+        self.localSelectedLight.location = cc3v(self.character.position.x, self.character.position.y, -500.0);
+        self.localSelectedLight.isDirectionalOnly = NO;        
+        [[FortSiegeWorld mainWorld]->cam addChild: _localSelectedLight];
+    }
+    
     
 }
 

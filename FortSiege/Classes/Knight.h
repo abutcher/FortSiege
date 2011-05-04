@@ -18,7 +18,6 @@
 
 @interface Knight : GameObject {
 
-    CC3Light* localSelectedLight;
     CC3Camera * localCam;
     
 }
