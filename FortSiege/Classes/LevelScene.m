@@ -65,6 +65,7 @@
         [self addChild:menuLayer];        
         menuLayer.parent = self;
         
+        //FIRESHIT
         [self addChild:[[SmallFire alloc] initWithPosition:ccp(845, 305)] z:0 tag:99];
         [self addChild:[[SmallSmoke alloc] initWithPosition:ccp(845, 310)] z: -1 tag:99];
         [self addChild:[[SmallFire alloc] initWithPosition:ccp(135, 305)] z:0 tag:99];
