@@ -26,7 +26,10 @@
 #import "SmallFire.h"
 #import "SmallSmoke.h"
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> 46dfff371ea44ab24dfcad8eb1bb980cfef66aeb
 
 extern int GameObjectTag;
 

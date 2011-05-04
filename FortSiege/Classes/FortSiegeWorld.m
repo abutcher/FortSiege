@@ -73,7 +73,7 @@ static FortSiegeWorld* _mainWorld = nil;
     teapotTextured = [[CC3ModelSampleFactory factory] makeLogoTexturedTeapotNamed: kTexturedTeapotName];
 	teapotTextured.isTouchEnabled = YES;		// allow this node to be selected by touch events
 	
-	teapotSatellite = [[CC3ModelSampleFactory factory] makeUniColoredTeapotNamed:kRainbowTeapotName withColor:ccc4FFromccc3B(ccc3(256.0, 256.0, 256.0))];
+	teapotSatellite = [[CC3ModelSampleFactory factory] makeMultiColoredTeapotNamed:kRainbowTeapotName];
     
 	teapotSatellite.location = cc3v(0.0, 0.0, -2.0);
 	teapotSatellite.uniformScale = 1.0;
@@ -84,7 +84,7 @@ static FortSiegeWorld* _mainWorld = nil;
 	// when the textured teapot was highlighted. So...we create a node that holds onto both
 	// teapots and rotates them together, but allows each to be individually highlighted.
 	CC3Node* teapotHolder = [CC3Node nodeWithName: kTeapotHolderName];
-	teapotHolder.location = cc3v(-200.0, 200.0, -650.0);
+	teapotHolder.location = cc3v(-200.0, 50.0, -650.0);
 	teapotHolder.uniformScale = 500.0;
 	[teapotHolder addChild: teapotTextured];
 	[teapotHolder addChild: teapotSatellite];
