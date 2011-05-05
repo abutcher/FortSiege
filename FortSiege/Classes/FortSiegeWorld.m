@@ -51,17 +51,13 @@ static FortSiegeWorld* _mainWorld = nil;
 	cam.location = cc3v( 0.0, 0.0, -700.0 );
 	[self addChild: cam];
   
-/*    
-	CC3Light* lamp = [CC3Light nodeWithName: @"Lamp"];
-	lamp.location = cc3v( 100.0, 100.0, -600.0 );
-	lamp.isDirectionalOnly = NO;
-	[cam addChild: lamp];
-*/    
-
 	localSelectedLight = [CC3Light nodeWithName: @"selected"];    
     localSelectedLight.location = cc3v(100.0, 100.0, -600.0);
 	localSelectedLight.isDirectionalOnly = NO;    
+    ccColor4F green = {0.0f, 1.0f, 0.0f, 1.0f};     
+    [localSelectedLight setEmissionColor: green];
     localSelectedLight.visible = false;
+    
     [[FortSiegeWorld mainWorld] addCamLight: localSelectedLight];
     
     // Create OpenGL ES buffers for the vertex arrays to keep things fast and efficient,

@@ -92,7 +92,6 @@
         fireLight3.isDirectionalOnly = NO;        
         fireLight4.isDirectionalOnly = NO;                
         
-        [[FortSiegeWorld mainWorld] addCamLight: fireLight1];
         
         [[FortSiegeWorld mainWorld]->cam addChild: fireLight1];
         [[FortSiegeWorld mainWorld]->cam addChild: fireLight2];
