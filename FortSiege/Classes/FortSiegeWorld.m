@@ -18,27 +18,26 @@
 static FortSiegeWorld* _mainWorld = nil;
 
 +(FortSiegeWorld*)mainWorld
-{
+{    
 	@synchronized([FortSiegeWorld class])
 	{
-		if (!_mainWorld)
+ 		if (!_mainWorld)
 			[[self alloc] init];
         
 		return _mainWorld;
 	}
-    
 	return nil;
 }
 
 +(id)alloc
 {
 	@synchronized([FortSiegeWorld class])
-	{
+	{    
 		NSAssert(_mainWorld == nil, @"Attempted to allocate a second instance of a singleton.");
 		_mainWorld = [super alloc];
 		return _mainWorld;
 	}
-    
+        
 	return nil;
 }
 
@@ -47,17 +46,23 @@ static FortSiegeWorld* _mainWorld = nil;
 }
 
 -(void) initializeWorld {
-    
 	// Create the camera, place it back a bit, and add it to the world
 	cam = [CC3Camera nodeWithName: @"Camera"];
 	cam.location = cc3v( 0.0, 0.0, -700.0 );
 	[self addChild: cam];
-    
+  
+/*    
 	CC3Light* lamp = [CC3Light nodeWithName: @"Lamp"];
 	lamp.location = cc3v( 100.0, 100.0, -600.0 );
 	lamp.isDirectionalOnly = NO;
 	[cam addChild: lamp];
-    
+*/    
+
+	localSelectedLight = [CC3Light nodeWithName: @"selected"];    
+    localSelectedLight.location = cc3v(100.0, 100.0, -600.0);
+	localSelectedLight.isDirectionalOnly = NO;    
+    localSelectedLight.visible = false;
+    [[FortSiegeWorld mainWorld] addCamLight: localSelectedLight];
     
     // Create OpenGL ES buffers for the vertex arrays to keep things fast and efficient,
 	// and to save memory, release the vertex data in main memory because it is now redundant.
@@ -65,8 +70,8 @@ static FortSiegeWorld* _mainWorld = nil;
 	[self releaseRedundantData];
 }
 
--(void) addMoon {
-
+-(void) addMoon {    
+    
 	CC3MeshNode* teapotTextured;
 	CC3MeshNode* teapotSatellite;
     
@@ -90,7 +95,11 @@ static FortSiegeWorld* _mainWorld = nil;
 	[teapotHolder addChild: teapotSatellite];
 	[self addChild: teapotHolder]; 
 
+}
 
+- (void) addCamLight:(CC3Light *) inLight {
+	[cam addChild: inLight];    
+    
 }
 
 @end

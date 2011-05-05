@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "CC3World.h"
 #import "CC3MeshNode.h"
+#import "CC3Light.h"
 
 #define kTexturedTeapotName		@"Teapot"
 #define kRainbowTeapotName		@"Satellite"
@@ -21,11 +22,15 @@
 @interface FortSiegeWorld : CC3World {
     @public
     CC3Camera * cam;
+    CC3Light* localSelectedLight;
+    
 }
 
 +(FortSiegeWorld*)mainWorld;
 -(void) addMoon;
+-(void) addCamLight: (CC3Light *) inLight;
 
 @property (nonatomic, retain) CC3Camera *cam;
+@property (nonatomic, retain) CC3Light *localSelectedLight;
 
 @end

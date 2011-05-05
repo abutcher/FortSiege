@@ -14,21 +14,25 @@
 +(id) scene 
 {
     
-    CCScene* scene = [CCScene node];
+//    CCScene* scene = [CCScene node];
     MainMenuScene *layer = [MainMenuScene node];
     
-    [scene addChild: layer];
+//    [scene addChild: layer];
     
-    return scene;
+    [[LevelScene mainLevelScene] addChild: layer];
+    
+    return [LevelScene mainLevelScene];
     
 }
 
 -(void) startGame
 {
+    
+    
     NSLog(@"Start game");
     [[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
     [[SimpleAudioEngine sharedEngine] playEffect:@"swords.mp3"];    
-    [[CCDirector sharedDirector] replaceScene:[LevelScene scene]];
+    [[CCDirector sharedDirector] replaceScene:[LevelScene scene]];    
     
 }
 

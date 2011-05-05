@@ -23,7 +23,6 @@
 @synthesize walkAnimation = _walkAnimation;
 @synthesize standAnimation = _standAnimation;
 @synthesize attackAnimation = _attackAnimation;
-@synthesize localSelectedLight = _localSelectedLight;
 
 
 @synthesize state;
@@ -41,6 +40,7 @@
 }
 
 -(GameObject*) init {
+
     
     if ( (self = [super init]) ) {
         self.position = [[Position alloc] init];
@@ -57,18 +57,14 @@
     self.selectRect = [CCSprite spriteWithSpriteFrameName:@"selection.png"];
     self.selectedP = true;
     
-    
-    [[FortSiegeWorld mainWorld]->cam removeChild: [[FortSiegeWorld mainWorld]->cam getNodeNamed: @"selected"]];
-    
-	self.localSelectedLight = [CC3Light nodeWithName: @"selected"];
-    
-    if (self.localSelectedLight != NULL)
-    {
-        self.localSelectedLight.location = cc3v(self.character.position.x, self.character.position.y, -500.0);
-        self.localSelectedLight.isDirectionalOnly = NO;        
-        [[FortSiegeWorld mainWorld]->cam addChild: self.localSelectedLight];
+
+    if ([FortSiegeWorld mainWorld]->localSelectedLight != NULL) 
+    {    
+        [FortSiegeWorld mainWorld]->localSelectedLight.location = cc3v(self.character.position.x, self.character.position.y, -500.0);                
+        [FortSiegeWorld mainWorld]->localSelectedLight.visible = true;
     }
-    
+        
+            
     
 }
 
@@ -78,7 +74,9 @@
 //    self.selectRect = NULL;
 //    self.selectRect = [CCSprite spriteWithSpriteFrameName:@"dirt.png"];
     self.selectedP = false;
-        
+    if ([FortSiegeWorld mainWorld]->localSelectedLight != NULL)         
+        [FortSiegeWorld mainWorld]->localSelectedLight.visible = false;
+    
 }
 
 
@@ -109,7 +107,14 @@
     if (self.selectedP)
     {
         self.selectRect.position = ccp(self.character.position.x, self.character.position.y); 
+        if ([FortSiegeWorld mainWorld]->localSelectedLight != NULL)
+        {
+            [FortSiegeWorld mainWorld]->localSelectedLight.location = cc3v(self.character.position.x, self.character.position.y, -500.0);            
+        }
+        printf("%f %f location of light", self.character.position.x, self.character.position.y);
     }
+    
+    
 }
 
 -(void) runStandAction {

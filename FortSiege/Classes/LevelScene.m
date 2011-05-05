@@ -38,8 +38,9 @@
         
         self.isTouchEnabled = YES;
         
+        
         self.cc3World = [FortSiegeWorld mainWorld];
-    
+        
         [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"revecy.mp3" loop:YES];
         
         self.gameObjects = [NSMutableArray array];
@@ -66,6 +67,7 @@
         menuLayer.parent = self;
         
         //MANUAL FIRE LIGHTS - PROBABLY REMOVE ME LATER
+        
         [self addChild:[[SmallFire alloc] initWithPosition:ccp(845, 305)] z:0 tag:99];
         [self addChild:[[SmallSmoke alloc] initWithPosition:ccp(845, 310)] z: -1 tag:99];
         [self addChild:[[SmallFire alloc] initWithPosition:ccp(135, 305)] z:0 tag:99];
@@ -90,6 +92,8 @@
         fireLight3.isDirectionalOnly = NO;        
         fireLight4.isDirectionalOnly = NO;                
         
+        [[FortSiegeWorld mainWorld] addCamLight: fireLight1];
+        
         [[FortSiegeWorld mainWorld]->cam addChild: fireLight1];
         [[FortSiegeWorld mainWorld]->cam addChild: fireLight2];
         [[FortSiegeWorld mainWorld]->cam addChild: fireLight3];
@@ -98,7 +102,9 @@
         //end dumb manual fire lights
         
         [[FortSiegeWorld mainWorld] addMoon];
+                
     }
+    
     return self;
 
 }
@@ -110,9 +116,11 @@
 }
 
 - (void) addGameObject:(GameObject *)object {
+        
     [self.gameObjects addObject:object];
     [self.sprites addChild:object.character];
-    [self.sprites addChild:object.selectRect];
+    [self.sprites addChild:object.selectRect];    
+    
 }
 
 -(void) registerWithTouchDispatcher
@@ -205,8 +213,9 @@
         if (CGRectContainsPoint(selectionRectangle, object.character.position)) {
             NSLog(@"Selected: %@", [object class]);
             [object selected];
-            [self.sprites addChild:object.selectRect];                       
-        }        
+            [self.sprites addChild:object.selectRect];              
+        }
+        if (object != NULL && object.selectedP) break;
     }
 
     NSLog(@"X: %.2f, Y: %.2f", location.x, location.y);
@@ -236,5 +245,6 @@
     [super dealloc];
     
 }
+
 
 @end

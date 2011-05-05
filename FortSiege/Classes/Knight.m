@@ -79,25 +79,14 @@
             
         
     }
-        
+    
     return self;
 }
 
--(void) selected {
-    [super selected];                
-}
-
--(void) unselected {
-    [super unselected];    
-}
 
 
 -(void) updateObject:(ccTime)dt {
     [super updateObject:dt];
-    
-    CC3Node *currLight = [[FortSiegeWorld mainWorld]->cam getNodeNamed: @"selected"];
-    if (self.localSelectedLight != NULL && currLight != NULL && self.localSelectedLight == currLight)
-        self.localSelectedLight.location = cc3v(self.character.position.x, self.character.position.y, -500.0);
 }
 
 @end

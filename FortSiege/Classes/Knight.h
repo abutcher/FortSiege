@@ -17,14 +17,10 @@
 
 
 @interface Knight : GameObject {
-
-    CC3Camera * localCam;
     
 }
 
 -(void)prepareFrames;
--(void)selected;
--(void)unselected;
 -(void) updateObject:(ccTime)dt;
 
 @end

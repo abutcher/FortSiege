@@ -109,7 +109,7 @@
 }
 
 - (void)butt1Tapped:(id)sender {
-      [self.parent addGameObject:[[Knight alloc] summonWithParameters: 758 y:296 state:WALKING facing:LEFT]]; 
+    [self.parent addGameObject:[[Knight alloc] summonWithParameters: 758 y:296 state:WALKING facing:LEFT]];             
 }
 - (void)butt2Tapped:(id)sender {
     [self.parent addGameObject:[[KingArthur alloc] summonWithParameters: 758 y:296 state:WALKING facing:LEFT]]; 

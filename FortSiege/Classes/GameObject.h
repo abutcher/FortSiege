@@ -9,8 +9,13 @@
 //
 #import "cocos2d.h"
 #import <Foundation/Foundation.h>
-#import "FortSiegeWorld.h"
+
+#import "CC3Layer.h"
 #import "CC3Light.h"
+#import "FortSiegeWorld.h"
+
+#import "GameObject.h"
+
 
 extern enum State {
     ATTACKING = 0,
@@ -71,7 +76,6 @@ static int GameObjectTag;
     CCSprite* _selectRect;
     
     BOOL selectedP;
-    CC3Light* _localSelectedLight;
     
 }
 
@@ -90,8 +94,6 @@ static int GameObjectTag;
 @property (retain) CCAction* attackAction;
 
 @property BOOL selectedP;
-
-@property (retain) CC3Light* localSelectedLight;
 
 
 @property int tag;

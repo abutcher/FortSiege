@@ -26,10 +26,6 @@
 #import "SmallFire.h"
 #import "SmallSmoke.h"
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 46dfff371ea44ab24dfcad8eb1bb980cfef66aeb
 
 extern int GameObjectTag;
 
@@ -50,6 +46,7 @@ extern int GameObjectTag;
 
 + (id) scene;
 - (void) addGameObject: (GameObject *) object;
+- (void) addCamLight: (CC3Light *) inLight;
 
 @property (nonatomic, retain) CCTMXTiledMap *tileMap;
 @property (nonatomic, retain) CCTMXLayer *background;
