@@ -16,6 +16,33 @@
 @synthesize sprites = _sprites;
 @synthesize gameObjects = _gameObjects;
 
+static LevelScene* _mainLevelScene = nil;
+
++(LevelScene*)mainLevelScene
+{
+	@synchronized([LevelScene class])
+	{
+		if (!_mainLevelScene)
+			[[self alloc] init];
+        
+		return _mainLevelScene;
+	}
+    
+	return nil;
+}
+
++(id)alloc
+{
+	@synchronized([LevelScene class])
+	{
+		NSAssert(_mainLevelScene == nil, @"Attempted to allocate a second instance of a singleton (LevelScene).");
+		_mainLevelScene = [super alloc];
+		return _mainLevelScene;
+	}
+    
+	return nil;
+}
+
 +(id) scene
 {
 
@@ -31,10 +58,11 @@
 
 -(id) init
 {
-    // Must be reset at the beginning of each level.
-    GameObjectTag = 0;
+	self = [super init];
 
-    if ( ( self=[super init] )) {
+	if (self != nil) {        
+        // Must be reset at the beginning of each level.        
+        GameObjectTag = 0;
         
         self.isTouchEnabled = YES;
         
