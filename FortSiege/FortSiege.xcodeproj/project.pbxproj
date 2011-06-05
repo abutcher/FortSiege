@@ -161,6 +161,7 @@
 		5EF97827136E0FE600E208C6 /* fire.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EF97826136E0FE600E208C6 /* fire.png */; };
 		5EF97831136E395700E208C6 /* moon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EF97830136E395700E208C6 /* moon.png */; };
 		5EFCFEA7136F343E004C9D0F /* Sphere.pod in Resources */ = {isa = PBXBuildFile; fileRef = 5EFCFEA6136F343E004C9D0F /* Sphere.pod */; };
+		6B948E3E139C0BC600D47887 /* globalAttributes.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B948E3D139C0BC600D47887 /* globalAttributes.m */; };
 		6BB5868D1352C6DD00DA1B7F /* UnitMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB5868C1352C6DD00DA1B7F /* UnitMenu.m */; };
 		B96F7B44135228A500DC5313 /* LevelScene.m in Sources */ = {isa = PBXBuildFile; fileRef = B96F7B43135228A500DC5313 /* LevelScene.m */; };
 		B96F7B54135231AC00DC5313 /* MainMenuScene.m in Sources */ = {isa = PBXBuildFile; fileRef = B96F7B53135231AC00DC5313 /* MainMenuScene.m */; };
@@ -602,6 +603,8 @@
 		5EF97826136E0FE600E208C6 /* fire.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fire.png; sourceTree = "<group>"; };
 		5EF97830136E395700E208C6 /* moon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = moon.png; sourceTree = "<group>"; };
 		5EFCFEA6136F343E004C9D0F /* Sphere.pod */ = {isa = PBXFileReference; lastKnownFileType = file; path = Sphere.pod; sourceTree = "<group>"; };
+		6B948E3C139C0BC600D47887 /* globalAttributes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = globalAttributes.h; sourceTree = "<group>"; };
+		6B948E3D139C0BC600D47887 /* globalAttributes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = globalAttributes.m; sourceTree = "<group>"; };
 		6BB5868B1352C6DD00DA1B7F /* UnitMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnitMenu.h; sourceTree = "<group>"; };
 		6BB5868C1352C6DD00DA1B7F /* UnitMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnitMenu.m; sourceTree = "<group>"; };
 		B96F7B42135228A500DC5313 /* LevelScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelScene.h; sourceTree = "<group>"; };
@@ -913,6 +916,8 @@
 				6BB5868C1352C6DD00DA1B7F /* UnitMenu.m */,
 				5E935648135A73E800B5FCF8 /* FortSiegeWorld.h */,
 				5E935649135A73E800B5FCF8 /* FortSiegeWorld.m */,
+				6B948E3C139C0BC600D47887 /* globalAttributes.h */,
+				6B948E3D139C0BC600D47887 /* globalAttributes.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -1863,6 +1868,7 @@
 				5E935641135A71B400B5FCF8 /* CC3Math.m in Sources */,
 				5E93564A135A73E800B5FCF8 /* FortSiegeWorld.m in Sources */,
 				5E541509136E527500222F1D /* SmallSmoke.m in Sources */,
+				6B948E3E139C0BC600D47887 /* globalAttributes.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
