@@ -19,10 +19,6 @@
 #import "Soldier.h"
 #import "Archer.h"
 
-#import "CC3Layer.h"
-#import "CC3Light.h"
-#import "FortSiegeWorld.h"
-
 #import "SmallFire.h"
 #import "SmallSmoke.h"
 
@@ -30,7 +26,7 @@
 extern int GameObjectTag;
 
 
-@interface LevelScene : CC3Layer {
+@interface LevelScene : CCLayer {
     
     LevelScene *LS;
     
@@ -46,7 +42,6 @@ extern int GameObjectTag;
 
 + (id) scene;
 - (void) addGameObject: (GameObject *) object;
-- (void) addCamLight: (CC3Light *) inLight;
 
 @property (nonatomic, retain) CCTMXTiledMap *tileMap;
 @property (nonatomic, retain) CCTMXLayer *background;

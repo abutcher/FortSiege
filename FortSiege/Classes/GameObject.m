@@ -63,16 +63,6 @@
 -(void) selected{
     self.selectRect = [CCSprite spriteWithSpriteFrameName:@"selection.png"];
     self.selectedP = true;
-    
-
-    if ([FortSiegeWorld mainWorld]->localSelectedLight != NULL) 
-    {    
-        [FortSiegeWorld mainWorld]->localSelectedLight.location = cc3v(self.character.position.x, self.character.position.y, -500.0);                
-        [FortSiegeWorld mainWorld]->localSelectedLight.visible = true;
-    }
-        
-            
-    
 }
 
 -(void) unselected{
@@ -81,9 +71,6 @@
 //    self.selectRect = NULL;
 //    self.selectRect = [CCSprite spriteWithSpriteFrameName:@"dirt.png"];
     self.selectedP = false;
-    if ([FortSiegeWorld mainWorld]->localSelectedLight != NULL)         
-        [FortSiegeWorld mainWorld]->localSelectedLight.visible = false;
-    
 }
 
 
@@ -114,10 +101,6 @@
     if (self.selectedP)
     {
         self.selectRect.position = ccp(self.character.position.x, self.character.position.y); 
-        if ([FortSiegeWorld mainWorld]->localSelectedLight != NULL)
-        {
-            [FortSiegeWorld mainWorld]->localSelectedLight.location = cc3v(self.character.position.x, self.character.position.y, -500.0);            
-        }
         printf("%f %f location of light", self.character.position.x, self.character.position.y);
     }
     

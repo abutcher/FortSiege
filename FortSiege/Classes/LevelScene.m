@@ -67,7 +67,7 @@ static LevelScene* _mainLevelScene = nil;
         self.isTouchEnabled = YES;
         
         
-        self.cc3World = [FortSiegeWorld mainWorld];
+        //self.cc3World = [FortSiegeWorld mainWorld];
         
         [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"revecy.mp3" loop:YES];
         

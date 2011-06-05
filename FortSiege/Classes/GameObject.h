@@ -10,12 +10,7 @@
 #import "cocos2d.h"
 #import <Foundation/Foundation.h>
 
-#import "CC3Layer.h"
-#import "CC3Light.h"
-#import "FortSiegeWorld.h"
-
 #import "GameObject.h"
-
 
 extern enum State {
     ATTACKING = 0,

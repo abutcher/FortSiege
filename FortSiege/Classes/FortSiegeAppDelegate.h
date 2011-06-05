@@ -7,15 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CCNodeController.h"
-#import "CC3World.h"
 
 @class RootViewController;
 
 @interface FortSiegeAppDelegate : NSObject <UIApplicationDelegate> {
 	UIWindow			*window;
-	CCNodeController    *viewController;
-//    CC3World            *cc3world;
+	RootViewController	*viewController;
 }
 
 @property (nonatomic, retain) UIWindow *window;
