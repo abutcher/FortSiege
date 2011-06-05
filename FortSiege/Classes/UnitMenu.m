@@ -108,6 +108,29 @@
     return self;
 }
 
+/*
+ - (void)butt1Tapped:(id)sender {
+ [self.parent addGameObject:[[Unit alloc] summonWithParameters: 758 y:296 state:WALKING facing:LEFT type:@"knight"]];             
+ }
+ - (void)butt2Tapped:(id)sender {
+ [self.parent addGameObject:[[Unit alloc] summonWithParameters: 758 y:296 state:WALKING facing:LEFT type:@"kingar"]]; 
+ }
+ - (void)butt3Tapped:(id)sender {
+ [self.parent addGameObject:[[Unit alloc] summonWithParameters: 758 y:296 state:WALKING facing:LEFT type:@"archer"]]; 
+ }
+ - (void)butt4Tapped:(id)sender {
+ [self.parent addGameObject:[[Unit alloc] summonWithParameters: 758 y:296 state:WALKING facing:LEFT type:@"barrelman"]]; 
+ }
+ - (void)butt5Tapped:(id)sender {
+ [self.parent addGameObject:[[Unit alloc] summonWithParameters: 758 y:296 state:WALKING facing:LEFT type:@"kingar"]]; 
+ }
+ - (void)butt6Tapped:(id)sender {
+ [self.parent addGameObject:[[Unit alloc] summonWithParameters: 758 y:296 state:WALKING facing:LEFT type:@"kingar"]]; 
+ }
+ - (void)butt7Tapped:(id)sender {
+ [self.parent addGameObject:[[Unit alloc] summonWithParameters: 758 y:296 state:WALKING facing:LEFT type:@"soldier"]]; 
+ }
+ */
 - (void)butt1Tapped:(id)sender {
     [self.parent addGameObject:[[Knight alloc] summonWithParameters: 758 y:296 state:WALKING facing:LEFT]];             
 }

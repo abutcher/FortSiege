@@ -7,6 +7,7 @@
 //
 
 #import "GameObject.h"
+#import "LevelScene.h"
 
 
 @implementation GameObject
@@ -34,6 +35,7 @@
 
 @synthesize state;
 @synthesize facing;
+@synthesize team;
 
 +(int) getTagAndIncrement
 {
@@ -73,6 +75,26 @@
     self.selectedP = false;
 }
 
+-(void) prepareFrames{
+
+}
+
+-(GameObject*) getCollision {
+    GameObject* collider = nil;
+    for (GameObject* i in [LevelScene mainLevelScene].gameObjects)
+        if(i.team != self.team)
+            if( CGRectIntersectsRect(i.character.textureRect, self.character.textureRect) )
+                collider = i;
+    return collider;
+}
+
+-(void) collideWith:(GameObject*) actor {
+    
+}
+
+-(void) collideFrom:(GameObject*) actor {
+    
+}
 
 -(void) updateObject:(ccTime)dt {
     if (self.state == WALKING) {
@@ -104,7 +126,11 @@
         printf("%f %f location of light", self.character.position.x, self.character.position.y);
     }
     
-    
+    GameObject* touchie;
+    if((touchie = self.getCollision)) {
+        [self collideWith:touchie];
+        [touchie collideFrom:self];
+    }
 }
 
 -(void) runStandAction {

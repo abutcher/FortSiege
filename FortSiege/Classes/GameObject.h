@@ -23,6 +23,11 @@ extern enum Facing {
     LEFT = 1
 };
 
+extern enum Team {
+    COMPUTER = 0,
+    PLAYER = 1
+};
+
 @interface Position : NSObject {
 @private
     int x;
@@ -84,6 +89,7 @@ static int GameObjectTag;
 
 @property enum State state;
 @property enum Facing facing;
+@property enum Team team;
 @property (retain) CCSprite* selectRect;
 @property (retain) CCSprite* character;
 @property (retain) Position* position;
@@ -111,6 +117,10 @@ static int GameObjectTag;
 -(void) selected;
 -(void) unselected;
 
+-(void) collideWith:(GameObject*) actor;
+-(void) collideFrom:(GameObject*) actor;
+
+-(void) prepareFrames;
 -(void) updateObject:(ccTime) dt;
 -(void) runWalkAction;
 -(void) runAttackAction;
