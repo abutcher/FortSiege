@@ -20,12 +20,9 @@
 
 #import "MainMenuScene.h"
 
-#import "CC3Layer.h"
-#import "CC3Light.h"
-
 @class LevelScene;
 
-@interface SelectedMenu : CC3Layer
+@interface SelectedMenu : CCLayer
 {
     LevelScene* parent;
     
