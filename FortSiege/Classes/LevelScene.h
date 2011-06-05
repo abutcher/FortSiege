@@ -10,6 +10,7 @@
 #import "cocos2d.h"
 #import "CCTouchDispatcher.h"
 #import "UnitMenu.h"
+#import "SelectedMenu.h"
 #import "GameObject.h"
 #import "SimpleAudioEngine.h"
 

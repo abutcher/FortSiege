@@ -93,6 +93,8 @@ static LevelScene* _mainLevelScene = nil;
         
         [self addChild:menuLayer];        
         menuLayer.parent = self;
+        
+        SelectedMenu *sel = [SelectedMenu node];
 
     }
     

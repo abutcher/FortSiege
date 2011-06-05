@@ -20,7 +20,6 @@
 {
     
     self.isTouchEnabled = YES;
-    
     if( (self=[super init] )) {
         [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"sprites.plist"];		
         
@@ -39,54 +38,6 @@
                               winSize.height-(_label.contentSize.height/2));
         [self addChild:_label];
         
-        normal1 = [CCSprite spriteWithSpriteFrameName:@"knight_button.png"];
-        selected1 = [CCSprite spriteWithSpriteFrameName:@"knight_button.png"];
-        
-        menuItem1 = [CCMenuItemSprite itemFromNormalSprite:normal1
-                                            selectedSprite:selected1
-                                                    target:self selector:@selector(butt1Tapped:)];
-        
-        normal2 = [CCSprite spriteWithSpriteFrameName:@"black_wiz_button.png"];
-        selected2 = [CCSprite spriteWithSpriteFrameName:@"black_wiz_button.png"];
-        
-        menuItem2 = [CCMenuItemSprite itemFromNormalSprite:normal2
-                                            selectedSprite:selected2
-                                                    target:self selector:@selector(butt2Tapped:)];
-        
-        normal3 = [CCSprite spriteWithSpriteFrameName:@"archer_button.png"];
-        selected3 = [CCSprite spriteWithSpriteFrameName:@"archer_button.png"];
-        
-        menuItem3 = [CCMenuItemSprite itemFromNormalSprite:normal3
-                                            selectedSprite:selected3
-                                                    target:self selector:@selector(butt3Tapped:)];
-        
-        normal4 = [CCSprite spriteWithSpriteFrameName:@"barrel_button.png"];
-        selected4 = [CCSprite spriteWithSpriteFrameName:@"barrel_button.png"];
-        
-        menuItem4 = [CCMenuItemSprite itemFromNormalSprite:normal4
-                                            selectedSprite:selected4
-                                                    target:self selector:@selector(butt4Tapped:)];
-        
-        normal5 = [CCSprite spriteWithSpriteFrameName:@"white_wiz_button.png"];
-        selected5 = [CCSprite spriteWithSpriteFrameName:@"white_wiz_button.png"];
-        
-        menuItem5 = [CCMenuItemSprite itemFromNormalSprite:normal5
-                                            selectedSprite:selected5
-                                                    target:self selector:@selector(butt5Tapped:)];
-        
-        normal6 = [CCSprite spriteWithSpriteFrameName:@"engineer_button.png"];
-        selected6 = [CCSprite spriteWithSpriteFrameName:@"engineer_button.png"];
-        
-        menuItem6 = [CCMenuItemSprite itemFromNormalSprite:normal6
-                                            selectedSprite:selected6
-                                                    target:self selector:@selector(butt6Tapped:)];
-        
-        normal7 = [CCSprite spriteWithSpriteFrameName:@"soldier_button.png"];
-        selected7 = [CCSprite spriteWithSpriteFrameName:@"soldier_button.png"];
-        
-        menuItem7 = [CCMenuItemSprite itemFromNormalSprite:normal7
-                                            selectedSprite:selected7
-                                                    target:self selector:@selector(butt7Tapped:)];
         
         
         menuItem1.position = ccp(153, 40);
@@ -97,16 +48,71 @@
         menuItem6.position = ccp(314, 40);
         menuItem7.position = ccp(347, 40);
         
-        
-        CCMenu *mainMenu = [CCMenu menuWithItems:menuItem1, menuItem2, menuItem3, menuItem4, menuItem5, menuItem6, menuItem7, nil];
-        mainMenu.position = CGPointZero;
-        //        menuItemOne.selectedImage = norm;
-        //        menuItem1.normalImage = selected;
-        [self addChild:mainMenu];  
-        
+                
     }
     return self;
 }
+
+//setup a menu for the corresponding gameobject's associated actions
+- (void)setup:(GameObject*)type {
+    
+    normal1 = [CCSprite spriteWithSpriteFrameName:@"knight_button.png"];
+    selected1 = [CCSprite spriteWithSpriteFrameName:@"knight_button.png"];
+    
+    menuItem1 = [CCMenuItemSprite itemFromNormalSprite:normal1
+                                        selectedSprite:selected1
+                                                target:self selector:@selector(butt1Tapped:)];
+    
+    normal2 = [CCSprite spriteWithSpriteFrameName:@"black_wiz_button.png"];
+    selected2 = [CCSprite spriteWithSpriteFrameName:@"black_wiz_button.png"];
+    
+    menuItem2 = [CCMenuItemSprite itemFromNormalSprite:normal2
+                                        selectedSprite:selected2
+                                                target:self selector:@selector(butt2Tapped:)];
+    
+    normal3 = [CCSprite spriteWithSpriteFrameName:@"archer_button.png"];
+    selected3 = [CCSprite spriteWithSpriteFrameName:@"archer_button.png"];
+    
+    menuItem3 = [CCMenuItemSprite itemFromNormalSprite:normal3
+                                        selectedSprite:selected3
+                                                target:self selector:@selector(butt3Tapped:)];
+    
+    normal4 = [CCSprite spriteWithSpriteFrameName:@"barrel_button.png"];
+    selected4 = [CCSprite spriteWithSpriteFrameName:@"barrel_button.png"];
+    
+    menuItem4 = [CCMenuItemSprite itemFromNormalSprite:normal4
+                                        selectedSprite:selected4
+                                                target:self selector:@selector(butt4Tapped:)];
+    
+    normal5 = [CCSprite spriteWithSpriteFrameName:@"white_wiz_button.png"];
+    selected5 = [CCSprite spriteWithSpriteFrameName:@"white_wiz_button.png"];
+    
+    menuItem5 = [CCMenuItemSprite itemFromNormalSprite:normal5
+                                        selectedSprite:selected5
+                                                target:self selector:@selector(butt5Tapped:)];
+    
+    normal6 = [CCSprite spriteWithSpriteFrameName:@"engineer_button.png"];
+    selected6 = [CCSprite spriteWithSpriteFrameName:@"engineer_button.png"];
+    
+    menuItem6 = [CCMenuItemSprite itemFromNormalSprite:normal6
+                                        selectedSprite:selected6
+                                                target:self selector:@selector(butt6Tapped:)];
+    
+    normal7 = [CCSprite spriteWithSpriteFrameName:@"soldier_button.png"];
+    selected7 = [CCSprite spriteWithSpriteFrameName:@"soldier_button.png"];
+    
+    menuItem7 = [CCMenuItemSprite itemFromNormalSprite:normal7
+                                        selectedSprite:selected7
+                                                target:self selector:@selector(butt7Tapped:)];
+    
+    CCMenu *mainMenu = [CCMenu menuWithItems:menuItem1, menuItem2, menuItem3, menuItem4, menuItem5, menuItem6, menuItem7, nil];
+    mainMenu.position = CGPointZero;
+    //        menuItemOne.selectedImage = norm;
+    //        menuItem1.normalImage = selected;
+    [self addChild:mainMenu];  
+    
+}
+
 
 - (void)butt1Tapped:(id)sender {
     [self.parent addGameObject:[[Knight alloc] summonWithParameters: 758 y:296 state:WALKING facing:LEFT]];             
