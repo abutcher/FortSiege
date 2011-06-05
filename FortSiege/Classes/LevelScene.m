@@ -65,43 +65,7 @@
         
         [self addChild:menuLayer];        
         menuLayer.parent = self;
-        
-        //MANUAL FIRE LIGHTS - PROBABLY REMOVE ME LATER
-        
-        [self addChild:[[SmallFire alloc] initWithPosition:ccp(845, 305)] z:0 tag:99];
-        [self addChild:[[SmallSmoke alloc] initWithPosition:ccp(845, 310)] z: -1 tag:99];
-        [self addChild:[[SmallFire alloc] initWithPosition:ccp(135, 305)] z:0 tag:99];
-        [self addChild:[[SmallSmoke alloc] initWithPosition:ccp(135, 310)] z: -1 tag:99];
 
-        [self addChild:[[SmallFire alloc] initWithPosition:ccp(545, 305)] z:0 tag:99];
-        [self addChild:[[SmallSmoke alloc] initWithPosition:ccp(545, 310)] z: -1 tag:99];
-        [self addChild:[[SmallFire alloc] initWithPosition:ccp(335, 305)] z:0 tag:99];
-        [self addChild:[[SmallSmoke alloc] initWithPosition:ccp(335, 310)] z: -1 tag:99];        
-        CC3Light* fireLight1 = [CC3Light nodeWithName: @"fire1"];
-        CC3Light* fireLight2 = [CC3Light nodeWithName: @"fire2"];
-        CC3Light* fireLight3 = [CC3Light nodeWithName: @"fire3"];
-        CC3Light* fireLight4 = [CC3Light nodeWithName: @"fire4"];
-        
-        fireLight1.location = cc3v(845, 305, -500.0);
-        fireLight2.location = cc3v(545, 305, -500.0);
-        fireLight3.location = cc3v(345, 305, -500.0);
-        fireLight4.location = cc3v(145, 305, -500.0);
-                
-        fireLight1.isDirectionalOnly = NO;        
-        fireLight2.isDirectionalOnly = NO;        
-        fireLight3.isDirectionalOnly = NO;        
-        fireLight4.isDirectionalOnly = NO;                
-        
-        
-        [[FortSiegeWorld mainWorld]->cam addChild: fireLight1];
-        [[FortSiegeWorld mainWorld]->cam addChild: fireLight2];
-        [[FortSiegeWorld mainWorld]->cam addChild: fireLight3];
-        [[FortSiegeWorld mainWorld]->cam addChild: fireLight4];
-        
-        //end dumb manual fire lights
-        
-        [[FortSiegeWorld mainWorld] addMoon];
-                
     }
     
     return self;
