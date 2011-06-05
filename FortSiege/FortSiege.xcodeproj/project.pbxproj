@@ -162,6 +162,7 @@
 		5EF97831136E395700E208C6 /* moon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EF97830136E395700E208C6 /* moon.png */; };
 		5EFCFEA7136F343E004C9D0F /* Sphere.pod in Resources */ = {isa = PBXBuildFile; fileRef = 5EFCFEA6136F343E004C9D0F /* Sphere.pod */; };
 		6B948E3E139C0BC600D47887 /* globalAttributes.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B948E3D139C0BC600D47887 /* globalAttributes.m */; };
+		6B948E42139C18B300D47887 /* SelectedMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B948E41139C18B300D47887 /* SelectedMenu.m */; };
 		6BB5868D1352C6DD00DA1B7F /* UnitMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB5868C1352C6DD00DA1B7F /* UnitMenu.m */; };
 		B96F7B44135228A500DC5313 /* LevelScene.m in Sources */ = {isa = PBXBuildFile; fileRef = B96F7B43135228A500DC5313 /* LevelScene.m */; };
 		B96F7B54135231AC00DC5313 /* MainMenuScene.m in Sources */ = {isa = PBXBuildFile; fileRef = B96F7B53135231AC00DC5313 /* MainMenuScene.m */; };
@@ -605,6 +606,8 @@
 		5EFCFEA6136F343E004C9D0F /* Sphere.pod */ = {isa = PBXFileReference; lastKnownFileType = file; path = Sphere.pod; sourceTree = "<group>"; };
 		6B948E3C139C0BC600D47887 /* globalAttributes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = globalAttributes.h; sourceTree = "<group>"; };
 		6B948E3D139C0BC600D47887 /* globalAttributes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = globalAttributes.m; sourceTree = "<group>"; };
+		6B948E40139C18B200D47887 /* SelectedMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; path = SelectedMenu.h; sourceTree = "<group>"; };
+		6B948E41139C18B300D47887 /* SelectedMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectedMenu.m; sourceTree = "<group>"; };
 		6BB5868B1352C6DD00DA1B7F /* UnitMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnitMenu.h; sourceTree = "<group>"; };
 		6BB5868C1352C6DD00DA1B7F /* UnitMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnitMenu.m; sourceTree = "<group>"; };
 		B96F7B42135228A500DC5313 /* LevelScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelScene.h; sourceTree = "<group>"; };
@@ -914,6 +917,8 @@
 				B96F7B811352475D00DC5313 /* AboutUsScene.m */,
 				6BB5868B1352C6DD00DA1B7F /* UnitMenu.h */,
 				6BB5868C1352C6DD00DA1B7F /* UnitMenu.m */,
+				6B948E40139C18B200D47887 /* SelectedMenu.h */,
+				6B948E41139C18B300D47887 /* SelectedMenu.m */,
 				5E935648135A73E800B5FCF8 /* FortSiegeWorld.h */,
 				5E935649135A73E800B5FCF8 /* FortSiegeWorld.m */,
 				6B948E3C139C0BC600D47887 /* globalAttributes.h */,
@@ -1869,6 +1874,7 @@
 				5E93564A135A73E800B5FCF8 /* FortSiegeWorld.m in Sources */,
 				5E541509136E527500222F1D /* SmallSmoke.m in Sources */,
 				6B948E3E139C0BC600D47887 /* globalAttributes.m in Sources */,
+				6B948E42139C18B300D47887 /* SelectedMenu.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
