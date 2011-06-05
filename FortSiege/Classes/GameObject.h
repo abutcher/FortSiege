@@ -77,6 +77,14 @@ static int GameObjectTag;
     
     BOOL selectedP;
     
+    BOOL collideable;
+    int maxHitPoints;
+    int maxManaPoints;
+    int currHitPoints;
+    int currManaPoints;    
+    int attackDamage;
+    
+    
 }
 
 @property enum State state;
@@ -94,6 +102,13 @@ static int GameObjectTag;
 @property (retain) CCAction* attackAction;
 
 @property BOOL selectedP;
+
+@property BOOL collideable;
+@property int maxHitPoints;
+@property int maxManaPoints;
+@property int currHitPoints;
+@property int currManaPoints;
+@property int attackDamage;
 
 
 @property int tag;

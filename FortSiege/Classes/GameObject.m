@@ -24,6 +24,13 @@
 @synthesize standAnimation = _standAnimation;
 @synthesize attackAnimation = _attackAnimation;
 
+@synthesize collideable;
+@synthesize maxHitPoints;
+@synthesize maxManaPoints;
+@synthesize currHitPoints;
+@synthesize currManaPoints;
+@synthesize attackDamage;
+
 
 @synthesize state;
 @synthesize facing;
