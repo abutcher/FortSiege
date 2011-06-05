@@ -92,10 +92,6 @@
     
 }
 
--(void) collideFrom:(GameObject*) actor {
-    
-}
-
 -(void) updateObject:(ccTime)dt {
     if (self.state == WALKING) {
         if (self.facing == LEFT) {
@@ -129,7 +125,7 @@
     GameObject* touchie;
     if((touchie = self.getCollision)) {
         [self collideWith:touchie];
-        [touchie collideFrom:self];
+        [touchie collideWith:self];
     }
 }
 

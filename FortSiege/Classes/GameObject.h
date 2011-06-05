@@ -118,7 +118,6 @@ static int GameObjectTag;
 -(void) unselected;
 
 -(void) collideWith:(GameObject*) actor;
--(void) collideFrom:(GameObject*) actor;
 
 -(void) prepareFrames;
 -(void) updateObject:(ccTime) dt;
