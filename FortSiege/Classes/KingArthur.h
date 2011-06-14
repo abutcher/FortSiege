@@ -15,6 +15,7 @@
 
 -(void)prepareFrames;
 -(void) updateObject:(ccTime)dt;
+-(id) summonWithParameters: (int)x y: (int)y state: (enum State) state facing: (enum Facing) facing team: (enum Team) team;
 
 
 @end

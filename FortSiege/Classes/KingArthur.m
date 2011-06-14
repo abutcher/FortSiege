@@ -53,12 +53,19 @@
 }
 
 -(id) summonWithParameters: (int)x y: (int)y state: (enum State) state facing: (enum Facing) facing {
+    return [self summonWithParameters: x y:y state:state facing:facing team:PLAYER];
+}
+
+-(id) summonWithParameters: (int)x y: (int)y state: (enum State) state facing: (enum Facing) facing team: (enum Team) team {
     if (( self = [super init])) {
         
         [self prepareFrames];
         
+        self.name = @"kingar";
+        
         self.state = state;
         self.facing = facing;
+        self.team = team;
         
         if (self.state == WALKING) {
             self.character = [CCSprite spriteWithSpriteFrameName:@"kingar_walk_01.png"];
@@ -73,8 +80,14 @@
         self.position.y = y;
         self.character.position = ccp(x, y);
         
+        self.collideable = true;
+        
     }
     return self;
+}
+
+-(void) collideWith:(GameObject *)actor {
+    //[self runAttackAction];
 }
 
 -(void) updateObject:(ccTime)dt {

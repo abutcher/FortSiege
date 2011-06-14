@@ -83,6 +83,7 @@ static int GameObjectTag;
     int currHitPoints;
     int currManaPoints;    
     int attackDamage;
+    NSString* _name;
     
     
 }
@@ -110,7 +111,7 @@ static int GameObjectTag;
 @property int currHitPoints;
 @property int currManaPoints;
 @property int attackDamage;
-
+@property NSString* name;
 
 @property int tag;
 

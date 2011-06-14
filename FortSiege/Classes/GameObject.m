@@ -31,6 +31,7 @@
 @synthesize currHitPoints;
 @synthesize currManaPoints;
 @synthesize attackDamage;
+@synthesize name = _name;
 
 
 @synthesize state;
@@ -58,7 +59,7 @@
     }
     
     self.selectRect = [CCSprite spriteWithSpriteFrameName:@"blank.png"];
-    
+    self.collideable = false;
     return self;
 }
 
@@ -79,17 +80,17 @@
 
 }
 
--(GameObject*) getCollision {
+-(GameObject*) getFirstCollidingGameObject {
     GameObject* collider = nil;
-    for (GameObject* i in [LevelScene mainLevelScene].gameObjects)
-        if(i.team != self.team)
-            if( CGRectIntersectsRect(i.character.textureRect, self.character.textureRect) )
+    printf("COUNT:%u\n", [[LevelScene mainLevelScene].gameObjects count]);
+    for (GameObject* i in [LevelScene mainLevelScene].gameObjects) {
+        if(i.collideable && self.collideable)
+            if( CGRectIntersectsRect(i.character.textureRect, self.character.textureRect) ) {
                 collider = i;
+                printf("%s", collider.name);
+            }
+    }
     return collider;
-}
-
--(void) collideWith:(GameObject*) actor {
-    
 }
 
 -(void) updateObject:(ccTime)dt {
@@ -122,8 +123,8 @@
         printf("%f %f location of light", self.character.position.x, self.character.position.y);
     }
     
-    GameObject* touchie;
-    if((touchie = self.getCollision)) {
+    GameObject* touchie = [self getFirstCollidingGameObject];
+    if((touchie != nil)) {
         [self collideWith:touchie];
         [touchie collideWith:self];
     }
