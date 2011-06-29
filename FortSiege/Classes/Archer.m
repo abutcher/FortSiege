@@ -61,7 +61,12 @@
         self.facing = facing;
         
         if (self.state == WALKING) {
+//            CCSprite *walk = [CCSprite spriteWithSpriteFrameName:@"archer_walk_01.png"];
+//            if (self.facing == RIGHT) walk.scaleY *= -1;
+//            walk.scaleY *= -1;
             self.character = [CCSprite spriteWithSpriteFrameName:@"archer_walk_01.png"];
+//            self.character = walk;
+            
             [self runWalkAction];
         }
         else if (self.state == STANDING) {

@@ -95,7 +95,7 @@ static LevelScene* _mainLevelScene = nil;
         [self addChild:menuLayer];        
         menuLayer.parent = self;
         
-        SelectedMenu *sel = [SelectedMenu node];
+//        SelectedMenu *sel = [SelectedMenu node];
         
         // enemy king for testing
         [self addGameObject:[[KingArthur alloc] summonWithParameters: 500 y:296 state:STANDING facing:RIGHT team:COMPUTER]];
