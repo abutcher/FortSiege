@@ -82,12 +82,11 @@
 
 -(GameObject*) getFirstCollidingGameObject {
     GameObject* collider = nil;
-    printf("COUNT:%u\n", [[LevelScene mainLevelScene].gameObjects count]);
     for (GameObject* i in [LevelScene mainLevelScene].gameObjects) {
-        if(i.collideable && self.collideable)
+        if(i != self && i.collideable && self.collideable)
             if( CGRectIntersectsRect(i.character.textureRect, self.character.textureRect) ) {
                 collider = i;
-                printf("%s", collider.name);
+                NSLog(@"collider: %@\n", collider.name);
             }
     }
     return collider;
@@ -122,6 +121,8 @@
         self.selectRect.position = ccp(self.character.position.x, self.character.position.y); 
         printf("%f %f location of light", self.character.position.x, self.character.position.y);
     }
+    
+    NSLog(@"%@ at %f,%f", self.name, self.character.textureRect.origin.x, self.character.textureRect.origin.y);
     
     GameObject* touchie = [self getFirstCollidingGameObject];
     if((touchie != nil)) {

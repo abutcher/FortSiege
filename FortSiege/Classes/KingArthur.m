@@ -87,7 +87,8 @@
 }
 
 -(void) collideWith:(GameObject *)actor {
-    //[self runAttackAction];
+    [self runAttackAction];
+    NSLog(@"%@ collided with %@", self.name, actor.name);
 }
 
 -(void) updateObject:(ccTime)dt {
